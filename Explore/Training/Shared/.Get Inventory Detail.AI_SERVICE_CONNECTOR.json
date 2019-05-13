@@ -1,0 +1,24 @@
+[
+   {
+      "objectGuid": "gFM4tVrxbOxlomtB2cZ1c8",
+      "objectName": "Get Inventory Detail",
+      "objectType": "AI_SERVICE_CONNECTOR",
+      "path": "/Explore/Training/Shared",
+      "metadata": {
+         "additionalInfo": {
+            "contentType": "application/json; charset=utf-8",
+            "description": "Connector to interact with InventoryService",
+            "documentState": "VALID"
+         },
+         "contextAttributes": null,
+         "modelVersion": {
+            "major": 1,
+            "minor": 0
+         },
+         "objectRefs": [],
+         "repoInfo": {
+            "repoHandle": "S1BghuImXycotFg-gt-21933-2018-05-28T22:18:42.713Z::svc.xml"
+         }
+      }
+   }
+]

@@ -1,0 +1,129 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>2w4ARW8UBM7zsZv-gt-2192681-2019-01-18T11:50:13.856Z::pd.xml</types1:EntryId>
+      <types1:Name>ExchangeRateService</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.anonymous</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>ganesh@na1.dm-us.org</types1:CreatedBy>
+      <types1:CreationDate>2019-01-18T11:50:14Z</types1:CreationDate>
+      <types1:ModifiedBy>ganesh@na1.dm-us.org</types1:ModifiedBy>
+      <types1:ModificationDate>2019-01-22T05:30:40Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>ganesh@na1.dm-us.org</types1:PublishedBy>
+      <types1:PublicationDate>2019-01-22T05:31:03Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/spi.ExchangeRateService/ExchangeRateService.pd.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="ExchangeRateService"
+                  name="ExchangeRateService">
+            <appliesTo/>
+            <description/>
+            <tags>.anonymous</tags>
+            <generator>Informatica Process Designer 10</generator>
+            <input>
+               <parameter description="" name="ExchangeRequest" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:ConversionRequestPO</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                     <option name="guid">elZu2PrNWsCb81uOnND1YF</option>
+                  </options>
+               </parameter>
+            </input>
+            <output>
+               <field description="" name="ExchangeResponse" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:ConversionResponsePO</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                     <option name="guid">9mTgJ7fun4Jlal0MVZGmK5</option>
+                  </options>
+               </field>
+            </output>
+            <tempFields>
+               <field description="" name="Title" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment suspendOnFault="false" tracingLevel="none">
+               <rest>
+                  <allowAnonymousAccess/>
+                  <wholePayload inputWholePayload="true" outputWholePayload="true"/>
+               </rest>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="jr2ga6xj" targetId="jr2ga6xi"/>
+               </start>
+               <assignment id="jr2ga6xi">
+                  <title>Set Process Title</title>
+                  <operation source="formula" to="temp.Title">
+                     <expression language="XQuery">let $fromCur :=  fn:concat('Get Exchange Rates for ',$input.ExchangeRequest[1]/BaseRate[1]/Value,' ',$input.ExchangeRequest[1]/BaseRate[1]/Type) return ipd:setProcessTitle($fromCur)</expression>
+                  </operation>
+                  <link id="jr2ga6xq" targetId="jr68n74e"/>
+               </assignment>
+               <eventContainer id="jr68n74e">
+                  <subflow id="jr2ga6xp">
+                     <title>ExchangeRate</title>
+                     <subflowGUID>8AHjUFMo7OhdcULS5DNSu1</subflowGUID>
+                     <subflowPath>ExchangeRate</subflowPath>
+                     <runForEach>false</runForEach>
+                     <input>
+                        <parameter name="ExchangeRequest" source="field" updatable="true">input.ExchangeRequest</parameter>
+                     </input>
+                     <outputDef>
+                        <field name="ExchangeResponse" type="reference">
+                           <options>
+                              <option name="referenceTo">$po:ConversionResponsePO</option>
+                              <option name="required">false</option>
+                              <option name="isCopy">true</option>
+                              <option name="guid">9mTgJ7fun4Jlal0MVZGmK5</option>
+                           </options>
+                        </field>
+                     </outputDef>
+                  </subflow>
+                  <flow id="jr68n74g">
+                     <assignment id="jr68n74r">
+                        <title>Assignment to Out</title>
+                        <operation source="field" to="output.ExchangeResponse">output.ExchangeResponse</operation>
+                     </assignment>
+                     <link id="jr68n74h" targetId="jr68n74e" type="containerLink"/>
+                  </flow>
+                  <flow id="jr68n74j">
+                     <throw id="jr68n76u">
+                        <title>Faulted</title>
+                        <throwInput>
+                           <parameter name="code" source="constant" updatable="true">The service is not available. Please try after some time.</parameter>
+                           <parameter name="detail" source="constant" updatable="true">One or more processes may not be executing. Hence the fault.</parameter>
+                           <parameter name="reason" source="constant" updatable="true">Not known as of now.</parameter>
+                        </throwInput>
+                     </throw>
+                  </flow>
+                  <link id="jr68n74f" targetId="jr68n74g" type="containerLink"/>
+                  <link id="jr2ga6xr" targetId="c"/>
+                  <events>
+                     <catch faultField="faultInfo" id="jr68n748" interrupting="true">
+                        <link id="jr68n74i" targetId="jr68n74j" type="containerLink"/>
+                     </catch>
+                  </events>
+               </eventContainer>
+               <end id="c"/>
+            </flow>
+         </process>
+      </types1:Entry>
+      <types1:GUID>7deDaVnF9qZcTYALyTF1cF</types1:GUID>
+      <types1:DisplayName>ExchangeRateService</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2019-05-13T04:33:13.357Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

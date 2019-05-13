@@ -1,0 +1,64 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>wZaaaa-gt-5423657-2019-03-28T16:27:16.358Z::pd.xml</types1:EntryId>
+      <types1:Name>SFTPFileTransferProcess-1</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>luc@na1.dm-us.org</types1:CreatedBy>
+      <types1:CreationDate>2019-03-28T16:27:16Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="SFTPFileTransferProcess"
+                  name="SFTPFileTransferProcess-1">
+            <appliesTo/>
+            <description/>
+            <generator>Informatica Process Designer 8</generator>
+            <input>
+               <parameter name="fileEvent" type="reference">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="referenceTo">LocalFileConnection:FileInformation</option>
+                     <option name="isCopy">true</option>
+                  </options>
+               </parameter>
+            </input>
+            <notes/>
+            <deployment suspendOnFault="false" tracingLevel="verbose">
+               <targetLocation>00000J</targetLocation>
+               <event eventSource="LocalFileConnection:AccountsXmlMonitor"/>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="ifrzweg4" targetId="ifrzweg3"/>
+               </start>
+               <service id="ifrzweg3">
+                  <title>SFTPFileCopy</title>
+                  <serviceName>SFTPDemoConnection:SFTPFileCopy</serviceName>
+                  <serviceInput>
+                     <parameter name="localFilePath" source="field" updatable="true">input.fileEvent[1]/path</parameter>
+                     <parameter name="remoteFileName" source="formula">
+                        <expression language="XQuery">concat( $input.fileEvent[1]/name, '_copy.xml' )</expression>
+                     </parameter>
+                     <parameter name="remoteRelativePath" source="constant">users_xml</parameter>
+                  </serviceInput>
+                  <link id="ifrzweg5" targetId="d"/>
+               </service>
+               <end id="d"/>
+            </flow>
+         </process>
+      </types1:Entry>
+      <types1:GUID>1rAZErm1Fqkbxo5XeHnN0Y</types1:GUID>
+      <types1:DisplayName>SFTPFileTransferProcess</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2019-05-13T04:33:12.777Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

@@ -1,0 +1,48 @@
+[
+   {
+      "objectGuid": "25TiQQc0T2QcfxVUmCbw4s",
+      "objectName": "Edmund-actions",
+      "objectType": "AI_CONNECTION",
+      "path": "/Explore/Default",
+      "metadata": {
+         "additionalInfo": {
+            "contentType": "application/json; charset=utf-8",
+            "description": "",
+            "documentState": "VALID"
+         },
+         "contextAttributes": null,
+         "modelVersion": {
+            "major": 1,
+            "minor": 0
+         },
+         "objectRefs": [
+            "iSxmWjy6w8dcCwof8FGP4K"
+         ],
+         "repoInfo": {
+            "repoHandle": "xR6Eaaaaaaaaaaa-gt-937704-2019-01-21T12:49:52.383Z::conn.xml"
+         }
+      }
+   },
+   {
+      "objectGuid": "iSxmWjy6w8dcCwof8FGP4K",
+      "objectName": "Edmunds",
+      "objectType": "AI_SERVICE_CONNECTOR",
+      "path": "/Explore/Default",
+      "metadata": {
+         "additionalInfo": {
+            "contentType": "application/json; charset=utf-8",
+            "description": "",
+            "documentState": "VALID"
+         },
+         "contextAttributes": null,
+         "modelVersion": {
+            "major": 1,
+            "minor": 0
+         },
+         "objectRefs": [],
+         "repoInfo": {
+            "repoHandle": "tiTW34Xutaaabbg-gt-2508423-2019-01-21T12:39:33.318Z::svc.xml"
+         }
+      }
+   }
+]

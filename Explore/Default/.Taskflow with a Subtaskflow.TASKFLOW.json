@@ -1,0 +1,76 @@
+[
+   {
+      "objectGuid": "02LEsPPT8EykYU8PSQYxMr",
+      "objectName": "Taskflow with a Subtaskflow",
+      "objectType": "TASKFLOW",
+      "path": "/Explore/Default",
+      "metadata": {
+         "additionalInfo": {
+            "contentType": "application/json; charset=utf-8",
+            "description": "Retail sales data needs to be reconciled across geographies and needs to be written to one central DB for analytics. You would be receiving files from different geographies to write to central DB. The mapping logic is consistent for all geographies. The mapping is parameterized to take source value as a parameter. Taskflow can now be invoked with a list of source parameters and be looped over the mapping by passing one source value at a time.\n\nOnce this is done, user would call a subtaskflow that provide analytics based on customer input coming through the API request",
+            "documentState": "VALID"
+         },
+         "contextAttributes": null,
+         "modelVersion": {
+            "major": 1,
+            "minor": 0
+         },
+         "objectRefs": [
+            "cldp7oXiH0dhW2JfHcat2L",
+            "jIPfSYiYI2klQi2IxMZask"
+         ],
+         "repoInfo": {
+            "repoHandle": "2D86CjqFVNN5Kaa-gt-1697172-2019-03-26T08:21:59.857Z::tf.xml"
+         }
+      }
+   },
+   {
+      "objectGuid": "cldp7oXiH0dhW2JfHcat2L",
+      "objectName": "Gather Insights",
+      "objectType": "TASKFLOW",
+      "path": "/Explore/CDI Examples/Enterprise Data Warehousing through API",
+      "metadata": {
+         "additionalInfo": {
+            "contentType": "application/json; charset=utf-8",
+            "description": "",
+            "documentState": "VALID"
+         },
+         "contextAttributes": null,
+         "modelVersion": {
+            "major": 1,
+            "minor": 0
+         },
+         "objectRefs": [],
+         "repoInfo": {
+            "repoHandle": "TNeJ91pqrzYLnzY-gt-320054-2019-03-11T19:49:44.732Z::tf.xml"
+         }
+      }
+   },
+   {
+      "objectGuid": "jIPfSYiYI2klQi2IxMZask",
+      "objectName": "MCT Write to Warehouse",
+      "objectType": "MTT",
+      "path": "/Explore/CDI Examples/Enterprise Data Warehousing through API",
+      "metadata": {
+         "additionalInfo": {
+            "contentType": "JSON",
+            "description": "",
+            "documentState": "VALID"
+         },
+         "contextAttributes": [
+            {
+               "name": "id",
+               "value": "@1"
+            }
+         ],
+         "modelVersion": {
+            "major": 0,
+            "minor": 0
+         },
+         "objectRefs": [],
+         "repoInfo": {
+            "repoHandle": "01013R0Z00000000002W"
+         }
+      }
+   }
+]

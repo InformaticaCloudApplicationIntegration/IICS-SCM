@@ -1,0 +1,153 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>RTyxKf3eFhBJQWS-gt-36259-2018-06-13T05:06:07.052Z::pd.xml</types1:EntryId>
+      <types1:Name>OrderProcessorDelete</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description>Input fields: itemName and itemCount</types1:Description>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>sorabh@na1.dm-us.org</types1:CreatedBy>
+      <types1:CreationDate>2018-06-13T05:06:07Z</types1:CreationDate>
+      <types1:ModifiedBy>luc@na1.dm-us.org</types1:ModifiedBy>
+      <types1:ModificationDate>2018-11-27T20:25:55Z</types1:ModificationDate>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="OrderProcessorDelete"
+                  name="OrderProcessorDelete">
+            <appliesTo/>
+            <description>Input fields: itemName and itemCount</description>
+            <tags/>
+            <generator>Informatica Process Designer 9</generator>
+            <input>
+               <parameter description="" name="itemName" required="true" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="itemCount" required="true" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+            </input>
+            <output>
+               <field description="" name="orderId" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+            </output>
+            <notes>test with https://ai-pod1.staging5.infaqa.com/active-bpel/rt/OrderProcessor?itemName=int1782&amp;itemCount=3</notes>
+            <deployment suspendOnFault="false" tracingLevel="verbose">
+               <rest/>
+            </deployment>
+            <eventDefinitions>
+               <messageDefinition name="CheckOrderStatus">
+                  <input>
+                     <parameter correlationPath="."
+                                description=""
+                                name="idOfOrderToCheckStatus"
+                                required="true"
+                                type="string">
+                        <options>
+                           <option name="required">false</option>
+                        </options>
+                     </parameter>
+                  </input>
+                  <output>
+                     <field description="" name="orderStatus" type="string">
+                        <options>
+                           <option name="required">false</option>
+                        </options>
+                     </field>
+                  </output>
+                  <deployment>
+                     <rest>
+                        <allowedRoles>
+                           <role>Service Consumer</role>
+                        </allowedRoles>
+                     </rest>
+                  </deployment>
+               </messageDefinition>
+               <messageDefinition name="CancelOrder">
+                  <input>
+                     <parameter correlationPath="."
+                                description=""
+                                name="idOfOrderToCancel"
+                                required="true"
+                                type="string">
+                        <options>
+                           <option name="required">false</option>
+                        </options>
+                     </parameter>
+                  </input>
+                  <output>
+                     <field description="" name="orderStatus" type="string">
+                        <options>
+                           <option name="required">false</option>
+                        </options>
+                     </field>
+                  </output>
+                  <deployment>
+                     <rest>
+                        <allowedRoles>
+                           <role>Service Consumer</role>
+                        </allowedRoles>
+                     </rest>
+                  </deployment>
+               </messageDefinition>
+               <messageDefinition name="UpdateOrder">
+                  <input>
+                     <parameter correlationPath="true"
+                                description=""
+                                name="idOfOrderToUpdate"
+                                required="true"
+                                type="string">
+                        <options>
+                           <option name="required">false</option>
+                        </options>
+                     </parameter>
+                     <parameter description="" name="itemCount" required="true" type="string">
+                        <options>
+                           <option name="required">false</option>
+                        </options>
+                     </parameter>
+                  </input>
+                  <output>
+                     <field description="" name="orderStatus" type="string">
+                        <options>
+                           <option name="required">false</option>
+                        </options>
+                     </field>
+                  </output>
+                  <deployment>
+                     <rest>
+                        <allowedRoles>
+                           <role>Service Consumer</role>
+                        </allowedRoles>
+                     </rest>
+                  </deployment>
+               </messageDefinition>
+            </eventDefinitions>
+            <flow id="a">
+               <start id="b">
+                  <link id="jp06wu0n" targetId="jbxi0ltx"/>
+               </start>
+               <end id="jbxi0ltx">
+                  <title>End 2</title>
+               </end>
+            </flow>
+         </process>
+      </types1:Entry>
+      <types1:GUID>4gzvqAO1s2ShKo3jfTi4y4</types1:GUID>
+      <types1:DisplayName>OrderProcessorDelete</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2019-05-13T04:33:10.478Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>
