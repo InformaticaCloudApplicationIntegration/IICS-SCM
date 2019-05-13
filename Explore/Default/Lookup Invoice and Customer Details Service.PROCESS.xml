@@ -1,0 +1,116 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>DclzHfSTu0kMVX3-gt-600882-2019-01-18T13:05:28.469Z::pd.xml</types1:EntryId>
+      <types1:Name>Lookup_Invoice_and_Customer_Details_Service-1</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>ganesh@na1.dm-us.org</types1:CreatedBy>
+      <types1:CreationDate>2019-01-18T13:05:28Z</types1:CreationDate>
+      <types1:ModifiedBy>ganesh@na1.dm-us.org</types1:ModifiedBy>
+      <types1:ModificationDate>2019-01-18T13:06:54Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>ganesh@na1.dm-us.org</types1:PublishedBy>
+      <types1:PublicationDate>2019-01-18T13:07:03Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/spi.Lookup_Invoice_and_Customer_Details_Service-1/Lookup_Invoice_and_Customer_Details_Service-1.pd.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="Lookup Invoice and Customer Details Service"
+                  name="Lookup_Invoice_and_Customer_Details_Service-1">
+            <appliesTo/>
+            <description/>
+            <tags/>
+            <generator>Informatica Process Designer 10</generator>
+            <input>
+               <parameter description=""
+                          name="invoiceID_in"
+                          required="true"
+                          type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+            </input>
+            <output>
+               <field description="" name="INVOICEID" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="CUSTOMERID" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="TOTAL" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="FIRSTNAME" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="LASTNAME" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="STREET" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="CITY" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+            </output>
+            <notes/>
+            <deployment suspendOnFault="false" tracingLevel="none">
+               <rest>
+                  <allowedUsers>
+                     <user>ganesh@na1.dm-us.org</user>
+                  </allowedUsers>
+               </rest>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="jr2icacp" targetId="jr2icaco"/>
+               </start>
+               <service id="jr2icaco">
+                  <title>getInvoice</title>
+                  <serviceName>Customer-and-Invoice-details-actions-1:getInvoice</serviceName>
+                  <serviceGUID>5KDzB3dxBAqfUNhWDtbbst</serviceGUID>
+                  <serviceInput>
+                     <parameter name="invoiceID" source="field" updatable="true">input.invoiceID_in</parameter>
+                  </serviceInput>
+                  <link id="jr2icacy" targetId="jr2icacx"/>
+               </service>
+               <service id="jr2icacx">
+                  <title>getCustomer</title>
+                  <serviceName>Customer-and-Invoice-details-actions-1:getCustomer</serviceName>
+                  <serviceGUID>5KDzB3dxBAqfUNhWDtbbst</serviceGUID>
+                  <serviceInput>
+                     <parameter name="customerID" source="field" updatable="true">output.CUSTOMERID</parameter>
+                  </serviceInput>
+                  <link id="jr2icacz" targetId="c"/>
+               </service>
+               <end id="c"/>
+            </flow>
+         </process>
+      </types1:Entry>
+      <types1:GUID>8919QPpUW9wflI73tfY80Q</types1:GUID>
+      <types1:DisplayName>Lookup Invoice and Customer Details Service</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2019-05-13T04:23:41.433Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

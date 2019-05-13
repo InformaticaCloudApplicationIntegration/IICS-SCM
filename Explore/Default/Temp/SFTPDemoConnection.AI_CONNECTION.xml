@@ -1,0 +1,92 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>OdwWcn6Hbf13Erh-gt-1856570-2019-03-28T16:27:14.656Z::conn.xml</types1:EntryId>
+      <types1:Name>SFTPDemoConnection-1</types1:Name>
+      <types1:MimeType>application/xml+connection</types1:MimeType>
+      <types1:Description>asdsa</types1:Description>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>luc@na1.dm-us.org</types1:CreatedBy>
+      <types1:CreationDate>2019-03-28T16:27:15Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <connection xmlns="http://schemas.informatica.com/socrates/data-services/2014/04/avosConnections.xsd"
+                     displayName="SFTPDemoConnection"
+                     label="SFTPDemoConnection"
+                     name="SFTPDemoConnection-1">
+            <description>asdsa</description>
+            <agent>00000J</agent>
+            <attributes>
+               <attribute encrypted="false" name="ftpProtocol" value="SFTP"/>
+               <attribute encrypted="false" name="hostname" value="127.0.0.1"/>
+               <attribute encrypted="false" name="port" value="22"/>
+               <attribute encrypted="false"
+                          name="knownHostsFile"
+                          value="D:\testfiles\ftp\hosts.txt"/>
+               <attribute encrypted="false" name="strictHostKeyChecking" value="true"/>
+               <attribute encrypted="false" name="username" value="user1"/>
+               <attribute encrypted="true" name="password" value=""/>
+               <attribute encrypted="false"
+                          name="privateKeyFile"
+                          value="D:\testfiles\ftp\sftp.key.ppk"/>
+               <attribute encrypted="true" name="privateKeyPassphrase" value=""/>
+               <attribute encrypted="false" name="binary" value="Binary"/>
+               <attribute encrypted="false" name="compression" value="0"/>
+               <attribute encrypted="false" name="passiveMode" value="false"/>
+               <attribute encrypted="false" name="stepwise" value="true"/>
+               <attribute encrypted="false" name="fastExistsCheck" value="false"/>
+               <attribute encrypted="false" name="serverAliveInterval" value="0"/>
+               <attribute encrypted="false" name="serverAliveCountMax" value="1"/>
+               <attribute encrypted="false" name="connectTimeout" value="10"/>
+               <attribute encrypted="false" name="timeout" value="30"/>
+               <attribute encrypted="false" name="soTimeout" value="300"/>
+               <attribute encrypted="false" name="maximumReconnectAttempts" value="3"/>
+               <attribute encrypted="false" name="reconnectDelay" value="1"/>
+               <attribute encrypted="false" name="ciphers" value=""/>
+               <attribute encrypted="false"
+                          name="throwExceptionOnConnectFailed"
+                          value="false"/>
+               <attribute encrypted="false" name="idempotentReposituryFolder" value=""/>
+               <attribute encrypted="false"
+                          name="clearIdempotentRepositoryOnStart"
+                          value="false"/>
+            </attributes>
+            <producers>
+               <producer enabled="true" name="SFTPFileCopy" typeName="FTPFileTransferer">
+                  <description>This event target can be used to transfer local files to a a remote folder via FTP/SFTP.</description>
+                  <attributes>
+                     <attribute encrypted="false" name="directoryName" value=""/>
+                     <attribute encrypted="false" name="fileExist" value="Override"/>
+                     <attribute encrypted="false" name="moveExisting" value=""/>
+                     <attribute encrypted="false" name="eagerDeleteTargetFile" value="true"/>
+                     <attribute encrypted="false" name="tempPrefix" value=""/>
+                     <attribute encrypted="false" name="tempFileName" value=""/>
+                     <attribute encrypted="false" name="bufferSize" value=""/>
+                     <attribute encrypted="false" name="charset" value=""/>
+                     <attribute encrypted="false" name="otherAttributes" value=""/>
+                  </attributes>
+               </producer>
+            </producers>
+            <javaConnector xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"
+                           agentOnly="true"
+                           plugin="Camel"
+                           supportsConnectionTest="true"
+                           supportsDataPreview="false"
+                           supportsOData="false"
+                           type="FTP"
+                           uuid="49a3e8d4-71b5-4fbc-b5ad-0774a850e01d">
+               <description>Provides connections to FTP, FTPS and SFTP operation brokers.</description>
+            </javaConnector>
+         </connection>
+      </types1:Entry>
+      <types1:GUID>2Q9pG43Nsiclfc7nvbYNY1</types1:GUID>
+      <types1:DisplayName>SFTPDemoConnection</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2019-05-13T04:23:40.824Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

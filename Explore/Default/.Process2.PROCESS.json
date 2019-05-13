@@ -1,0 +1,24 @@
+[
+   {
+      "objectGuid": "4gbflD8AhjJe8nBdfHeKWZ",
+      "objectName": "Process2",
+      "objectType": "PROCESS",
+      "path": "/Explore/Default",
+      "metadata": {
+         "additionalInfo": {
+            "contentType": "application/json; charset=utf-8",
+            "description": "",
+            "documentState": "VALID"
+         },
+         "contextAttributes": null,
+         "modelVersion": {
+            "major": 1,
+            "minor": 0
+         },
+         "objectRefs": [],
+         "repoInfo": {
+            "repoHandle": "qq5eERhKGXShOeC-gt-215417-2019-04-16T14:56:12.269Z::pd.xml"
+         }
+      }
+   }
+]

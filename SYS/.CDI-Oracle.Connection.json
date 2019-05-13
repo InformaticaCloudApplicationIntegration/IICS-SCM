@@ -1,0 +1,58 @@
+[
+   {
+      "objectGuid": "eN3Qe3UH82Fe7vid3DKqof",
+      "objectName": "CDI-Oracle",
+      "objectType": "Connection",
+      "path": "/SYS",
+      "metadata": {
+         "additionalInfo": {
+            "contentType": "JSON",
+            "description": null,
+            "documentState": "COMPLETE"
+         },
+         "contextAttributes": [
+            {
+               "name": "id",
+               "value": "@1"
+            }
+         ],
+         "modelVersion": {
+            "major": 0,
+            "minor": 0
+         },
+         "objectRefs": [
+            "7kX411S4axjlXraCenEM8E"
+         ],
+         "repoInfo": {
+            "repoHandle": "01013R0B00000000003U"
+         }
+      }
+   },
+   {
+      "objectGuid": "7kX411S4axjlXraCenEM8E",
+      "objectName": "VM-CDI",
+      "objectType": "AgentGroup",
+      "path": "/SYS",
+      "metadata": {
+         "additionalInfo": {
+            "contentType": "JSON",
+            "description": null,
+            "documentState": "VALID"
+         },
+         "contextAttributes": [
+            {
+               "name": "id",
+               "value": "@1"
+            }
+         ],
+         "modelVersion": {
+            "major": 0,
+            "minor": 0
+         },
+         "objectRefs": [],
+         "repoInfo": {
+            "repoHandle": "01013R2500000000000O"
+         }
+      }
+   }
+]

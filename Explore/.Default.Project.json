@@ -1,0 +1,27 @@
+[
+   {
+      "objectGuid": "4HKXwCguVxgkfxpgoR8TkN",
+      "objectName": "Default",
+      "objectType": "Project",
+      "path": "/Explore",
+      "metadata": {
+         "additionalInfo": {
+            "contentType": null,
+            "description": "Auto-generated Default Project",
+            "documentState": "COMPLETE"
+         },
+         "contextAttributes": [
+            {
+               "name": "IS_DEF_LOC",
+               "value": "true"
+            }
+         ],
+         "modelVersion": {
+            "major": 0,
+            "minor": 0
+         },
+         "objectRefs": [],
+         "repoInfo": null
+      }
+   }
+]

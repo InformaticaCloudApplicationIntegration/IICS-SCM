@@ -1,0 +1,43 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>tCUtoVVVVVVVVVV-gt-5404027-2019-02-01T03:59:30.7Z::po.xml</types1:EntryId>
+      <types1:Name>ProcessObject1</types1:Name>
+      <types1:ParentFlowIds>Z5Hhwq9bdsreK8Z-gt-998704-2019-02-01T04:19:42.824Z::pd.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+processobject</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>sorabh@na1.dm-us.org</types1:CreatedBy>
+      <types1:CreationDate>2019-02-01T03:59:31Z</types1:CreationDate>
+      <types1:ModifiedBy>sorabh@na1.dm-us.org</types1:ModifiedBy>
+      <types1:ModificationDate>2019-02-05T06:14:35Z</types1:ModificationDate>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                        displayName="ProcessObject1"
+                        isByCopy="true"
+                        name="ProcessObject1">
+            <description/>
+            <tags/>
+            <detail>
+               <field label="value1" name="value1" type="string"/>
+               <field label="value2" name="value2" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:ProcessObject11</option>
+                     <option name="guid">bHwCNw1L7yljXNIu6lZTIl</option>
+                     <option name="relationshipName">Child</option>
+                  </options>
+               </field>
+            </detail>
+         </processObject>
+      </types1:Entry>
+      <types1:GUID>95jTsJYxI4gjX0KLEO4pSn</types1:GUID>
+      <types1:DisplayName>ProcessObject1</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2019-05-13T04:23:38.386Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

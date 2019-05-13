@@ -1,0 +1,94 @@
+[
+   {
+      "objectGuid": "7deDaVnF9qZcTYALyTF1cF",
+      "objectName": "ExchangeRateService",
+      "objectType": "PROCESS",
+      "path": "/Explore/Default",
+      "metadata": {
+         "additionalInfo": {
+            "contentType": "application/json; charset=utf-8",
+            "description": "",
+            "documentState": "VALID"
+         },
+         "contextAttributes": null,
+         "modelVersion": {
+            "major": 1,
+            "minor": 0
+         },
+         "objectRefs": [
+            "elZu2PrNWsCb81uOnND1YF",
+            "9mTgJ7fun4Jlal0MVZGmK5",
+            "8AHjUFMo7OhdcULS5DNSu1"
+         ],
+         "repoInfo": {
+            "repoHandle": "2w4ARW8UBM7zsZv-gt-2192681-2019-01-18T11:50:13.856Z::pd.xml"
+         }
+      }
+   },
+   {
+      "objectGuid": "elZu2PrNWsCb81uOnND1YF",
+      "objectName": "ConversionRequestPO",
+      "objectType": "PROCESS_OBJECT",
+      "path": "/Explore/Default",
+      "metadata": {
+         "additionalInfo": {
+            "contentType": "application/json; charset=utf-8",
+            "description": "",
+            "documentState": "VALID"
+         },
+         "contextAttributes": null,
+         "modelVersion": {
+            "major": 1,
+            "minor": 0
+         },
+         "objectRefs": [],
+         "repoInfo": {
+            "repoHandle": "EBNjDg8SOlA1vyo-gt-1267002-2019-01-16T04:42:51.494Z::po.xml"
+         }
+      }
+   },
+   {
+      "objectGuid": "9mTgJ7fun4Jlal0MVZGmK5",
+      "objectName": "ConversionResponsePO",
+      "objectType": "PROCESS_OBJECT",
+      "path": "/Explore/Default",
+      "metadata": {
+         "additionalInfo": {
+            "contentType": "application/json; charset=utf-8",
+            "description": "",
+            "documentState": "VALID"
+         },
+         "contextAttributes": null,
+         "modelVersion": {
+            "major": 1,
+            "minor": 0
+         },
+         "objectRefs": [],
+         "repoInfo": {
+            "repoHandle": "vE69xGomUhGdwOL-gt-3500222-2019-01-16T04:44:38.353Z::po.xml"
+         }
+      }
+   },
+   {
+      "objectGuid": "8AHjUFMo7OhdcULS5DNSu1",
+      "objectName": "ExchangeRate",
+      "objectType": "PROCESS",
+      "path": "/Explore/Default",
+      "metadata": {
+         "additionalInfo": {
+            "contentType": "application/json; charset=utf-8",
+            "description": "",
+            "documentState": "VALID"
+         },
+         "contextAttributes": null,
+         "modelVersion": {
+            "major": 1,
+            "minor": 0
+         },
+         "objectRefs": [],
+         "repoInfo": {
+            "repoHandle": "4ARW8UBM7zsZvEI-gt-3932520-2019-01-18T11:41:16.902Z::pd.xml"
+         }
+      }
+   }
+]

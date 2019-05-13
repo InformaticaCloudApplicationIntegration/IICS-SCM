@@ -1,0 +1,109 @@
+[
+   {
+      "objectGuid": "cldp7oXiH0dhW2JfHcat2L",
+      "objectName": "Gather Insights",
+      "objectType": "TASKFLOW",
+      "path": "/Explore/CDI Examples/Enterprise Data Warehousing through API",
+      "metadata": {
+         "additionalInfo": {
+            "contentType": "application/json; charset=utf-8",
+            "description": "",
+            "documentState": "VALID"
+         },
+         "contextAttributes": null,
+         "modelVersion": {
+            "major": 1,
+            "minor": 0
+         },
+         "objectRefs": [
+            "igf8Tbpj5ETfjcDc8e4jaT",
+            "gi1ZIdzufexcTIZeKMte4b",
+            "78jX08T50gQcDfKY4PApM0"
+         ],
+         "repoInfo": {
+            "repoHandle": "TNeJ91pqrzYLnzY-gt-320054-2019-03-11T19:49:44.732Z::tf.xml"
+         }
+      }
+   },
+   {
+      "objectGuid": "igf8Tbpj5ETfjcDc8e4jaT",
+      "objectName": "MCT_TopCustomers",
+      "objectType": "MTT",
+      "path": "/Explore/CDI Examples/Enterprise Data Warehousing through API",
+      "metadata": {
+         "additionalInfo": {
+            "contentType": "JSON",
+            "description": "",
+            "documentState": "VALID"
+         },
+         "contextAttributes": [
+            {
+               "name": "id",
+               "value": "@1"
+            }
+         ],
+         "modelVersion": {
+            "major": 0,
+            "minor": 0
+         },
+         "objectRefs": [],
+         "repoInfo": {
+            "repoHandle": "01013R0Z00000000002Y"
+         }
+      }
+   },
+   {
+      "objectGuid": "gi1ZIdzufexcTIZeKMte4b",
+      "objectName": "MCT_TopInvoice",
+      "objectType": "MTT",
+      "path": "/Explore/CDI Examples/Enterprise Data Warehousing through API",
+      "metadata": {
+         "additionalInfo": {
+            "contentType": "JSON",
+            "description": "",
+            "documentState": "VALID"
+         },
+         "contextAttributes": [
+            {
+               "name": "id",
+               "value": "@1"
+            }
+         ],
+         "modelVersion": {
+            "major": 0,
+            "minor": 0
+         },
+         "objectRefs": [],
+         "repoInfo": {
+            "repoHandle": "01013R0Z00000000002X"
+         }
+      }
+   },
+   {
+      "objectGuid": "78jX08T50gQcDfKY4PApM0",
+      "objectName": "MCT_TopStockCode",
+      "objectType": "MTT",
+      "path": "/Explore/CDI Examples/Enterprise Data Warehousing through API",
+      "metadata": {
+         "additionalInfo": {
+            "contentType": "JSON",
+            "description": "",
+            "documentState": "VALID"
+         },
+         "contextAttributes": [
+            {
+               "name": "id",
+               "value": "@1"
+            }
+         ],
+         "modelVersion": {
+            "major": 0,
+            "minor": 0
+         },
+         "objectRefs": [],
+         "repoInfo": {
+            "repoHandle": "01013R0Z00000000002Z"
+         }
+      }
+   }
+]
