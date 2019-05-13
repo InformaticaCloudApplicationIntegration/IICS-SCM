@@ -1,0 +1,58 @@
+[
+   {
+      "objectGuid": "0ZYWPn39r5abkNQTb4suya",
+      "objectName": "TopStockCode",
+      "objectType": "DTEMPLATE",
+      "path": "/Explore/Default/Enterprise Data Warehousing",
+      "metadata": {
+         "additionalInfo": {
+            "contentType": "JSON",
+            "description": "",
+            "documentState": "VALID"
+         },
+         "contextAttributes": [
+            {
+               "name": "id",
+               "value": "@1"
+            }
+         ],
+         "modelVersion": {
+            "major": 0,
+            "minor": 0
+         },
+         "objectRefs": [
+            "9Vu63gRBru4jysKSMje8aV"
+         ],
+         "repoInfo": {
+            "repoHandle": "01013R1700000000004O"
+         }
+      }
+   },
+   {
+      "objectGuid": "9Vu63gRBru4jysKSMje8aV",
+      "objectName": "MySQL_sales_DW",
+      "objectType": "Connection",
+      "path": "/SYS",
+      "metadata": {
+         "additionalInfo": {
+            "contentType": "JSON",
+            "description": "This is needed for sales DW scenarios",
+            "documentState": "COMPLETE"
+         },
+         "contextAttributes": [
+            {
+               "name": "id",
+               "value": "@1"
+            }
+         ],
+         "modelVersion": {
+            "major": 0,
+            "minor": 0
+         },
+         "objectRefs": [],
+         "repoInfo": {
+            "repoHandle": "01013R0B000000000003"
+         }
+      }
+   }
+]

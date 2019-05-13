@@ -1,0 +1,24 @@
+[
+   {
+      "objectGuid": "fUmUhrbv5erdSNnXSVJKEg",
+      "objectName": "Customer and Invoice Details1",
+      "objectType": "AI_SERVICE_CONNECTOR",
+      "path": "/Explore/Default",
+      "metadata": {
+         "additionalInfo": {
+            "contentType": "application/json; charset=utf-8",
+            "description": "",
+            "documentState": "VALID"
+         },
+         "contextAttributes": null,
+         "modelVersion": {
+            "major": 1,
+            "minor": 0
+         },
+         "objectRefs": [],
+         "repoInfo": {
+            "repoHandle": "fOC2XZPnE29Em2k-gt-332415-2019-01-18T12:23:27.081Z::svc.xml"
+         }
+      }
+   }
+]

@@ -1,0 +1,24 @@
+[
+   {
+      "objectGuid": "elZu2PrNWsCb81uOnND1YF",
+      "objectName": "ConversionRequestPO",
+      "objectType": "PROCESS_OBJECT",
+      "path": "/Explore/Default",
+      "metadata": {
+         "additionalInfo": {
+            "contentType": "application/json; charset=utf-8",
+            "description": "",
+            "documentState": "VALID"
+         },
+         "contextAttributes": null,
+         "modelVersion": {
+            "major": 1,
+            "minor": 0
+         },
+         "objectRefs": [],
+         "repoInfo": {
+            "repoHandle": "EBNjDg8SOlA1vyo-gt-1267002-2019-01-16T04:42:51.494Z::po.xml"
+         }
+      }
+   }
+]

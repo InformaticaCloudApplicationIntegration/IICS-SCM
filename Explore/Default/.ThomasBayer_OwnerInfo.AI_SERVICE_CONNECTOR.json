@@ -1,0 +1,24 @@
+[
+   {
+      "objectGuid": "2qnhxOhDi8KlWaISjOGRez",
+      "objectName": "ThomasBayer_OwnerInfo",
+      "objectType": "AI_SERVICE_CONNECTOR",
+      "path": "/Explore/Default",
+      "metadata": {
+         "additionalInfo": {
+            "contentType": "application/json; charset=utf-8",
+            "description": "",
+            "documentState": "VALID"
+         },
+         "contextAttributes": null,
+         "modelVersion": {
+            "major": 1,
+            "minor": 0
+         },
+         "objectRefs": [],
+         "repoInfo": {
+            "repoHandle": "ydx2CGeFRqXpIW7-gt-1270186-2019-01-16T06:03:38.81Z::svc.xml"
+         }
+      }
+   }
+]

@@ -1,0 +1,47 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>pInLhBJQWSwxF1T-gt-2336-2018-05-28T22:18:43.256Z::conn.xml</types1:EntryId>
+      <types1:Name>Get-Inventory-Detail</types1:Name>
+      <types1:ParentFlowIds>9Gjw4ARW8UBM7zs-gt-1818436-2019-03-06T08:06:09.825Z::pd.xml,XFtclq1iUsRvsGR-gt-575570-2018-12-31T03:21:05.803Z::pd.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+connection</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>luc@na1.dm-us.org</types1:CreatedBy>
+      <types1:CreationDate>2018-05-28T22:18:43Z</types1:CreationDate>
+      <types1:ModifiedBy>luc@na1.dm-us.org</types1:ModifiedBy>
+      <types1:ModificationDate>2018-05-28T22:24:16Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>sorabh@na1.dm-us.org</types1:PublishedBy>
+      <types1:PublicationDate>2018-10-26T09:21:14Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/rt.connection/Get-Inventory-Detail/Get-Inventory-Detail.conn.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <connection xmlns="http://schemas.informatica.com/socrates/data-services/2014/04/avosConnections.xsd"
+                     displayName="Get-Inventory-Detail"
+                     label="Get-Inventory-Detail"
+                     name="Get-Inventory-Detail">
+            <description/>
+            <tags/>
+            <agent/>
+            <attributes/>
+            <businessConnector xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"
+                               agentOnly="false"
+                               connectorPath="project:/rt.connector/Get_Inventory_Detail/Get_Inventory_Detail_svcDef.xml"
+                               guid="gFM4tVrxbOxlomtB2cZ1c8"
+                               name="Get_Inventory_Detail"
+                               supportsConnectionTest="false"
+                               uuid="95147721-a125-409e-9cd4-43b7dd92f804">
+               <description>Connector to interact with InventoryService</description>
+            </businessConnector>
+         </connection>
+      </types1:Entry>
+      <types1:GUID>1PBlgk2eWeOk6rP4fzWy8i</types1:GUID>
+      <types1:DisplayName>Get-Inventory-Detail</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2019-05-13T04:57:04.802Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

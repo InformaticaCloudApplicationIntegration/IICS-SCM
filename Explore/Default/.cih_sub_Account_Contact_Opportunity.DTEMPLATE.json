@@ -1,0 +1,29 @@
+[
+   {
+      "objectGuid": "9MUlJFR8ZQslx64B2fSGeh",
+      "objectName": "cih_sub_Account_Contact_Opportunity",
+      "objectType": "DTEMPLATE",
+      "path": "/Explore/Default",
+      "metadata": {
+         "additionalInfo": {
+            "contentType": "JSON",
+            "description": "Created by the Informatica Cloud Integration Hub Salesforce Accelerator. A mapping that subscribes to data from an Informatica Cloud Integration Hub Salesforce topic.",
+            "documentState": "VALID"
+         },
+         "contextAttributes": [
+            {
+               "name": "id",
+               "value": "@1"
+            }
+         ],
+         "modelVersion": {
+            "major": 0,
+            "minor": 0
+         },
+         "objectRefs": [],
+         "repoInfo": {
+            "repoHandle": "01013R1700000000001E"
+         }
+      }
+   }
+]

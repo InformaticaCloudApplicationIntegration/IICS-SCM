@@ -1,0 +1,24 @@
+[
+   {
+      "objectGuid": "1rAZErm1Fqkbxo5XeHnN0Y",
+      "objectName": "SFTPFileTransferProcess",
+      "objectType": "PROCESS",
+      "path": "/Explore/Default/Temp",
+      "metadata": {
+         "additionalInfo": {
+            "contentType": "Binary",
+            "description": null,
+            "documentState": "VALID"
+         },
+         "contextAttributes": null,
+         "modelVersion": {
+            "major": 1,
+            "minor": 0
+         },
+         "objectRefs": [],
+         "repoInfo": {
+            "repoHandle": "wZaaaa-gt-5423657-2019-03-28T16:27:16.358Z::pd.xml"
+         }
+      }
+   }
+]
