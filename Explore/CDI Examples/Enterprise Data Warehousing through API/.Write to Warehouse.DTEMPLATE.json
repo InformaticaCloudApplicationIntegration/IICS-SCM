@@ -1,0 +1,29 @@
+[
+   {
+      "objectGuid": "0OW9d1lIqgWjCUYpus9bka",
+      "objectName": "Write to Warehouse",
+      "objectType": "DTEMPLATE",
+      "path": "/Explore/CDI Examples/Enterprise Data Warehousing through API",
+      "metadata": {
+         "additionalInfo": {
+            "contentType": "JSON",
+            "description": "",
+            "documentState": "VALID"
+         },
+         "contextAttributes": [
+            {
+               "name": "id",
+               "value": "@1"
+            }
+         ],
+         "modelVersion": {
+            "major": 0,
+            "minor": 0
+         },
+         "objectRefs": [],
+         "repoInfo": {
+            "repoHandle": "01013R1700000000004E"
+         }
+      }
+   }
+]

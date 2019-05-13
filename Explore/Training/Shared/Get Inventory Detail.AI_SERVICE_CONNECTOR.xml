@@ -1,0 +1,99 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>S1BghuImXycotFg-gt-21933-2018-05-28T22:18:42.713Z::svc.xml</types1:EntryId>
+      <types1:Name>Get_Inventory_Detail</types1:Name>
+      <types1:ParentFlowIds>pInLhBJQWSwxF1T-gt-2336-2018-05-28T22:18:43.256Z::conn.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+businesssconnector</types1:MimeType>
+      <types1:Description>Connector to interact with InventoryService</types1:Description>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>luc@na1.dm-us.org</types1:CreatedBy>
+      <types1:CreationDate>2018-05-28T22:18:43Z</types1:CreationDate>
+      <types1:ModifiedBy>sorabh@na1.dm-us.org</types1:ModifiedBy>
+      <types1:ModificationDate>2018-09-18T04:51:43Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>sorabh@na1.dm-us.org</types1:PublishedBy>
+      <types1:PublicationDate>2018-09-18T04:51:48Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/rt.connector/Get_Inventory_Detail/Get_Inventory_Detail_svcDef.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <businessConnector xmlns="http://schemas.informatica.com/socrates/data-services/2014/05/business-connector-model.xsd"
+                            agentOnly="false"
+                            debug="false"
+                            displayName="Get Inventory Detail"
+                            label=""
+                            name="Get_Inventory_Detail"
+                            uuid="95147721-a125-409e-9cd4-43b7dd92f804">
+            <description>Connector to interact with InventoryService</description>
+            <tags/>
+            <connectionAttributes xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"/>
+            <actions>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="getInventoryDetail"
+                       maxRedirects="100"
+                       name="getInventoryDetail"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Returns item pricing details given item name.</description>
+                  <input>
+                     <parameter label="Item Name"
+                                name="ItemName"
+                                required="false"
+                                testWith="item1"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="https://na1.ai.dm-us.informaticacloud.com/active-bpel/public/rt/6w10pMc8bwmkGpCQs9xkSM/Inventory_Detail_Service"
+                                        verb="GET"/>
+                  </binding>
+                  <output>
+                     <field description="Boolean flag to indicate if item was found."
+                            name="ItemFound"
+                            type="boolean">
+                        <xquery>{string(//status) = "found"}</xquery>
+                     </field>
+                     <field description="ItemDetail only if item was found."
+                            name="Item"
+                            type="reference">
+                        <options>
+                           <option name="referenceTo">ItemDetail</option>
+                        </options>
+                        <xquery>&lt;ItemDetail&gt;
+   &lt;name&gt;{string(//name/text())}&lt;/name&gt;
+   &lt;costprice&gt;{string(//cost/text())}&lt;/costprice&gt;
+   &lt;sellprice&gt;{string(//sell/text())}&lt;/sellprice&gt;
+   &lt;commission&gt;{string(//comm/text())}&lt;/commission&gt;
+   &lt;salesperson&gt;{string(//salesperson/text())}&lt;/salesperson&gt;
+&lt;/ItemDetail&gt;</xquery>
+                     </field>
+                  </output>
+               </action>
+            </actions>
+            <objects>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="ItemDetail">
+                  <description/>
+                  <detail>
+                     <field name="name" type="string"/>
+                     <field name="costprice" type="double"/>
+                     <field name="sellprice" type="double"/>
+                     <field name="commission" type="double"/>
+                     <field name="salesperson" type="string"/>
+                  </detail>
+               </processObject>
+            </objects>
+         </businessConnector>
+      </types1:Entry>
+      <types1:GUID>gFM4tVrxbOxlomtB2cZ1c8</types1:GUID>
+      <types1:DisplayName>Get Inventory Detail</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2019-05-13T04:57:04.301Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

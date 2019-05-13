@@ -1,0 +1,58 @@
+[
+   {
+      "objectGuid": "joQOJgEBRYKkdhyNJvWpyd",
+      "objectName": "SK_Con_FF_Auto",
+      "objectType": "Connection",
+      "path": "/SYS",
+      "metadata": {
+         "additionalInfo": {
+            "contentType": "JSON",
+            "description": "Flat File connection for CMD Sorter Automation",
+            "documentState": "COMPLETE"
+         },
+         "contextAttributes": [
+            {
+               "name": "id",
+               "value": "@1"
+            }
+         ],
+         "modelVersion": {
+            "major": 0,
+            "minor": 0
+         },
+         "objectRefs": [
+            "7iz1Y76h4ozeAGHzjtPjwP"
+         ],
+         "repoInfo": {
+            "repoHandle": "01013R0B00000000002Z"
+         }
+      }
+   },
+   {
+      "objectGuid": "7iz1Y76h4ozeAGHzjtPjwP",
+      "objectName": "psrlcldqamn001",
+      "objectType": "AgentGroup",
+      "path": "/SYS",
+      "metadata": {
+         "additionalInfo": {
+            "contentType": "JSON",
+            "description": null,
+            "documentState": "VALID"
+         },
+         "contextAttributes": [
+            {
+               "name": "id",
+               "value": "@1"
+            }
+         ],
+         "modelVersion": {
+            "major": 0,
+            "minor": 0
+         },
+         "objectRefs": [],
+         "repoInfo": {
+            "repoHandle": "01013R2500000000000I"
+         }
+      }
+   }
+]

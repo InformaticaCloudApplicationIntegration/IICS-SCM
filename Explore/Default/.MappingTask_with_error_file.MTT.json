@@ -1,0 +1,142 @@
+[
+   {
+      "objectGuid": "2juF5gcGSwWezaOxfFABQ1",
+      "objectName": "MappingTask_with_error_file",
+      "objectType": "MTT",
+      "path": "/Explore/Default",
+      "metadata": {
+         "additionalInfo": {
+            "contentType": null,
+            "description": "",
+            "documentState": "VALID"
+         },
+         "contextAttributes": [
+            {
+               "name": "id",
+               "value": "@1"
+            }
+         ],
+         "modelVersion": {
+            "major": 0,
+            "minor": 0
+         },
+         "objectRefs": [
+            "7kX411S4axjlXraCenEM8E",
+            "38DqhsmSRrCloDOdwHHRmC",
+            "6J6jAzrzi1thtyRRpiiykQ",
+            "53TxoKvd2YLggHKaMtguQi"
+         ],
+         "repoInfo": {
+            "repoHandle": "01013R0Z00000000003C"
+         }
+      }
+   },
+   {
+      "objectGuid": "7kX411S4axjlXraCenEM8E",
+      "objectName": "VM-CDI",
+      "objectType": "AgentGroup",
+      "path": "/SYS",
+      "metadata": {
+         "additionalInfo": {
+            "contentType": "JSON",
+            "description": null,
+            "documentState": "VALID"
+         },
+         "contextAttributes": [
+            {
+               "name": "id",
+               "value": "@1"
+            }
+         ],
+         "modelVersion": {
+            "major": 0,
+            "minor": 0
+         },
+         "objectRefs": [],
+         "repoInfo": {
+            "repoHandle": "01013R2500000000000O"
+         }
+      }
+   },
+   {
+      "objectGuid": "38DqhsmSRrCloDOdwHHRmC",
+      "objectName": "Azure  SQL DW_Customer",
+      "objectType": "Connection",
+      "path": "/SYS",
+      "metadata": {
+         "additionalInfo": {
+            "contentType": "JSON",
+            "description": null,
+            "documentState": "COMPLETE"
+         },
+         "contextAttributes": [
+            {
+               "name": "id",
+               "value": "@1"
+            }
+         ],
+         "modelVersion": {
+            "major": 0,
+            "minor": 0
+         },
+         "objectRefs": [],
+         "repoInfo": {
+            "repoHandle": "01013R0B00000000003I"
+         }
+      }
+   },
+   {
+      "objectGuid": "6J6jAzrzi1thtyRRpiiykQ",
+      "objectName": "Mapping with error file",
+      "objectType": "DTEMPLATE",
+      "path": "/Explore/Play pen/Meenakshi",
+      "metadata": {
+         "additionalInfo": {
+            "contentType": "JSON",
+            "description": "",
+            "documentState": "VALID"
+         },
+         "contextAttributes": [
+            {
+               "name": "id",
+               "value": "@1"
+            }
+         ],
+         "modelVersion": {
+            "major": 0,
+            "minor": 0
+         },
+         "objectRefs": [],
+         "repoInfo": {
+            "repoHandle": "01013R1700000000004T"
+         }
+      }
+   },
+   {
+      "objectGuid": "53TxoKvd2YLggHKaMtguQi",
+      "objectName": "VM-cdi-FF",
+      "objectType": "Connection",
+      "path": "/SYS",
+      "metadata": {
+         "additionalInfo": {
+            "contentType": "JSON",
+            "description": null,
+            "documentState": "COMPLETE"
+         },
+         "contextAttributes": [
+            {
+               "name": "id",
+               "value": "@1"
+            }
+         ],
+         "modelVersion": {
+            "major": 0,
+            "minor": 0
+         },
+         "objectRefs": [],
+         "repoInfo": {
+            "repoHandle": "01013R0B00000000003E"
+         }
+      }
+   }
+]

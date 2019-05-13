@@ -1,0 +1,29 @@
+[
+   {
+      "objectGuid": "72dXcVmTFk3cxVvV7RmKMX",
+      "objectName": "cih_pub_Account_Contact_Opportunity",
+      "objectType": "DTEMPLATE",
+      "path": "/Explore/Default",
+      "metadata": {
+         "additionalInfo": {
+            "contentType": "JSON",
+            "description": "Created by the Informatica Cloud Integration Hub Salesforce Accelerator. A mapping that publishes data from Salesforce to Informatica Cloud Integration Hub.",
+            "documentState": "VALID"
+         },
+         "contextAttributes": [
+            {
+               "name": "id",
+               "value": "@1"
+            }
+         ],
+         "modelVersion": {
+            "major": 0,
+            "minor": 0
+         },
+         "objectRefs": [],
+         "repoInfo": {
+            "repoHandle": "01013R1700000000001D"
+         }
+      }
+   }
+]

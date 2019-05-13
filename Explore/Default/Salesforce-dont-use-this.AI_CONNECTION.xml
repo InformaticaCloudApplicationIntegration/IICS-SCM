@@ -1,0 +1,54 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>lKchKGXShOeCFk4-gt-120383-2018-11-30T10:31:43.189Z::conn.xml</types1:EntryId>
+      <types1:Name>Salesforce-dont-use-this</types1:Name>
+      <types1:MimeType>application/xml+connection</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>mandar@na1.dm-us.org</types1:CreatedBy>
+      <types1:CreationDate>2018-11-30T10:31:43Z</types1:CreationDate>
+      <types1:ModifiedBy>luc@na1.dm-us.org</types1:ModifiedBy>
+      <types1:ModificationDate>2019-02-25T21:00:10Z</types1:ModificationDate>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <connection xmlns="http://schemas.informatica.com/socrates/data-services/2014/04/avosConnections.xsd"
+                     displayName="Salesforce-dont-use-this"
+                     label="Salesforce-dont-use-this"
+                     name="Salesforce-dont-use-this">
+            <description/>
+            <tags/>
+            <agent/>
+            <attributes/>
+            <soaConnector xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"
+                          connectorPath="project:/com.activevos.cumulus.cloud.extend.playbook.configuration/config/sfConnector.xml"
+                          name="Salesforce"
+                          supportsConnectionTest="true"
+                          supportsOData="true"
+                          uuid="05fc48f1-e6e1-441b-b700-bac396ca2ed1">
+               <description>Salesforce.com SOA based data connector.</description>
+            </soaConnector>
+            <authentication type="$infa_basicform">
+               <attributes>
+                  <attribute encrypted="false"
+                             name="username"
+                             value="msarnaik@informatica.com.pm3"/>
+                  <attribute encrypted="true" name="password" value=""/>
+                  <attribute encrypted="true" name="token" value=""/>
+                  <attribute encrypted="false"
+                             name="serviceUrl"
+                             value="https://login.salesforce.com/services/Soap/c/40.0"/>
+               </attributes>
+            </authentication>
+         </connection>
+      </types1:Entry>
+      <types1:GUID>kwY17ZWJFAJlP8bUjWWhMl</types1:GUID>
+      <types1:DisplayName>Salesforce-dont-use-this</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2019-05-13T04:57:01.672Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>
