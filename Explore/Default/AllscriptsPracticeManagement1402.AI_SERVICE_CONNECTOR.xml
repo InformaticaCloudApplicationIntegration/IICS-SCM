@@ -1,0 +1,2583 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>uu3cjAXhNUdyOoM-gt-123374-2018-08-17T06:04:23.366Z::svc.xml</types1:EntryId>
+      <types1:Name>AllscriptsPracticeManagement1402</types1:Name>
+      <types1:MimeType>application/xml+businesssconnector</types1:MimeType>
+      <types1:Description>Allscripts Practice Management APIs for PRO-PM GA Practice Management 14.0.2 (AZURE)</types1:Description>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>sagarwal@svccon.com</types1:CreatedBy>
+      <types1:CreationDate>2018-08-17T06:04:23Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <businessConnector xmlns="http://schemas.informatica.com/socrates/data-services/2014/05/business-connector-model.xsd"
+                            agentOnly="false"
+                            debug="false"
+                            displayName="AllscriptsPracticeManagement1402"
+                            label=""
+                            name="AllscriptsPracticeManagement1402"
+                            uuid="a92ea0cf-aee3-4c5c-8726-329a8e82e1ae">
+            <description>Allscripts Practice Management APIs for PRO-PM GA Practice Management 14.0.2 (AZURE)</description>
+            <connectionAttributes xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd">
+               <connectionAttribute description=""
+                                    masked="false"
+                                    name="username"
+                                    required="false"
+                                    testWith="Infor-0a7b-POC-test"
+                                    type="string"/>
+               <connectionAttribute description=""
+                                    masked="false"
+                                    name="password"
+                                    required="false"
+                                    testWith="#n4!re@tfC@7!rp8r@T9!Np1Ct%Sta"
+                                    type="string"/>
+               <connectionAttribute description=""
+                                    masked="false"
+                                    name="Appname"
+                                    required="false"
+                                    testWith="InformaticaCorporation.POC.TestApp"
+                                    type="string"/>
+               <connectionAttribute description=""
+                                    masked="false"
+                                    name="AppUserID"
+                                    required="false"
+                                    testWith="demo1"
+                                    type="string"/>
+            </connectionAttributes>
+            <actions>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="Echo"
+                       maxRedirects="100"
+                       name="Echo"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description/>
+                  <input/>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="http://pm.unitysandbox.com/UnityPM/unityservice.svc/json/MagicJson"
+                                        verb="POST">
+                        <httpHeaders>
+                           <header name="Content-Type">application/json</header>
+                        </httpHeaders>
+                        <body>{{"Action":"Echo", "Appname":"", "AppUserID":"", "PatientID":"", "Token":"", "Parameter1":"", "Parameter2":"", "Parameter3":"", "Parameter4":"", "Parameter5":"", "Parameter6":"", "Data":""}}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="GetToken"
+                       maxRedirects="100"
+                       name="GetToken"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description/>
+                  <input/>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="http://pm.unitysandbox.com/UnityPM/unityservice.svc/json/GetToken"
+                                        verb="POST">
+                        <otherParams>
+                           <otherParam name="Username">{$username}</otherParam>
+                           <otherParam name="Password">{$password}</otherParam>
+                        </otherParams>
+                        <httpHeaders>
+                           <header name="Content-Type">application/json</header>
+                        </httpHeaders>
+                        <body generateUsing="JSON" preserveJsonStringFormatting="false"/>
+                     </restSimpleBinding>
+                  </binding>
+                  <output>
+                     <field attachment="true"
+                            description=""
+                            name="TokenAttachment"
+                            type="attachment"/>
+                  </output>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="GetUserAuthentication"
+                       maxRedirects="100"
+                       name="GetUserAuthentication"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Authenticates a user against the PM system. This ties the Unity Security Token to the authenticated user.</description>
+                  <input>
+                     <parameter name="Appname"
+                                required="true"
+                                testWith="&#34;InformaticaCorporation.POC.TestApp&#34;"
+                                type="string"/>
+                     <parameter name="AppUserID"
+                                required="true"
+                                testWith="&#34;demo1&#34;"
+                                type="string"/>
+                     <parameter name="Token"
+                                required="true"
+                                testWith="&#34;84303F50-4517-45C2-8EEF-8BDAA5956A84&#34;"
+                                type="string"/>
+                     <parameter description="Allscripts Practice Management password"
+                                name="Password"
+                                required="true"
+                                testWith="&#34;Password07!&#34;"
+                                type="string"/>
+                     <parameter name="ClientID" required="false" testWith="&#34;&#34;" type="string"/>
+                     <parameter description="Application Version (for version matrix checking)"
+                                name="AppVersion"
+                                required="false"
+                                testWith="&#34;&#34;"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="http://pm.unitysandbox.com/UnityPM/unityservice.svc/json/MagicJson"
+                                        verb="POST">
+                        <httpHeaders>
+                           <header name="Content-Type">application/json</header>
+                        </httpHeaders>
+                        <body>{{"Action":"GetUserAuthentication", "Appname":{$Appname}, "AppUserID":{$AppUserID}, "PatientID":"", "Token":{$Token}, "Parameter1":{$Password}, "Parameter2":"", "Parameter3":"", "Parameter4":"", "Parameter5":"", "Parameter6":"", "Data":""}}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="GetServerInfo"
+                       maxRedirects="100"
+                       name="GetServerInfo"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Gets local information about the server hosting the Unity web service.</description>
+                  <input>
+                     <parameter name="Appname"
+                                required="true"
+                                testWith="&#34;InformaticaCorporation.POC.TestApp&#34;"
+                                type="string"/>
+                     <parameter name="Token"
+                                required="true"
+                                testWith="&#34;ED24CC1E-90E6-4101-A2C0-0A6CB7843F4A&#34;"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="http://pm.unitysandbox.com/UnityPM/unityservice.svc/json/MagicJson"
+                                        verb="POST">
+                        <httpHeaders>
+                           <header name="Content-Type">application/json</header>
+                        </httpHeaders>
+                        <body>{{"Action":"GetServerInfo", "Appname":{$Appname}, "AppUserID":"", "PatientID":"", "Token":{$Token}, "Parameter1":"", "Parameter2":"", "Parameter3":"", "Parameter4":"", "Parameter5":"", "Parameter6":"", "Data":""}}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="GetAdditionalInfoByPatient"
+                       maxRedirects="100"
+                       name="GetAdditionalInfoByPatient"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Return all additional info fields and their corresponding values if present for specified patient.
+			</description>
+                  <input>
+                     <parameter name="Appname"
+                                required="true"
+                                testWith="&#34;InformaticaCorporation.POC.TestApp&#34;"
+                                type="string"/>
+                     <parameter name="AppUserID"
+                                required="true"
+                                testWith="&#34;demo1&#34;"
+                                type="string"/>
+                     <parameter name="PatientID"
+                                required="false"
+                                testWith="&#34;33283&#34;"
+                                type="string"/>
+                     <parameter name="Token"
+                                required="true"
+                                testWith="&#34;ED24CC1E-90E6-4101-A2C0-0A6CB7843F4A&#34;"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="http://pm.unitysandbox.com/UnityPM/unityservice.svc/json/MagicJson"
+                                        verb="POST">
+                        <httpHeaders>
+                           <header name="Content-Type">application/json</header>
+                        </httpHeaders>
+                        <body>{{"Action":"GetAdditionalInfoByPatient", "Appname":{$Appname}, "AppUserID":{$AppUserID}, "PatientID":{$PatientID}, "Token":{$Token}, "Parameter1":"", "Parameter2":"", "Parameter3":"", "Parameter4":"", "Parameter5":"", "Parameter6":"", "Data":""}}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="GetGenders"
+                       maxRedirects="100"
+                       name="GetGenders"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Returns valid values for Gender. </description>
+                  <input>
+                     <parameter label="Appname"
+                                name="Appname"
+                                required="true"
+                                testWith="&#34;InformaticaCorporation.POC.TestApp&#34;"
+                                type="string"/>
+                     <parameter label="AppUserID"
+                                name="AppUserID"
+                                required="true"
+                                testWith="&#34;demo1&#34;"
+                                type="string"/>
+                     <parameter label="Token"
+                                name="Token"
+                                required="true"
+                                testWith="&#34;ED24CC1E-90E6-4101-A2C0-0A6CB7843F4A&#34;"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="http://pm.unitysandbox.com/UnityPM/unityservice.svc/json/MagicJson"
+                                        verb="POST">
+                        <httpHeaders>
+                           <header name="Content-Type">application/json</header>
+                        </httpHeaders>
+                        <body>{{"Action":"GetGenders", "Appname":{$Appname}, "AppUserID":{$AppUserID}, "PatientID":"", "Token":{$Token}, "Parameter1":"", "Parameter2":"", "Parameter3":"", "Parameter4":"", "Parameter5":"", "Parameter6":"", "Data":""}}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="GetMaritalStatuses"
+                       maxRedirects="100"
+                       name="GetMaritalStatuses"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Returns valid values for Marital Status. </description>
+                  <input>
+                     <parameter name="Appname"
+                                required="true"
+                                testWith="&#34;InformaticaCorporation.POC.TestApp&#34;"
+                                type="string"/>
+                     <parameter name="AppUserID"
+                                required="true"
+                                testWith="&#34;demo1&#34;"
+                                type="string"/>
+                     <parameter name="Token"
+                                required="true"
+                                testWith="&#34;ED24CC1E-90E6-4101-A2C0-0A6CB7843F4A&#34;"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="http://pm.unitysandbox.com/UnityPM/unityservice.svc/json/MagicJson"
+                                        verb="POST">
+                        <httpHeaders>
+                           <header name="Content-Type">application/json</header>
+                        </httpHeaders>
+                        <body>{{"Action":"GetMaritalStatuses", "Appname":{$Appname}, "AppUserID":{$AppUserID}, "PatientID":"", "Token":{$Token}, "Parameter1":"", "Parameter2":"", "Parameter3":"", "Parameter4":"", "Parameter5":"", "Parameter6":"", "Data":""}}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="GetPatient"
+                       maxRedirects="100"
+                       name="GetPatient"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Returns a patient's demographic information, including insurance, guarantor, and PCP information.
+			</description>
+                  <input>
+                     <parameter name="Appname"
+                                required="true"
+                                testWith="&#34;InformaticaCorporation.POC.TestApp&#34;"
+                                type="string"/>
+                     <parameter name="AppUserID"
+                                required="true"
+                                testWith="&#34;demo1&#34;"
+                                type="string"/>
+                     <parameter description="Internal patient identifier. If not supplied, parameter 1 is required."
+                                name="PatientID"
+                                required="false"
+                                testWith="&#34;35573&#34;"
+                                type="string"/>
+                     <parameter name="Token"
+                                required="true"
+                                testWith="48E53FB6-C24D-4A2D-99F7-946B410C78AC"
+                                type="string"/>
+                     <parameter description="PM Patient number"
+                                name="PatientNumber"
+                                required="false"
+                                testWith="&#34;&#34;"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="http://pm.unitysandbox.com/UnityPM/unityservice.svc/json/MagicJson"
+                                        verb="POST">
+                        <httpHeaders>
+                           <header name="Content-Type">application/json</header>
+                        </httpHeaders>
+                        <body>{{"Action":"GetPatient", "Appname":{$Appname}, "AppUserID":{$AppUserID}, "PatientID":{$PatientID}, "Token":{$Token}, "Parameter1":{$PatientNumber}, "Parameter2":"", "Parameter3":"", "Parameter4":"", "Parameter5":"", "Parameter6":"", "Data":""}}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="GetPatientAdditionalInfoValues"
+                       maxRedirects="100"
+                       name="GetPatientAdditionalInfoValues"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Returns valid values for any patient additional info field with a field type of combo box.
+			</description>
+                  <input>
+                     <parameter name="Appname"
+                                required="true"
+                                testWith="&#34;InformaticaCorporation.POC.TestApp&#34;"
+                                type="string"/>
+                     <parameter name="AppUserID"
+                                required="true"
+                                testWith="&#34;demo1&#34;"
+                                type="string"/>
+                     <parameter name="Token"
+                                required="true"
+                                testWith="&#34;ED24CC1E-90E6-4101-A2C0-0A6CB7843F4A&#34;"
+                                type="string"/>
+                     <parameter description="Patient additional info field name with a field type of combo box."
+                                name="AdditionalInfo"
+                                required="true"
+                                testWith="&#34;Race&#34;"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="http://pm.unitysandbox.com/UnityPM/unityservice.svc/json/MagicJson"
+                                        verb="POST">
+                        <httpHeaders>
+                           <header name="Content-Type">application/json</header>
+                        </httpHeaders>
+                        <body>{{"Action":"GetPatientAdditionalInfoValues", "Appname":{$Appname}, "AppUserID":{$AppUserID}, "PatientID":"", "Token":{$Token}, "Parameter1":{$AdditionalInfo}, "Parameter2":"", "Parameter3":"", "Parameter4":"", "Parameter5":"", "Parameter6":"", "Data":""}}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="GetPatientByMRN"
+                       maxRedirects="100"
+                       name="GetPatientByMRN"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Get patient demographics by MRN.
+			</description>
+                  <input>
+                     <parameter name="Appname"
+                                required="true"
+                                testWith="&#34;InformaticaCorporation.POC.TestApp&#34;"
+                                type="string"/>
+                     <parameter name="AppUserID"
+                                required="true"
+                                testWith="&#34;demo1&#34;"
+                                type="string"/>
+                     <parameter name="Token"
+                                required="true"
+                                testWith="&#34;5EF7F632-BA83-4E7E-8B03-A5B93F738DD0&#34;"
+                                type="string"/>
+                     <parameter description="Patient's medical record number."
+                                name="MRN"
+                                required="true"
+                                testWith="&#34;2&#34;"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="http://pm.unitysandbox.com/UnityPM/unityservice.svc/json/MagicJson"
+                                        verb="POST">
+                        <httpHeaders>
+                           <header name="Content-Type">application/json</header>
+                        </httpHeaders>
+                        <body>{{"Action":"GetPatientByMRN", "Appname":{$Appname}, "AppUserID":{$AppUserID}, "PatientID":"", "Token":{$Token}, "Parameter1":{$MRN}, "Parameter2":"", "Parameter3":"", "Parameter4":"", "Parameter5":"", "Parameter6":"", "Data":""}}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="GetPatientDemographics"
+                       maxRedirects="100"
+                       name="GetPatientDemographics"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Returns basic patient demographic information such as name, age, sex, and contact information. To retrieve a more comprehensive set of demographic data (including insurance, PCP, and other information), use GetPatient or GetPatientByMRN.
+			</description>
+                  <input>
+                     <parameter name="Appname"
+                                required="true"
+                                testWith="&#34;InformaticaCorporation.POC.TestApp&#34;"
+                                type="string"/>
+                     <parameter name="AppUserID"
+                                required="true"
+                                testWith="&#34;demo1&#34;"
+                                type="string"/>
+                     <parameter description="Allscripts Internal Patient ID"
+                                name="PatientID"
+                                required="true"
+                                testWith="&#34;22&#34;"
+                                type="string"/>
+                     <parameter name="Token"
+                                required="true"
+                                testWith="&#34;ED24CC1E-90E6-4101-A2C0-0A6CB7843F4A&#34;"
+                                type="string"/>
+                     <parameter description="PM Patient Number"
+                                name="PatientNumber"
+                                required="false"
+                                testWith="&#34;200&#34;"
+                                type="string"/>
+                     <parameter description="When set to &#34;Y&#34;, all contacts that share an account will be returned."
+                                name="AccountFlag"
+                                required="false"
+                                testWith="&#34;Y&#34;"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="http://pm.unitysandbox.com/UnityPM/unityservice.svc/json/MagicJson"
+                                        verb="POST">
+                        <httpHeaders>
+                           <header name="Content-Type">application/json</header>
+                        </httpHeaders>
+                        <body>{{"Action":"GetPatientDemographics", "Appname":{$Appname}, "AppUserID":{$AppUserID}, "PatientID":{$PatientID}, "Token":{$Token}, "Parameter1":{$PatientNumber}, "Parameter2":{$AccountFlag}, "Parameter3":"", "Parameter4":"", "Parameter5":"", "Parameter6":"", "Data":""}}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="GetRelationships"
+                       maxRedirects="100"
+                       name="GetRelationships"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Returns valid values for Relationship based on relationship type (Guarantor, Subscriber, Emergency Contact). 
+			</description>
+                  <input>
+                     <parameter name="Appname"
+                                required="true"
+                                testWith="&#34;InformaticaCorporation.POC.TestApp&#34;"
+                                type="string"/>
+                     <parameter name="AppUserID"
+                                required="true"
+                                testWith="&#34;demo1&#34;"
+                                type="string"/>
+                     <parameter name="Token"
+                                required="true"
+                                testWith="&#34;ED24CC1E-90E6-4101-A2C0-0A6CB7843F4A&#34;"
+                                type="string"/>
+                     <parameter description="E = Emergency Contact&#xA;G = Guarantor&#xA;S = Subscriber"
+                                name="RelationshipType"
+                                required="true"
+                                testWith="&#34;E&#34;"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="http://pm.unitysandbox.com/UnityPM/unityservice.svc/json/MagicJson"
+                                        verb="POST">
+                        <httpHeaders>
+                           <header name="Content-Type">application/json</header>
+                        </httpHeaders>
+                        <body>{{"Action":"GetRelationships", "Appname":{$Appname}, "AppUserID":{$AppUserID}, "PatientID":"", "Token":{$Token}, "Parameter1":{$RelationshipType}, "Parameter2":"", "Parameter3":"", "Parameter4":"", "Parameter5":"", "Parameter6":"", "Data":""}}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="SavePatient"
+                       maxRedirects="100"
+                       name="SavePatient"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Adds or updates patient demographic information.
+			</description>
+                  <input>
+                     <parameter name="Token"
+                                required="true"
+                                testWith="6753B5D8-8C5C-4C1C-8667-ACF7F55C7D0A"
+                                type="string"/>
+                     <parameter description="&lt;patient&gt;&#xA;  &lt;patientID&gt;21&lt;/patientID&gt; &lt;!-- specify if updating a patient --&gt;&#xA;  &lt;lastName&gt;Collections&lt;/lastName&gt;&#xA;  &lt;firstName&gt;Carrie&lt;/firstName&gt;&#xA;  &lt;mi&gt;&lt;/mi&gt;&#xA;  &lt;suffix&gt;&lt;/suffix&gt;&#xA;  &lt;gender&gt;F&lt;/gender&gt; &#xA;  &lt;ssn&gt;555555555&lt;/ssn&gt;&#xA;  &lt;dob&gt;1980-01-25&lt;/dob&gt;&#xA;  &lt;street1&gt;123 Blue Street&lt;/street1&gt;&#xA;  &lt;street2&gt;Apartment 321&lt;/street2&gt;&#xA;  &lt;city&gt;Santa Clara&lt;/city&gt;&#xA;  &lt;state&gt;CA&lt;/state&gt;&#xA;  &lt;zip&gt;99999&lt;/zip&gt;&#xA;  &lt;phone&gt;3122345467&lt;/phone&gt;&#xA;  &lt;workphone&gt;2125551212&lt;/workphone&gt;&#xA;  &lt;workphoneext&gt;1234&lt;/workphoneext&gt;&#xA;  &lt;cellphone&gt;2127771212&lt;/cellphone&gt;&#xA;  &lt;email&gt;test@example.com&lt;/email&gt;&#xA;  &lt;ethnicity&gt;Not Hispanic / Latino&lt;/ethnicity&gt;&#xA;  &lt;language&gt;Swahili&lt;/language&gt;&#xA;  &lt;race&gt;American Indian/Alaska Native&lt;/race&gt;&#xA;  &lt;maritalstatus&gt;X&lt;/maritalstatus&gt;&#xA;  &lt;HIPAAStmtExp&gt;5/5/2020&lt;/HIPAAStmtExp&gt;&#xA;  &lt;usualprov&gt;MARFEE&lt;/usualprov&gt;&lt;!-- GetPractitioners.Abbreviation --&gt;&#xA;  &lt;referringdr&gt;MARFEE&lt;/referringdr&gt;&lt;!-- GetPractitioners.Abbreviation --&gt;&#xA;  &lt;pcp&gt;MARFEE&lt;/pcp&gt;&lt;!-- GetPractitioners.Abbreviation --&gt;&#xA;  &lt;employer&gt;AHS&lt;/employer&gt;&lt;!-- GetEmployers.Abbreviation --&gt;&#xA;  &lt;employmentstatus/&gt;&#xA;  &lt;studentstatus/&gt;&#xA;  &lt;IsGuarantor/&gt;&lt;!-- Y/N --&gt;&#xA;  &lt;RelationToGuarantor/&gt;&#xA;  &lt;IsEmergencyContact/&gt;&lt;!--Y/N --&gt;&#xA;  &lt;EmergencyContactRelation/&gt;&#xA;&lt;/patient&gt;"
+                                name="XMLPayLoad"
+                                nogen="true"
+                                required="true"
+                                testWith="&lt;patient&gt;   &lt;patientID&gt;&lt;/patientID&gt; &lt;!-- specify if updating a patient --&gt;   &lt;lastName&gt;Collins&lt;/lastName&gt;   &lt;firstName&gt;Carrie&lt;/firstName&gt;   &lt;mi&gt;&lt;/mi&gt;   &lt;suffix&gt;&lt;/suffix&gt;   &lt;gender&gt;F&lt;/gender&gt;    &lt;ssn&gt;555555555&lt;/ssn&gt;   &lt;dob&gt;1980-01-25&lt;/dob&gt;   &lt;street1&gt;123 Blue Street&lt;/street1&gt;   &lt;street2&gt;Apartment 321&lt;/street2&gt;   &lt;city&gt;Santa Clara&lt;/city&gt;   &lt;state&gt;CA&lt;/state&gt;   &lt;zip&gt;99999&lt;/zip&gt;   &lt;phone&gt;3122345467&lt;/phone&gt;   &lt;workphone&gt;2125551212&lt;/workphone&gt;   &lt;workphoneext&gt;1234&lt;/workphoneext&gt;   &lt;cellphone&gt;2127771212&lt;/cellphone&gt;   &lt;email&gt;test@example.com&lt;/email&gt;   &lt;ethnicity&gt;&lt;/ethnicity&gt;   &lt;language&gt;English&lt;/language&gt;   &lt;race&gt;American Indian/Alaska Native&lt;/race&gt;   &lt;maritalstatus&gt;X&lt;/maritalstatus&gt;   &lt;HIPAAStmtExp&gt;5/5/2020&lt;/HIPAAStmtExp&gt;   &lt;usualprov&gt;MARFEE&lt;/usualprov&gt;&lt;!-- GetPractitioners.Abbreviation --&gt;   &lt;referringdr&gt;MARFEE&lt;/referringdr&gt;&lt;!-- GetPractitioners.Abbreviation --&gt;   &lt;pcp&gt;MARFEE&lt;/pcp&gt;&lt;!-- GetPractitioners.Abbreviation --&gt;   &lt;employer&gt;AHS&lt;/employer&gt;&lt;!-- GetEmployers.Abbreviation --&gt;   &lt;employmentstatus&gt;&lt;/employmentstatus&gt;   &lt;studentstatus&gt;&lt;/studentstatus&gt;   &lt;IsGuarantor&gt;&lt;/IsGuarantor&gt;&lt;!-- Y/N --&gt;   &lt;RelationToGuarantor&gt;&lt;/RelationToGuarantor&gt;   &lt;IsEmergencyContact&gt;&lt;/IsEmergencyContact&gt;&lt;!--Y/N --&gt;   &lt;EmergencyContactRelation&gt;&lt;/EmergencyContactRelation&gt; &lt;/patient&gt;"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="http://pm.unitysandbox.com/UnityPM/unityservice.svc/json/MagicJson"
+                                        verb="POST">
+                        <otherParams>
+                           <otherParam name="Parameter2">{$XMLPayLoad}</otherParam>
+                           <otherParam name="Data">{fn:concat(' ',' ')}</otherParam>
+                           <otherParam name="Action">SavePatient</otherParam>
+                           <otherParam name="Appname">{$Appname}</otherParam>
+                           <otherParam name="AppUserID">{$AppUserID}</otherParam>
+                           <otherParam name="Parameter1"/>
+                        </otherParams>
+                        <httpHeaders>
+                           <header name="Content-Type">application/json</header>
+                        </httpHeaders>
+                        <body generateUsing="JSON" preserveJsonStringFormatting="false"/>
+                     </restSimpleBinding>
+                  </binding>
+                  <output>
+                     <field description="" name="SavePatientResponse" type="reference">
+                        <options>
+                           <option name="referenceTo">SavePatientResponse</option>
+                        </options>
+                        <xquery>{//savepatientinfo}</xquery>
+                     </field>
+                  </output>
+               </action>
+               <action category=""
+                       failOnError="false"
+                       forSearch="false"
+                       label="SearchPatients"
+                       maxRedirects="100"
+                       name="SearchPatients"
+                       preemptiveAuth="false"
+                       responseEncoding="">
+                  <description>Searches for a patient with arbitrary search parameters. Returns only patients for which the user has access. A maximum of 100 matched patients is returned.
+			</description>
+                  <input>
+                     <parameter name="Token"
+                                required="true"
+                                testWith="48E53FB6-C24D-4A2D-99F7-946B410C78AC"
+                                type="string"/>
+                     <parameter description="Search value. The search value can be any part of the demographics, MRN, or EMPI. Examples include:&#xA;'16483031': Returns patient with the specified MRN number.&#xA;'of': Returns Jesse Hofmann, Waldof Smith, and so forth.&#xA;'Hof, Jes': Returns Jesse Hofmann.&#xA;'Hof Mann,': Returns Jesse Hof mann.&#xA;'Hof, Jes 4/1/1990': Returns Jesse Hofmann born on April 1, 1990.&#xA;'Smith, John 4/1970': Returns all John Smiths born in April 1970.&#xA;'Smith, John 1970': Returns all John Smiths born in 1970.&#xA;'Jesse Ja': Does not return Jesse James Hofmann.&#xA;'J*e*': Returns Jesse Hofmann.&#xA;'J.sse': Returns Jesse Hofmann, but not JeEsse Hofmann."
+                                name="Parameter1"
+                                required="true"
+                                testWith="&lt;search volume=&#34;100&#34;&gt; &#x9; &#x9;&lt;lastname&gt;Coll&lt;/lastname&gt; &#x9; &lt;/search&gt;"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="http://pm.unitysandbox.com/UnityPM/unityservice.svc/json/MagicJson"
+                                        verb="POST">
+                        <otherParams>
+                           <otherParam name="Data">{fn:concat(' ',' ')}</otherParam>
+                           <otherParam name="Action">SearchPatients</otherParam>
+                           <otherParam name="Appname">{$Appname}</otherParam>
+                           <otherParam name="AppUserID">{$AppUserID}</otherParam>
+                        </otherParams>
+                        <httpHeaders>
+                           <header name="Content-Type">application/json</header>
+                        </httpHeaders>
+                        <body generateUsing="JSON" preserveJsonStringFormatting="false"/>
+                     </restSimpleBinding>
+                  </binding>
+                  <output>
+                     <field description="" name="List of Patients" type="objectlist">
+                        <options>
+                           <option name="referenceTo">Patient</option>
+                        </options>
+                        <xquery>{//searchpatientsinfo}</xquery>
+                     </field>
+                  </output>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="GetDiagnoses"
+                       maxRedirects="100"
+                       name="GetDiagnoses"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Returns diagnosis history for a patient or based on a date range.
+			</description>
+                  <input>
+                     <parameter name="Appname"
+                                required="true"
+                                testWith="&#34;InformaticaCorporation.POC.TestApp&#34;"
+                                type="string"/>
+                     <parameter name="AppUserID"
+                                required="true"
+                                testWith="&#34;demo1&#34;"
+                                type="string"/>
+                     <parameter name="PatientID"
+                                required="false"
+                                testWith="&#34;33283&#34;"
+                                type="string"/>
+                     <parameter name="Token"
+                                required="true"
+                                testWith="&#34;ED24CC1E-90E6-4101-A2C0-0A6CB7843F4A&#34;"
+                                type="string"/>
+                     <parameter name="Startdate" required="false" testWith="&#34;&#34;" type="string"/>
+                     <parameter name="Enddate" required="false" testWith="&#34;&#34;" type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="http://pm.unitysandbox.com/UnityPM/unityservice.svc/json/MagicJson"
+                                        verb="POST">
+                        <httpHeaders>
+                           <header name="Content-Type">application/json</header>
+                        </httpHeaders>
+                        <body>{{"Action":"GetDiagnoses", "Appname":{$Appname}, "AppUserID":{$AppUserID}, "PatientID":{$PatientID}, "Token":{$Token}, "Parameter1":{$Startdate}, "Parameter2":{$Enddate}, "Parameter3":"", "Parameter4":"", "Parameter5":"", "Parameter6":"", "Data":""}}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="SetPatientAdditionalInfoValue"
+                       maxRedirects="100"
+                       name="SetPatientAdditionalInfoValue"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Sets the value for the given patient additional info field.
+			</description>
+                  <input>
+                     <parameter name="Appname"
+                                required="true"
+                                testWith="&#34;InformaticaCorporation.POC.TestApp&#34;"
+                                type="string"/>
+                     <parameter name="AppUserID"
+                                required="true"
+                                testWith="&#34;demo1&#34;"
+                                type="string"/>
+                     <parameter name="PatientID"
+                                required="true"
+                                testWith="&#34;33283&#34;"
+                                type="string"/>
+                     <parameter name="Token"
+                                required="true"
+                                testWith="&#34;ED24CC1E-90E6-4101-A2C0-0A6CB7843F4A&#34;"
+                                type="string"/>
+                     <parameter description="Patient additional info field value."
+                                name="FieldValue"
+                                required="true"
+                                testWith="&#34;Asian&#34;"
+                                type="string"/>
+                     <parameter description="Patient additional info field name."
+                                name="FieldName"
+                                required="true"
+                                testWith="&#34;Race&#34;"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="http://pm.unitysandbox.com/UnityPM/unityservice.svc/json/MagicJson"
+                                        verb="POST">
+                        <httpHeaders>
+                           <header name="Content-Type">application/json</header>
+                        </httpHeaders>
+                        <body>{{"Action":"SetPatientAdditionalInfoValue", "Appname":{$Appname}, "AppUserID":{$AppUserID}, "PatientID":{$PatientID}, "Token":{$Token}, "Parameter1":{$FieldValue}, "Parameter2":{$FieldName}, "Parameter3":"", "Parameter4":"", "Parameter5":"", "Parameter6":"", "Data":""}}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="GetNotes"
+                       maxRedirects="100"
+                       name="GetNotes"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Return patient notes for specified patient or account.
+			</description>
+                  <input>
+                     <parameter name="Appname"
+                                required="true"
+                                testWith="&#34;InformaticaCorporation.POC.TestApp&#34;"
+                                type="string"/>
+                     <parameter name="AppUserID"
+                                required="true"
+                                testWith="&#34;demo1&#34;"
+                                type="string"/>
+                     <parameter name="PatientID"
+                                required="true"
+                                testWith="&#34;33283&#34;"
+                                type="string"/>
+                     <parameter name="Token"
+                                required="true"
+                                testWith="&#34;ED24CC1E-90E6-4101-A2C0-0A6CB7843F4A&#34;"
+                                type="string"/>
+                     <parameter description="Identifier for specific note"
+                                name="NoteID"
+                                required="false"
+                                testWith="&#34;&#34;"
+                                type="string"/>
+                     <parameter description="Only return notes of specific type. See GetNoteTypes."
+                                name="NoteType"
+                                required="false"
+                                testWith="&#34;&#34;"
+                                type="string"/>
+                     <parameter description="Only return notes that generate a warning in patient record (Y/N). All options returned by default."
+                                name="WarningFlag"
+                                required="false"
+                                testWith="&#34;&#34;"
+                                type="string"/>
+                     <parameter description="Return all notes on patient account (Y/N). Default = N"
+                                name="AccountFlag"
+                                required="false"
+                                testWith="&#34;&#34;"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="http://pm.unitysandbox.com/UnityPM/unityservice.svc/json/MagicJson"
+                                        verb="POST">
+                        <httpHeaders>
+                           <header name="Content-Type">application/json</header>
+                        </httpHeaders>
+                        <body>{{"Action":"GetNotes", "Appname":{$Appname}, "AppUserID":{$AppUserID}, "PatientID":{$PatientID}, "Token":{$Token}, "Parameter1":{$NoteID}, "Parameter2":{$NoteType}, "Parameter3":{$WarningFlag}, "Parameter4":{$AccountFlag}, "Parameter5":"", "Parameter6":"", "Data":""}}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="GetNoteTypes"
+                       maxRedirects="100"
+                       name="GetNoteTypes"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Returns all available patient note types.
+			</description>
+                  <input>
+                     <parameter name="Appname"
+                                required="true"
+                                testWith="&#34;InformaticaCorporation.POC.TestApp&#34;"
+                                type="string"/>
+                     <parameter name="AppUserID"
+                                required="true"
+                                testWith="&#34;demo1&#34;"
+                                type="string"/>
+                     <parameter name="Token"
+                                required="true"
+                                testWith="&#34;5EF7F632-BA83-4E7E-8B03-A5B93F738DD0&#34;"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="http://pm.unitysandbox.com/UnityPM/unityservice.svc/json/MagicJson"
+                                        verb="POST">
+                        <httpHeaders>
+                           <header name="Content-Type">application/json</header>
+                        </httpHeaders>
+                        <body>{{"Action":"GetNoteTypes", "Appname":{$Appname}, "AppUserID":{$AppUserID}, "PatientID":"", "Token":{$Token}, "Parameter1":"", "Parameter2":"", "Parameter3":"", "Parameter4":"", "Parameter5":"", "Parameter6":"", "Data":""}}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="SavePatientNote"
+                       maxRedirects="100"
+                       name="SavePatientNote"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Create patient note.
+			</description>
+                  <input>
+                     <parameter name="Appname"
+                                required="true"
+                                testWith="&#34;InformaticaCorporation.POC.TestApp&#34;"
+                                type="string"/>
+                     <parameter name="AppUserID"
+                                required="true"
+                                testWith="&#34;demo1&#34;"
+                                type="string"/>
+                     <parameter name="PatientID"
+                                required="true"
+                                testWith="&#34;33283&#34;"
+                                type="string"/>
+                     <parameter name="Token"
+                                required="true"
+                                testWith="&#34;2B5F7960-BFC7-4FDF-8E10-D0BD14A1BAF4&#34;"
+                                type="string"/>
+                     <parameter name="NoteXML"
+                                required="true"
+                                testWith="&#34;&lt;PatientNote&gt; &lt;Text&gt; hello &lt;/Text&gt;&lt;!-- 7500 character max --&gt; &lt;Subject&gt; patient &lt;/Subject&gt;&lt;!-- 80 character max --&gt; &lt;NoteTypeID&gt;1&lt;/NoteTypeID&gt;&lt;!-- see GetNoteTypes --&gt; &lt;ExpDate&gt;&lt;/ExpDate&gt;&lt;!-- Date only --&gt; &lt;/PatientNote&gt;&#34;"
+                                type="string"/>
+                     <parameter name="NoteID" required="false" testWith="&#34;&#34;" type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="http://pm.unitysandbox.com/UnityPM/unityservice.svc/json/MagicJson"
+                                        verb="POST">
+                        <httpHeaders>
+                           <header name="Content-Type">application/json</header>
+                        </httpHeaders>
+                        <body>{{"Action":"SavePatientNote", "Appname":{$Appname}, "AppUserID":{$AppUserID}, "PatientID":{$PatientID}, "Token":{$Token}, "Parameter1":{$NoteXML}, "Parameter2":{$NoteID}, "Parameter3":"", "Parameter4":"", "Parameter5":"", "Parameter6":"", "Data":""}}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="GetBatchDetail"
+                       maxRedirects="100"
+                       name="GetBatchDetail"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Returns details for a single batch or set of batches.
+			</description>
+                  <input>
+                     <parameter name="Appname"
+                                required="true"
+                                testWith="&#34;InformaticaCorporation.POC.TestApp&#34;"
+                                type="string"/>
+                     <parameter name="AppUserID"
+                                required="true"
+                                testWith="&#34;demo1&#34;"
+                                type="string"/>
+                     <parameter name="Token"
+                                required="true"
+                                testWith="&#34;ED24CC1E-90E6-4101-A2C0-0A6CB7843F4A&#34;"
+                                type="string"/>
+                     <parameter description="Batch #"
+                                name="BatchNumber"
+                                required="false"
+                                testWith="&#34;&#34;"
+                                type="string"/>
+                     <parameter description="P = Payment, C = Charge, V = Void"
+                                name="BatchType"
+                                required="false"
+                                testWith="&#34;&#34;"
+                                type="string"/>
+                     <parameter description="O = Open, C = Closed"
+                                name="BatchStatus"
+                                required="false"
+                                testWith="&#34;&#34;"
+                                type="string"/>
+                     <parameter description="Batch create/opened date"
+                                name="BatchDate"
+                                required="false"
+                                testWith="&#34;&#34;"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="http://pm.unitysandbox.com/UnityPM/unityservice.svc/json/MagicJson"
+                                        verb="POST">
+                        <httpHeaders>
+                           <header name="Content-Type">application/json</header>
+                        </httpHeaders>
+                        <body>{{"Action":"GetBatchDetail", "Appname":{$Appname}, "AppUserID":{$AppUserID}, "PatientID":"", "Token":{$Token}, "Parameter1":{$BatchNumber}, "Parameter2":{$BatchType}, "Parameter3":{$BatchStatus}, "Parameter4":{$BatchDate}, "Parameter5":"", "Parameter6":"", "Data":""}}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="GetCarriers"
+                       maxRedirects="100"
+                       name="GetCarriers"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Get insurance carrier details.
+			</description>
+                  <input>
+                     <parameter name="Appname"
+                                required="false"
+                                testWith="&#34;InformaticaCorporation.POC.TestApp&#34;"
+                                type="string"/>
+                     <parameter name="AppUserID"
+                                required="true"
+                                testWith="&#34;demo1&#34;"
+                                type="string"/>
+                     <parameter name="Token"
+                                required="true"
+                                testWith="&#34;5EF7F632-BA83-4E7E-8B03-A5B93F738DD0&#34;"
+                                type="string"/>
+                     <parameter description="Filter to apply to carrier name or code/abbreviation."
+                                name="Filter"
+                                required="false"
+                                testWith="&#34;&#34;"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="http://pm.unitysandbox.com/UnityPM/unityservice.svc/json/MagicJson"
+                                        verb="POST">
+                        <httpHeaders>
+                           <header name="Content-Type">application/json</header>
+                        </httpHeaders>
+                        <body>{{"Action":"GetCarriers", "Appname":{$Appname}, "AppUserID":{$AppUserID}, "PatientID":"", "Token":{$Token}, "Parameter1":{$Filter}, "Parameter2":"", "Parameter3":"", "Parameter4":"", "Parameter5":"", "Parameter6":"", "Data":""}}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="GetDepartments"
+                       maxRedirects="100"
+                       name="GetDepartments"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Returns all departments in the system to which the logged in user has access.
+			</description>
+                  <input>
+                     <parameter name="Appname"
+                                required="true"
+                                testWith="&#34;InformaticaCorporation.POC.TestApp&#34;"
+                                type="string"/>
+                     <parameter name="AppUserID"
+                                required="true"
+                                testWith="&#34;demo1&#34;"
+                                type="string"/>
+                     <parameter name="Token"
+                                required="true"
+                                testWith="&#34;ED24CC1E-90E6-4101-A2C0-0A6CB7843F4A&#34;"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="http://pm.unitysandbox.com/UnityPM/unityservice.svc/json/MagicJson"
+                                        verb="POST">
+                        <httpHeaders>
+                           <header name="Content-Type">application/json</header>
+                        </httpHeaders>
+                        <body>{{"Action":"GetDepartments", "Appname":{$Appname}, "AppUserID":{$AppUserID}, "PatientID":"", "Token":{$Token}, "Parameter1":"", "Parameter2":"", "Parameter3":"", "Parameter4":"", "Parameter5":"", "Parameter6":"", "Data":""}}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="GetLocations"
+                       maxRedirects="100"
+                       name="GetLocations"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Returns a list of billing locations configured in the system.
+			</description>
+                  <input>
+                     <parameter name="Appname"
+                                required="true"
+                                testWith="&#34;InformaticaCorporation.POC.TestApp&#34;"
+                                type="string"/>
+                     <parameter name="AppUserID"
+                                required="true"
+                                testWith="&#34;demo1&#34;"
+                                type="string"/>
+                     <parameter name="Token"
+                                required="true"
+                                testWith="&#34;ED24CC1E-90E6-4101-A2C0-0A6CB7843F4A&#34;"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="http://pm.unitysandbox.com/UnityPM/unityservice.svc/json/MagicJson"
+                                        verb="POST">
+                        <httpHeaders>
+                           <header name="Content-Type">application/json</header>
+                        </httpHeaders>
+                        <body>{{"Action":"GetLocations", "Appname":{$Appname}, "AppUserID":{$AppUserID}, "PatientID":"", "Token":{$Token}, "Parameter1":"", "Parameter2":"", "Parameter3":"", "Parameter4":"", "Parameter5":"", "Parameter6":"", "Data":""}}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="GetPatientAccountBalance"
+                       maxRedirects="100"
+                       name="GetPatientAccountBalance"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Gets account balance information for a given patient. Returns a record for each patient voucher. Aggregated final balance needs to be calculated from result set.
+			</description>
+                  <input>
+                     <parameter name="Appname"
+                                required="true"
+                                testWith="&#34;InformaticaCorporation.POC.TestApp&#34;"
+                                type="string"/>
+                     <parameter name="AppUserID"
+                                required="true"
+                                testWith="&#34;demo1&#34;"
+                                type="string"/>
+                     <parameter name="PatientID"
+                                required="true"
+                                testWith="&#34;33283&#34;"
+                                type="string"/>
+                     <parameter name="Token"
+                                required="true"
+                                testWith="&#34;79D6850E-1197-418B-BF76-71C34DBCFEEE&#34;"
+                                type="string"/>
+                     <parameter description="&#34;B&#34; = billing date. If not provided, result set is sorted by service date and voucher number."
+                                name="SortOrder"
+                                required="false"
+                                testWith="&#34;&#34;"
+                                type="string"/>
+                     <parameter description="Y/N - Determines if only self-pay charges should be returned. Default is N."
+                                name="SelfPayOnly"
+                                required="false"
+                                testWith="&#34;&#34;"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="http://pm.unitysandbox.com/UnityPM/unityservice.svc/json/MagicJson"
+                                        verb="POST">
+                        <httpHeaders>
+                           <header name="Content-Type">application/json</header>
+                        </httpHeaders>
+                        <body>{{"Action":"GetPatientAccountBalance", "Appname":{$Appname}, "AppUserID":{$AppUserID}, "PatientID":{$PatientID}, "Token":{$Token}, "Parameter1":{$SortOrder}, "Parameter2":{$SelfPayOnly}, "Parameter3":"", "Parameter4":"", "Parameter5":"", "Parameter6":"", "Data":""}}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="GetPatientAccountBalanceCalc"
+                       maxRedirects="100"
+                       name="GetPatientAccountBalanceCalc"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Returns basic patient account balance information calculated from GetPatientAccountBalance.
+			</description>
+                  <input>
+                     <parameter name="Appname"
+                                required="true"
+                                testWith="&#34;InformaticaCorporation.POC.TestApp&#34;"
+                                type="string"/>
+                     <parameter name="AppUserID"
+                                required="true"
+                                testWith="&#34;demo1&#34;"
+                                type="string"/>
+                     <parameter name="PatientID"
+                                required="true"
+                                testWith="&#34;33283&#34;"
+                                type="string"/>
+                     <parameter name="Token"
+                                required="true"
+                                testWith="&#34;79D6850E-1197-418B-BF76-71C34DBCFEEE&#34;"
+                                type="string"/>
+                     <parameter description="Department abbreviation."
+                                name="Department"
+                                required="false"
+                                testWith="&#34;&#34;"
+                                type="string"/>
+                     <parameter description="Place of service abbreviation."
+                                name="PlaceOfService"
+                                required="false"
+                                testWith="&#34;&#34;"
+                                type="string"/>
+                     <parameter description="Location abbreviation."
+                                name="Location"
+                                required="false"
+                                testWith="&#34;&#34;"
+                                type="string"/>
+                     <parameter description="Determines whether the balance returned is at the account level or patient level. Default is patient. &#xA;Valid values (Y/N)"
+                                name="AccountFlag"
+                                required="false"
+                                testWith="&#34;&#34;"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="http://pm.unitysandbox.com/UnityPM/unityservice.svc/json/MagicJson"
+                                        verb="POST">
+                        <httpHeaders>
+                           <header name="Content-Type">application/json</header>
+                        </httpHeaders>
+                        <body>{{"Action":"GetPatientAccountBalanceCalc", "Appname":{$Appname}, "AppUserID":{$AppUserID}, "PatientID":{$PatientID}, "Token":{$Token}, "Parameter1":{$Department}, "Parameter2":{$PlaceOfService}, "Parameter3":{$Location}, "Parameter4":{$AccountFlag}, "Parameter5":"", "Parameter6":"", "Data":""}}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="GetPatientPolicy"
+                       maxRedirects="100"
+                       name="GetPatientPolicy"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Returns policy information for given patient
+			</description>
+                  <input>
+                     <parameter name="Appname"
+                                required="true"
+                                testWith="&#34;InformaticaCorporation.POC.TestApp&#34;"
+                                type="string"/>
+                     <parameter name="AppUserID"
+                                required="true"
+                                testWith="&#34;demo1&#34;"
+                                type="string"/>
+                     <parameter name="PatientID" required="true" testWith="&#34;47&#34;" type="string"/>
+                     <parameter name="Token"
+                                required="true"
+                                testWith="&#34;79D6850E-1197-418B-BF76-71C34DBCFEEE&#34;"
+                                type="string"/>
+                     <parameter description="P=Primary, S=Secondary, T=Tertiary, X=Other"
+                                name="Coverage"
+                                required="false"
+                                testWith="&#34;&#34;"
+                                type="string"/>
+                     <parameter description="M=Medical, V=Motor Vehicle, D=Dental, H=Behavioral Health, W=Workers Comp"
+                                name="CoverageType"
+                                required="false"
+                                testWith="&#34;&#34;"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="http://pm.unitysandbox.com/UnityPM/unityservice.svc/json/MagicJson"
+                                        verb="POST">
+                        <httpHeaders>
+                           <header name="Content-Type">application/json</header>
+                        </httpHeaders>
+                        <body>{{"Action":"GetPatientPolicy", "Appname":{$Appname}, "AppUserID":{$AppUserID}, "PatientID":{$PatientID}, "Token":{$Token}, "Parameter1":{$Coverage}, "Parameter2":{$CoverageType}, "Parameter3":"", "Parameter4":"", "Parameter5":"", "Parameter6":"", "Data":""}}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="GetPatientSlidingFeeInfo"
+                       maxRedirects="100"
+                       name="GetPatientSlidingFeeInfo"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Returns all sliding fee scales associated with given patient.
+			</description>
+                  <input>
+                     <parameter name="Appname"
+                                required="true"
+                                testWith="&#34;InformaticaCorporation.POC.TestApp&#34;"
+                                type="string"/>
+                     <parameter name="AppUserID"
+                                required="true"
+                                testWith="&#34;demo1&#34;"
+                                type="string"/>
+                     <parameter name="PatientID"
+                                required="true"
+                                testWith="&#34;33283&#34;"
+                                type="string"/>
+                     <parameter name="Token"
+                                required="true"
+                                testWith="&#34;79D6850E-1197-418B-BF76-71C34DBCFEEE&#34;"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="http://pm.unitysandbox.com/UnityPM/unityservice.svc/json/MagicJson"
+                                        verb="POST">
+                        <httpHeaders>
+                           <header name="Content-Type">application/json</header>
+                        </httpHeaders>
+                        <body>{{"Action":"GetPatientSlidingFeeInfo", "Appname":{$Appname}, "AppUserID":{$AppUserID}, "PatientID":{$PatientID}, "Token":{$Token}, "Parameter1":"", "Parameter2":"", "Parameter3":"", "Parameter4":"", "Parameter5":"", "Parameter6":"", "Data":""}}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="GetPlacesOfService"
+                       maxRedirects="100"
+                       name="GetPlacesOfService"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Returns a list of places of service configured in the environment. Required for charged entry.
+			</description>
+                  <input>
+                     <parameter name="Appname"
+                                required="true"
+                                testWith="&#34;InformaticaCorporation.POC.TestApp&#34;"
+                                type="string"/>
+                     <parameter name="AppUserID"
+                                required="true"
+                                testWith="&#34;demo1&#34;"
+                                type="string"/>
+                     <parameter name="Token"
+                                required="true"
+                                testWith="&#34;79D6850E-1197-418B-BF76-71C34DBCFEEE&#34;"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="http://pm.unitysandbox.com/UnityPM/unityservice.svc/json/MagicJson"
+                                        verb="POST">
+                        <httpHeaders>
+                           <header name="Content-Type">application/json</header>
+                        </httpHeaders>
+                        <body>{{"Action":"GetPlacesOfService", "Appname":{$Appname}, "AppUserID":{$AppUserID}, "PatientID":"", "Token":{$Token}, "Parameter1":"", "Parameter2":"", "Parameter3":"", "Parameter4":"", "Parameter5":"", "Parameter6":"", "Data":""}}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="GetServicesByVoucherID"
+                       maxRedirects="100"
+                       name="GetServicesByVoucherID"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Returns details of services and procedures provided in a visit that are tied to a given voucher. See GetPatientAccountBalance for vouchers for a given patient.
+			</description>
+                  <input>
+                     <parameter name="Appname"
+                                required="true"
+                                testWith="&#34;InformaticaCorporation.POC.TestApp&#34;"
+                                type="string"/>
+                     <parameter name="AppUserID"
+                                required="true"
+                                testWith="&#34;demo1&#34;"
+                                type="string"/>
+                     <parameter name="Token"
+                                required="true"
+                                testWith="&#34;79D6850E-1197-418B-BF76-71C34DBCFEEE&#34;"
+                                type="string"/>
+                     <parameter description="Internal ID for voucher. See GetPatientAccountBalance."
+                                name="VoucherID"
+                                required="true"
+                                testWith="&#34;23&#34;"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="http://pm.unitysandbox.com/UnityPM/unityservice.svc/json/MagicJson"
+                                        verb="POST">
+                        <httpHeaders>
+                           <header name="Content-Type">application/json</header>
+                        </httpHeaders>
+                        <body>{{"Action":"ReopenBatch", "Appname":{$Appname}, "AppUserID":{$AppUserID}, "PatientID":"", "Token":{$Token}, "Parameter1":{$BatchID}, "Parameter2":{$BatchNumber}, "Parameter3":"", "Parameter4":"", "Parameter5":"", "Parameter6":"", "Data":""}}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="GetSlidingFeeScales"
+                       maxRedirects="100"
+                       name="GetSlidingFeeScales"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Returns sliding fee scales available in current system.
+			</description>
+                  <input>
+                     <parameter name="Appname"
+                                required="true"
+                                testWith="&#34;InformaticaCorporation.POC.TestApp&#34;"
+                                type="string"/>
+                     <parameter name="AppUserID"
+                                required="true"
+                                testWith="&#34;demo1&#34;"
+                                type="string"/>
+                     <parameter name="Token"
+                                required="true"
+                                testWith="&#34;79D6850E-1197-418B-BF76-71C34DBCFEEE&#34;"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="http://pm.unitysandbox.com/UnityPM/unityservice.svc/json/MagicJson"
+                                        verb="POST">
+                        <httpHeaders>
+                           <header name="Content-Type">application/json</header>
+                        </httpHeaders>
+                        <body>{{"Action":"GetSlidingFeeScales", "Appname":{$Appname}, "AppUserID":{$AppUserID}, "PatientID":"", "Token":{$Token}, "Parameter1":"", "Parameter2":"", "Parameter3":"", "Parameter4":"", "Parameter5":"", "Parameter6":"", "Data":""}}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="GetTransactionCodes"
+                       maxRedirects="100"
+                       name="GetTransactionCodes"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Get list of available transaction codes.
+			</description>
+                  <input>
+                     <parameter name="Appname"
+                                required="true"
+                                testWith="&#34;InformaticaCorporation.POC.TestApp&#34;"
+                                type="string"/>
+                     <parameter name="AppUserID"
+                                required="true"
+                                testWith="&#34;demo1&#34;"
+                                type="string"/>
+                     <parameter name="Token"
+                                required="true"
+                                testWith="&#34;5EF7F632-BA83-4E7E-8B03-A5B93F738DD0&#34;"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="http://pm.unitysandbox.com/UnityPM/unityservice.svc/json/MagicJson"
+                                        verb="POST">
+                        <httpHeaders>
+                           <header name="Content-Type">application/json</header>
+                        </httpHeaders>
+                        <body>{{"Action":"GetTransactionCodes", "Appname":{$Appname}, "AppUserID":{$AppUserID}, "PatientID":"", "Token":{$Token}, "Parameter1":"", "Parameter2":"", "Parameter3":"", "Parameter4":"", "Parameter5":"", "Parameter6":"", "Data":""}}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="ReopenBatch"
+                       maxRedirects="100"
+                       name="ReopenBatch"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Re-Opens a closed batch.
+			</description>
+                  <input>
+                     <parameter name="Appname"
+                                required="true"
+                                testWith="&#34;InformaticaCorporation.POC.TestApp&#34;"
+                                type="string"/>
+                     <parameter name="AppUserID"
+                                required="true"
+                                testWith="&#34;demo1&#34;"
+                                type="string"/>
+                     <parameter name="Token"
+                                required="true"
+                                testWith="&#34;79D6850E-1197-418B-BF76-71C34DBCFEEE&#34;"
+                                type="string"/>
+                     <parameter name="BatchID" required="false" testWith="&#34;1&#34;" type="string"/>
+                     <parameter name="BatchNumber" required="false" testWith="&#34;&#34;" type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="http://pm.unitysandbox.com/UnityPM/unityservice.svc/json/MagicJson"
+                                        verb="POST">
+                        <httpHeaders>
+                           <header name="Content-Type">application/json</header>
+                        </httpHeaders>
+                        <body>{{"Action":"ReopenBatch", "Appname":{$Appname}, "AppUserID":{$AppUserID}, "PatientID":"", "Token":{$Token}, "Parameter1":{$BatchID}, "Parameter2":{$BatchNumber}, "Parameter3":"", "Parameter4":"", "Parameter5":"", "Parameter6":"", "Data":""}}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="SavePatientPolicy"
+                       maxRedirects="100"
+                       name="SavePatientPolicy"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Adds existing carrier and plan to specified patient record.
+			</description>
+                  <input>
+                     <parameter name="Appname"
+                                required="true"
+                                testWith="&#34;InformaticaCorporation.POC.TestApp&#34;"
+                                type="string"/>
+                     <parameter name="AppUserID"
+                                required="true"
+                                testWith="&#34;demo1&#34;"
+                                type="string"/>
+                     <parameter name="PatientID" required="true" testWith="&#34;47&#34;" type="string"/>
+                     <parameter name="Token"
+                                required="true"
+                                testWith="&#34;5EF7F632-BA83-4E7E-8B03-A5B93F738DD0&#34;"
+                                type="string"/>
+                     <parameter description="Carrier abbreviation."
+                                name="CarrierAbbr"
+                                required="true"
+                                testWith="&#34;AETNA&#34;"
+                                type="string"/>
+                     <parameter description="Insurance plan code."
+                                name="PlanCode"
+                                required="false"
+                                testWith="&#34;&#34;"
+                                type="string"/>
+                     <parameter description="Insurance plan code for specialist."
+                                name="SpecialistPlanCode"
+                                required="false"
+                                testWith="&#34;&#34;"
+                                type="string"/>
+                     <parameter description="P = Primary&#xA;S = Secondary&#xA;T = Tertiary&#xA;X = Other"
+                                name="Priority"
+                                required="true"
+                                testWith="&#34;X&#34;"
+                                type="string"/>
+                     <parameter description="Required if performing an update."
+                                name="PolicyID"
+                                required="false"
+                                testWith="&#34;&#34;"
+                                type="string"/>
+                     <parameter description="&lt;policy&gt;&#xA;&lt;Group_Name&gt;&lt;/Group_Name&gt;&lt;!--40 chars--&gt;&#xA;&lt;Group_No&gt;&lt;/Group_No&gt;&lt;!--20 chars--&gt;&#xA;&lt;Policy_Phone&gt;&lt;/Policy_Phone&gt;&lt;!--20 chars--&gt;&#xA;&lt;Policy_Phone_Ext&gt;&lt;/Policy_Phone_Ext&gt;&lt;!--5 chars--&gt;&#xA;&lt;Certificate_No&gt;&lt;/Certificate_No&gt;&lt;!-- 20 chars--&gt;&#xA;&lt;Comments&gt;&lt;/Comments&gt;&lt;!--80 chars --&gt;&#xA;&lt;Effective_Date&gt;&lt;/Effective_Date&gt;&lt;!--datetime--&gt;&#xA;&lt;Expiration_Date&gt;&lt;/Expiration_Date&gt;&lt;!--datetime--&gt;&#xA;&lt;Subscriber_Certificate_Suffix&gt;&lt;/Subscriber_Certificate_Suffix&gt;&lt;!-- 8 chars--&gt;&#xA;&lt;/policy&gt;"
+                                name="XMLPayload"
+                                required="false"
+                                testWith="&#34;&#34;"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="http://pm.unitysandbox.com/UnityPM/unityservice.svc/json/MagicJson"
+                                        verb="POST">
+                        <httpHeaders>
+                           <header name="Content-Type">application/json</header>
+                        </httpHeaders>
+                        <body>{{"Action":"SavePatientPolicy", "Appname":{$Appname}, "AppUserID":{$AppUserID}, "PatientID":{$PatientID}, "Token":{$Token}, "Parameter1":{$CarrierAbbr}, "Parameter2":{$PlanCode}, "Parameter3":{$SpecialistPlanCode}, "Parameter4":{$Priority}, "Parameter5":{$PolicyID}, "Parameter6":{$XMLPayload}, "Data":""}}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="SavePatientSlidingFee"
+                       maxRedirects="100"
+                       name="SavePatientSlidingFee"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Adds a sliding scale to a given patient record.
+			</description>
+                  <input>
+                     <parameter name="Appname"
+                                required="true"
+                                testWith="&#34;InformaticaCorporation.POC.TestApp&#34;"
+                                type="string"/>
+                     <parameter name="AppUserID"
+                                required="true"
+                                testWith="&#34;demo1&#34;"
+                                type="string"/>
+                     <parameter name="PatientID"
+                                required="true"
+                                testWith="&#34;33283&#34;"
+                                type="string"/>
+                     <parameter name="Token"
+                                required="true"
+                                testWith="&#34;79D6850E-1197-418B-BF76-71C34DBCFEEE&#34;"
+                                type="string"/>
+                     <parameter description="Internal ID of an existing sliding fee scale for a patient. When provided, the current record is modified. See GetPatientSlidingFeeInfo."
+                                name="TransID"
+                                required="false"
+                                testWith="&#34;&#34;"
+                                type="string"/>
+                     <parameter description="&lt;SlidingFeeInfo&gt;&#xA;&#x9;&lt;SlidingFeeAbbr&gt;&lt;/SlidingFeeAbbr&gt;&#xA;&#x9;&lt;HouseholdIncome&gt;30000.00&lt;/HouseholdIncome&gt;&#xA;&#x9;&lt;FamilyMembers&gt;4&lt;/FamilyMembers&gt;&#xA;&#x9;&lt;LockInDate&gt;9/15/2014&lt;/LockInDate&gt;&#xA;&#x9;&lt;EndDate&gt;9/15/2015&lt;/EndDate&gt;&#xA;&#x9;&lt;FlatFeeAmount&gt;5.00&lt;/FlatFeeAmount&gt;&#xA;&#x9;&lt;PercentToPay&gt;60.0&lt;/PercentToPay&gt;&#xA;&#x9;&lt;MinimumToPay&gt;10.00&lt;/MinimumToPay&gt;&#xA;&#x9;&lt;MaximumToPay&gt;25.00&lt;/MaximumToPay&gt;&#xA;&#x9;&lt;Comments&gt;Free text up to 80 characters&lt;/Comments&gt;&#xA;&lt;/SlidingFeeInfo&gt;&#xA;&#xA;For valid SlidingFeeAbbr values, see GetSlidingFeeScales"
+                                name="XMLPayload"
+                                required="true"
+                                testWith="&#34;&#34;"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="http://pm.unitysandbox.com/UnityPM/unityservice.svc/json/MagicJson"
+                                        verb="POST">
+                        <httpHeaders>
+                           <header name="Content-Type">application/json</header>
+                        </httpHeaders>
+                        <body>{{"Action":"SavePatientSlidingFee", "Appname":{$Appname}, "AppUserID":{$AppUserID}, "PatientID":{$PatientID}, "Token":{$Token}, "Parameter1":{$TransID}, "Parameter2":{$XMLPayload}, "Parameter3":"", "Parameter4":"", "Parameter5":"", "Parameter6":"", "Data":""}}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="SavePaymentTransaction"
+                       maxRedirects="100"
+                       name="SavePaymentTransaction"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Saves a payment transaction. If no voucher is specified, payment is saved as an unassigned transaction.
+			</description>
+                  <input>
+                     <parameter name="Appname"
+                                required="true"
+                                testWith="&#34;InformaticaCorporation.POC.TestApp&#34;"
+                                type="string"/>
+                     <parameter name="AppUserID"
+                                required="true"
+                                testWith="&#34;demo1&#34;"
+                                type="string"/>
+                     <parameter name="Token"
+                                required="true"
+                                testWith="&#34;FB465114-3AE3-4CE8-98A0-5F76D0D807E3&#34;"
+                                type="string"/>
+                     <parameter description="&lt;Ntierprise_Msg&gt;&#xA;&#x9;&lt;REMIT&gt;&#xA;&#x9;&#x9;&lt;Payment_Amount&gt;10.00&lt;/Payment_Amount&gt;&#xA;&#x9;&#x9;&lt;Reference&gt;13094043&lt;/Reference&gt;&#xA;&#x9;&#x9;&lt;External_Account_ID/&gt;&lt;!--Patient Account Number--&gt;&#xA;                &lt;Patient_Number&gt;1234&lt;/Patient_Number&gt;&#xA;&#x9;&#x9;&lt;IsCopay&gt;0&lt;/IsCopay&gt;&lt;!--BIT - 1/0--&gt;&#xA;&#x9;&#x9;&lt;External_Transaction_Code&gt;COPCASH&lt;/External_Transaction_Code&gt;&lt;!-- Optional --&gt;&#xA;                &lt;Appointment_External_ID&gt;12345&lt;/Appointment_External_ID&gt;&lt;!-- Optional --&gt;&#xA;                &lt;External_Batch_Number/&gt; &lt;!-- Optional --&gt;&#xA;                &lt;Batch_Category /&gt;&lt;!-- Optional --&gt;&#xA;                &lt;Reference&gt;&lt;/Reference&gt;&lt;!--Required: 30 char limit--&gt;&#xA;                &lt;Patient_First_Name&gt;Thomas&lt;/Patient_First_Name&gt;&#xA;&#x9;&#x9;&lt;Patient_Last_Name&gt;Smith&lt;/Patient_Last_Name&gt;&#xA;&#x9;&#x9;&lt;BatchID&gt;12&lt;/BatchID&gt;&lt;!-- Optional --&gt;&#xA;&#x9;&#x9;&lt;VoucherID&gt;23&lt;/VoucherID&gt;&lt;!-- Optional --&gt;&#xA;                &lt;PractitionerAbbr&gt;&lt;/PractitionerAbbr&gt;&lt;!-- Optional --&gt;&#xA;                &lt;description&gt;&lt;/description&gt;&lt;!-- Optional: 255 character limit --&gt;&#xA;                &lt;Location&gt;PC-Main&lt;/Location&gt;&lt;!-- Optional: Location abbreviation --&gt;&#xA;                &lt;Dept&gt;Medical&lt;/Dept&gt;&lt;!-- Optional: Department abbreviation --&gt;&#xA;                &lt;CCAuthNo/&gt;&lt;!-- Optional: 20 char max --&gt;&#xA;                &lt;CCTransID/&gt;&lt;!-- Optional: 50 char max --&gt;&#xA;&#x9;&lt;/REMIT&gt;&#xA;&lt;/Ntierprise_Msg&gt;"
+                                name="XMLPayload"
+                                required="true"
+                                testWith="&#34;&lt;Ntierprise_Msg&gt; &#x9;&lt;REMIT&gt; &#x9;&#x9;&lt;Payment_Amount&gt;10.00&lt;/Payment_Amount&gt; &#x9;&#x9;&lt;Reference&gt;13094043&lt;/Reference&gt; &#x9;&#x9;&lt;External_Account_ID/&gt;&lt;!--Patient Account Number--&gt;                 &lt;Patient_Number&gt;1234&lt;/Patient_Number&gt; &#x9;&#x9;&lt;IsCopay&gt;0&lt;/IsCopay&gt;&lt;!--BIT - 1/0--&gt; &#x9;&#x9;&lt;External_Transaction_Code&gt;MRPMT&lt;/External_Transaction_Code&gt;&lt;!-- Optional --&gt;                 &lt;Appointment_External_ID&gt;12345&lt;/Appointment_External_ID&gt;&lt;!-- Optional --&gt;                 &lt;External_Batch_Number/&gt; &lt;!-- Optional --&gt;                 &lt;Batch_Category /&gt;&lt;!-- Optional --&gt;                 &lt;Reference&gt;&lt;/Reference&gt;&lt;!--Required: 30 char limit--&gt;                 &lt;Patient_First_Name&gt;Thomas&lt;/Patient_First_Name&gt; &#x9;&#x9;&lt;Patient_Last_Name&gt;Smith&lt;/Patient_Last_Name&gt; &#x9;&#x9;&lt;BatchID&gt;&lt;/BatchID&gt;&lt;!-- Optional --&gt; &#x9;&#x9;&lt;VoucherID&gt;23&lt;/VoucherID&gt;&lt;!-- Optional --&gt;                 &lt;PractitionerAbbr&gt;&lt;/PractitionerAbbr&gt;&lt;!-- Optional --&gt;                 &lt;description&gt;&lt;/description&gt;&lt;!-- Optional: 255 character limit --&gt;                 &lt;Location&gt;&lt;/Location&gt;&lt;!-- Optional: Location abbreviation --&gt;                 &lt;Dept&gt;&lt;/Dept&gt;&lt;!-- Optional: Department abbreviation --&gt;                 &lt;CCAuthNo/&gt;&lt;!-- Optional: 20 char max --&gt;                 &lt;CCTransID/&gt;&lt;!-- Optional: 50 char max --&gt; &#x9;&lt;/REMIT&gt; &lt;/Ntierprise_Msg&gt;&#34;"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="http://pm.unitysandbox.com/UnityPM/unityservice.svc/json/MagicJson"
+                                        verb="POST">
+                        <httpHeaders>
+                           <header name="Content-Type">application/json</header>
+                        </httpHeaders>
+                        <body>{{"Action":"SavePaymentTransaction", "Appname":{$Appname}, "AppUserID":{$AppUserID}, "PatientID":"", "Token":{$Token}, "Parameter1":{$XMLPayload}, "Parameter2":"", "Parameter3":"", "Parameter4":"", "Parameter5":"", "Parameter6":"", "Data":""}}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="GetChangedPatients"
+                       maxRedirects="100"
+                       name="GetChangedPatients"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Returns a list of Patient IDs that have had something change in their records since a specific date/time.
+			</description>
+                  <input>
+                     <parameter name="Appname"
+                                required="true"
+                                testWith="&#34;InformaticaCorporation.POC.TestApp&#34;"
+                                type="string"/>
+                     <parameter name="AppUserID"
+                                required="true"
+                                testWith="&#34;demo1&#34;"
+                                type="string"/>
+                     <parameter description="Can be supplied to check on a particular patient."
+                                name="PatientID"
+                                required="false"
+                                testWith="&#34;33283&#34;"
+                                type="string"/>
+                     <parameter name="Token"
+                                required="true"
+                                testWith="&#34;79D6850E-1197-418B-BF76-71C34DBCFEEE&#34;"
+                                type="string"/>
+                     <parameter description="Datetime indicating how far back to query."
+                                name="Since"
+                                required="true"
+                                testWith="&#34;11-Dec-1920&#34;"
+                                type="string"/>
+                     <parameter description="Optionally return only active patients"
+                                name="ActiveOnlyFlag"
+                                required="false"
+                                testWith="&#34;&#34;"
+                                type="string"/>
+                     <parameter description="If &#34;Y&#34; then details of what changed are returned:&#xA;new = the patient is a new patient&#xA;dem = patient demographics have changed&#xA;ins = one or more insurance details changed&#xA;guar = guarantor information has changed&#xA;section&#xA;Trans ID"
+                                name="Verbose"
+                                required="false"
+                                testWith="&#34;&#34;"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="http://pm.unitysandbox.com/UnityPM/unityservice.svc/json/MagicJson"
+                                        verb="POST">
+                        <httpHeaders>
+                           <header name="Content-Type">application/json</header>
+                        </httpHeaders>
+                        <body>{{"Action":"GetChangedPatients", "Appname":{$Appname}, "AppUserID":{$AppUserID}, "PatientID":{$PatientID}, "Token":{$Token}, "Parameter1":{$Since}, "Parameter2":{$ActiveOnlyFlag}, "Parameter3":{$Verbose}, "Parameter4":"", "Parameter5":"", "Parameter6":"", "Data":""}}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="GetEmployers"
+                       maxRedirects="100"
+                       name="GetEmployers"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Returns all existing employers.
+			</description>
+                  <input>
+                     <parameter name="Appname"
+                                required="true"
+                                testWith="&#34;InformaticaCorporation.POC.TestApp&#34;"
+                                type="string"/>
+                     <parameter name="AppUserID"
+                                required="true"
+                                testWith="&#34;demo1&#34;"
+                                type="string"/>
+                     <parameter name="Token"
+                                required="true"
+                                testWith="&#34;79D6850E-1197-418B-BF76-71C34DBCFEEE&#34;"
+                                type="string"/>
+                     <parameter description="Filter applied to name or abbreviation."
+                                name="Filter"
+                                required="false"
+                                testWith="&#34;&#34;"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="http://pm.unitysandbox.com/UnityPM/unityservice.svc/json/MagicJson"
+                                        verb="POST">
+                        <httpHeaders>
+                           <header name="Content-Type">application/json</header>
+                        </httpHeaders>
+                        <body>{{"Action":"GetEmployers", "Appname":{$Appname}, "AppUserID":{$AppUserID}, "PatientID":"", "Token":{$Token}, "Parameter1":{$Filter}, "Parameter2":"", "Parameter3":"", "Parameter4":"", "Parameter5":"", "Parameter6":"", "Data":""}}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="SaveAccountContact"
+                       maxRedirects="100"
+                       name="SaveAccountContact"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Add or edit a non-patient contact on an existing patient account.
+			</description>
+                  <input>
+                     <parameter name="Appname"
+                                required="true"
+                                testWith="&#34;InformaticaCorporation.POC.TestApp&#34;"
+                                type="string"/>
+                     <parameter name="AppUserID"
+                                required="true"
+                                testWith="&#34;demo1&#34;"
+                                type="string"/>
+                     <parameter name="Token"
+                                required="true"
+                                testWith="&#34;79D6850E-1197-418B-BF76-71C34DBCFEEE&#34;"
+                                type="string"/>
+                     <parameter name="PatientID" required="false" testWith="&#34;&#34;" type="string"/>
+                     <parameter description="Internal identifier for patient account."
+                                name="AccountID"
+                                required="true"
+                                testWith="&#34;90&#34;"
+                                type="string"/>
+                     <parameter description="Internal identifier for account contact. Required if performing an edit."
+                                name="ContactID"
+                                required="false"
+                                testWith="&#34;&#34;"
+                                type="string"/>
+                     <parameter description="&lt;contact&gt;&#xA;&#x9;&lt;lastName&gt;Paterson&lt;/lastName&gt;&#xA;&#x9;&lt;firstName&gt;Stella&lt;/firstName&gt;&#xA;&#x9;&lt;mi&gt;M&lt;/mi&gt;&#xA;&#x9;&lt;suffix&gt;&lt;/suffix&gt;&#xA;&#x9;&lt;gender&gt;F&lt;/gender&gt;&#xA;&#x9;&lt;ssn&gt;123546789&lt;/ssn&gt;&#xA;&#x9;&lt;dob&gt;1/1/1956&lt;/dob&gt;&#xA;&#x9;&lt;street1&gt;123 Main St.&lt;/street1&gt;&#xA;&#x9;&lt;street2&gt;&lt;/street2&gt;&#xA;&#x9;&lt;city&gt;Burlington&lt;/city&gt;&#xA;&#x9;&lt;state&gt;VT&lt;/state&gt;&#xA;&#x9;&lt;zip&gt;05403&lt;/zip&gt;&#xA;&#x9;&lt;phone&gt;8025559999&lt;/phone&gt;&#xA;&#x9;&lt;workphone&gt;&lt;/workphone&gt;&#xA;&#x9;&lt;workphoneext&gt;&lt;/workphoneext&gt;&#xA;&#x9;&lt;cellphone&gt;&lt;/cellphone&gt;&#xA;&#x9;&lt;email&gt;stella@paterson.edu&lt;/email&gt;&#xA;&#x9;&lt;employer&gt;&lt;/employer&gt;&lt;!-- abbreviation --&gt;&#xA;&#x9;&lt;IsGuarantor&gt;Y&lt;/IsGuarantor&gt;&#xA;&#x9;&lt;IsEmergencyContact&gt;N&lt;/IsEmergencyContact&gt;&#xA;&#x9;&lt;EmergencyContactRelation/&gt;&#xA;        &lt;IsSubscriber /&gt;&lt;!--y/n--&gt;&#xA;        &lt;CanGetStatements/&gt;&lt;!--y/n--&gt;&#xA;&#x9;&lt;comments&gt;&lt;/comments&gt;&#xA;&lt;/contact&gt;"
+                                name="ContactXML"
+                                required="true"
+                                testWith="&#34;&lt;contact&gt; &#x9;&lt;lastName&gt;MEDICAID&lt;/lastName&gt; &#x9;&lt;firstName&gt;MARCY&lt;/firstName&gt; &#x9;&lt;mi&gt;M&lt;/mi&gt; &#x9;&lt;suffix&gt;&lt;/suffix&gt; &#x9;&lt;gender&gt;F&lt;/gender&gt; &#x9;&lt;ssn&gt;000000090&lt;/ssn&gt; &#x9;&lt;dob&gt;09/12/1958&lt;/dob&gt; &#x9;&lt;street1&gt;1 MEDICAID LANE&lt;/street1&gt; &#x9;&lt;street2&gt;&lt;/street2&gt; &#x9;&lt;city&gt;NASHUA&lt;/city&gt; &#x9;&lt;state&gt;NH&lt;/state&gt; &#x9;&lt;zip&gt;03060&lt;/zip&gt; &#x9;&lt;phone&gt;&lt;/phone&gt; &#x9;&lt;workphone&gt;&lt;/workphone&gt; &#x9;&lt;workphoneext&gt;&lt;/workphoneext&gt; &#x9;&lt;cellphone&gt;&lt;/cellphone&gt; &#x9;&lt;email&gt;&lt;/email&gt; &#x9;&lt;employer&gt;&lt;/employer&gt;&lt;!-- abbreviation --&gt; &#x9;&lt;IsGuarantor&gt;Y&lt;/IsGuarantor&gt; &#x9;&lt;IsEmergencyContact&gt;&lt;/IsEmergencyContact&gt; &#x9;&lt;EmergencyContactRelation/&gt;         &lt;IsSubscriber /&gt;&lt;!--y/n--&gt;         &lt;CanGetStatements/&gt;&lt;!--y/n--&gt; &#x9;&lt;comments&gt;&lt;/comments&gt; &lt;/contact&gt;&#34;"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="http://pm.unitysandbox.com/UnityPM/unityservice.svc/json/MagicJson"
+                                        verb="POST">
+                        <httpHeaders>
+                           <header name="Content-Type">application/json</header>
+                        </httpHeaders>
+                        <body>{{"Action":"SaveAccountContact", "Appname":{$Appname}, "AppUserID":{$AppUserID}, "PatientID":{$PatientID}, "Token":{$Token}, "Parameter1":{$AccountID}, "Parameter2":{$ContactID}, "Parameter3":"", "Parameter4":"", "Parameter5":"", "Parameter6":{$ContactXML}, "Data":""}}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="SaveEmployer"
+                       maxRedirects="100"
+                       name="SaveEmployer"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Create a new employer record and/or add employer to a patient.
+			</description>
+                  <input>
+                     <parameter name="Appname"
+                                required="true"
+                                testWith="&#34;InformaticaCorporation.POC.TestApp&#34;"
+                                type="string"/>
+                     <parameter name="AppUserID"
+                                required="true"
+                                testWith="&#34;demo1&#34;"
+                                type="string"/>
+                     <parameter name="PatientID"
+                                required="false"
+                                testWith="&#34;33283&#34;"
+                                type="string"/>
+                     <parameter name="Token"
+                                required="true"
+                                testWith="&#34;79D6850E-1197-418B-BF76-71C34DBCFEEE&#34;"
+                                type="string"/>
+                     <parameter description="Unique code for employer. Required when mapping existing employer to patient. See: GetEmployers"
+                                name="EmployerAbbr"
+                                required="false"
+                                testWith="&#34;&#34;"
+                                type="string"/>
+                     <parameter description="Required when creating a new employer record.&#xA;&lt;Employer&gt;&#xA;&#x9;&lt;Abbreviation&gt;AHS&lt;/Abbreviation&gt;&lt;!--8 char max--&gt;&#xA;&#x9;&lt;Name&gt;Allscripts&lt;/Name&gt;&lt;!--40 char max--&gt;&#xA;&#x9;&lt;Contact_Name&gt;James Medici&lt;/Contact_Name&gt;&lt;!--40 char max--&gt;&#xA;&#x9;&lt;Street1&gt;2377 Neuport Lane&lt;/Street1&gt;&lt;!--40 char max--&gt;&#xA;&#x9;&lt;City&gt;Los Angeles&lt;/City&gt;&lt;!--30 char max--&gt;&#xA;&#x9;&lt;State&gt;CA&lt;/State&gt;&lt;!--3 char max--&gt;&#xA;&#x9;&lt;Zip&gt;90009&lt;/Zip&gt;&lt;!--9 char max--&gt;&#xA;&#x9;&lt;Phone&gt;6552095640&lt;/Phone&gt;&#xA;&#x9;&lt;PhoneExt&gt;6552095640&lt;/PhoneExt&gt;&#xA;&#x9;&lt;Fax&gt;3219543012&lt;/Fax&gt;&#xA;&#x9;&lt;Email&gt;jm@email.com&lt;/Email&gt;&lt;!--255 char max--&gt;&#xA;&lt;/Employer&gt;"
+                                name="XMLPayload"
+                                required="false"
+                                testWith="&#34;&#34;"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="http://pm.unitysandbox.com/UnityPM/unityservice.svc/json/MagicJson"
+                                        verb="POST">
+                        <httpHeaders>
+                           <header name="Content-Type">application/json</header>
+                        </httpHeaders>
+                        <body>{{"Action":"SaveEmployer", "Appname":{$Appname}, "AppUserID":{$AppUserID}, "PatientID":{$PatientID}, "Token":{$Token}, "Parameter1":{$EmployerAbbr}, "Parameter2":"", "Parameter3":"", "Parameter4":"", "Parameter5":"", "Parameter6":{$XMLPayload}, "Data":""}}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="GetServices"
+                       maxRedirects="100"
+                       name="GetServices"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Return procedure history by patient or based on a date range.
+			</description>
+                  <input>
+                     <parameter name="Appname"
+                                required="true"
+                                testWith="&#34;InformaticaCorporation.POC.TestApp&#34;"
+                                type="string"/>
+                     <parameter name="AppUserID"
+                                required="true"
+                                testWith="&#34;demo1&#34;"
+                                type="string"/>
+                     <parameter name="PatientID"
+                                required="false"
+                                testWith="&#34;33283&#34;"
+                                type="string"/>
+                     <parameter name="Token"
+                                required="true"
+                                testWith="&#34;79D6850E-1197-418B-BF76-71C34DBCFEEE&#34;"
+                                type="string"/>
+                     <parameter name="StartDate" required="false" testWith="&#34;&#34;" type="string"/>
+                     <parameter name="EndDate" required="false" testWith="&#34;&#34;" type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="http://pm.unitysandbox.com/UnityPM/unityservice.svc/json/MagicJson"
+                                        verb="POST">
+                        <httpHeaders>
+                           <header name="Content-Type">application/json</header>
+                        </httpHeaders>
+                        <body>{{"Action":"GetServices", "Appname":{$Appname}, "AppUserID":{$AppUserID}, "PatientID":{$PatientID}, "Token":{$Token}, "Parameter1":{$StartDate}, "Parameter2":{$EndDate}, "Parameter3":"", "Parameter4":"", "Parameter5":"", "Parameter6":"", "Data":""}}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="GetOperators"
+                       maxRedirects="100"
+                       name="GetOperators"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Retrieve a list of operators in the system.
+			</description>
+                  <input>
+                     <parameter name="Appname"
+                                required="true"
+                                testWith="&#34;InformaticaCorporation.POC.TestApp&#34;"
+                                type="string"/>
+                     <parameter name="AppUserID"
+                                required="true"
+                                testWith="&#34;demo1&#34;"
+                                type="string"/>
+                     <parameter name="Token"
+                                required="true"
+                                testWith="&#34;79D6850E-1197-418B-BF76-71C34DBCFEEE&#34;"
+                                type="string"/>
+                     <parameter description="Applies a search filter to either last name or abbreviation."
+                                name="Filter"
+                                required="false"
+                                testWith="&#34;&#34;"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="http://pm.unitysandbox.com/UnityPM/unityservice.svc/json/MagicJson"
+                                        verb="POST">
+                        <httpHeaders>
+                           <header name="Content-Type">application/json</header>
+                        </httpHeaders>
+                        <body>{{"Action":"GetOperators", "Appname":{$Appname}, "AppUserID":{$AppUserID}, "PatientID":"", "Token":{$Token}, "Parameter1":{$Filter}, "Parameter2":"", "Parameter3":"", "Parameter4":"", "Parameter5":"", "Parameter6":"", "Data":""}}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="GetPractitioners"
+                       maxRedirects="100"
+                       name="GetPractitioners"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Returns a list of available practitioners.
+			</description>
+                  <input>
+                     <parameter name="Appname"
+                                required="true"
+                                testWith="&#34;InformaticaCorporation.POC.TestApp&#34;"
+                                type="string"/>
+                     <parameter name="Token"
+                                required="true"
+                                testWith="&#34;79D6850E-1197-418B-BF76-71C34DBCFEEE&#34;"
+                                type="string"/>
+                     <parameter description="Optional search term. Search is based on last name or practitioner abbreviation."
+                                name="SearchTerm"
+                                required="false"
+                                testWith="&#34;&#34;"
+                                type="string"/>
+                     <parameter description="Optional flag (Y/N) to only return referring providers."
+                                name="RefProviderOnlyFlag"
+                                required="false"
+                                testWith="&#34;&#34;"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="http://pm.unitysandbox.com/UnityPM/unityservice.svc/json/MagicJson"
+                                        verb="POST">
+                        <httpHeaders>
+                           <header name="Content-Type">application/json</header>
+                        </httpHeaders>
+                        <body>{{"Action":"GetPractitioners", "Appname":{$Appname}, "AppUserID":"", "PatientID":"", "Token":{$Token}, "Parameter1":{$SearchTerm}, "Parameter2":{$RefProviderOnlyFlag}, "Parameter3":"", "Parameter4":"", "Parameter5":"", "Parameter6":"", "Data":""}}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="GetResourceByID"
+                       maxRedirects="100"
+                       name="GetResourceByID"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Returns resource details by ID.
+			</description>
+                  <input>
+                     <parameter name="Appname"
+                                required="true"
+                                testWith="&#34;InformaticaCorporation.POC.TestApp&#34;"
+                                type="string"/>
+                     <parameter name="AppUserID"
+                                required="true"
+                                testWith="&#34;demo1&#34;"
+                                type="string"/>
+                     <parameter name="Token"
+                                required="true"
+                                testWith="&#34;79D6850E-1197-418B-BF76-71C34DBCFEEE&#34;"
+                                type="string"/>
+                     <parameter description="Internal ID for resource. See GetResources."
+                                name="ResourceID"
+                                required="true"
+                                testWith="&#34;1&#34;"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="http://pm.unitysandbox.com/UnityPM/unityservice.svc/json/MagicJson"
+                                        verb="POST">
+                        <httpHeaders>
+                           <header name="Content-Type">application/json</header>
+                        </httpHeaders>
+                        <body>{{"Action":"GetPractitioners", "Appname":{$Appname}, "AppUserID":{$AppUserID}, "PatientID":"", "Token":{$Token}, "Parameter1":{$ResourceID}, "Parameter2":"", "Parameter3":"", "Parameter4":"", "Parameter5":"", "Parameter6":"", "Data":""}}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="GetAppointmentCancellationReasons"
+                       maxRedirects="100"
+                       name="GetAppointmentCancellationReasons"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Returns a list of valid cancellation reasons in the system.
+			</description>
+                  <input>
+                     <parameter name="Appname"
+                                required="true"
+                                testWith="&#34;InformaticaCorporation.POC.TestApp&#34;"
+                                type="string"/>
+                     <parameter name="AppUserID"
+                                required="false"
+                                testWith="&#34;demo1&#34;"
+                                type="string"/>
+                     <parameter name="Token"
+                                required="true"
+                                testWith="&#34;79D6850E-1197-418B-BF76-71C34DBCFEEE&#34;"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="http://pm.unitysandbox.com/UnityPM/unityservice.svc/json/MagicJson"
+                                        verb="POST">
+                        <httpHeaders>
+                           <header name="Content-Type">application/json</header>
+                        </httpHeaders>
+                        <body>{{"Action":"GetAppointmentCancellationReasons", "Appname":{$Appname}, "AppUserID":{$AppUserID}, "PatientID":"", "Token":{$Token}, "Parameter1":"", "Parameter2":"", "Parameter3":"", "Parameter4":"", "Parameter5":"", "Parameter6":"", "Data":""}}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="GetAppointmentConfirmationResults"
+                       maxRedirects="100"
+                       name="GetAppointmentConfirmationResults"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Returns list of options for confirmation results when confirming an appointment.
+			</description>
+                  <input>
+                     <parameter name="Appname"
+                                required="true"
+                                testWith="&#34;InformaticaCorporation.POC.TestApp&#34;"
+                                type="string"/>
+                     <parameter name="AppUserID"
+                                required="true"
+                                testWith="&#34;demo1&#34;"
+                                type="string"/>
+                     <parameter name="Token"
+                                required="true"
+                                testWith="&#34;D0716251-BD52-417E-88B2-B8DD2F86D041&#34;"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="http://pm.unitysandbox.com/UnityPM/unityservice.svc/json/MagicJson"
+                                        verb="POST">
+                        <httpHeaders>
+                           <header name="Content-Type">application/json</header>
+                        </httpHeaders>
+                        <body>{{"Action":"GetAppointmentConfirmationResults", "Appname":{$Appname}, "AppUserID":{$AppUserID}, "PatientID":"", "Token":{$Token}, "Parameter1":"", "Parameter2":"", "Parameter3":"", "Parameter4":"", "Parameter5":"", "Parameter6":"", "Data":""}}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="GetAppointmentsByChangeDTTM"
+                       maxRedirects="100"
+                       name="GetAppointmentsByChangeDTTM"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Returns all appointments within the given date range. If a last pulled date is used (Parameter3), then only appointments that have been modified or created since that date are returned.
+			</description>
+                  <input>
+                     <parameter name="Appname"
+                                required="true"
+                                testWith="&#34;InformaticaCorporation.POC.TestApp&#34;"
+                                type="string"/>
+                     <parameter name="AppUserID"
+                                required="true"
+                                testWith="&#34;demo1&#34;"
+                                type="string"/>
+                     <parameter name="Token"
+                                required="true"
+                                testWith="&#34;D0716251-BD52-417E-88B2-B8DD2F86D041&#34;"
+                                type="string"/>
+                     <parameter description="Starting date for appointment list. Accepts date time format. If no date is provided, this value will default to the current date and time."
+                                name="ApptStartDate"
+                                required="false"
+                                testWith="&#34;&#34;"
+                                type="string"/>
+                     <parameter description="Ending date for appointment list. If not used, all appointments are returned starting from appointment start date (Parameter1)."
+                                name="ApptEndDate"
+                                required="false"
+                                testWith="&#34;&#34;"
+                                type="string"/>
+                     <parameter description="If used, the appointments returned are only those that have been modified/changed since this date and time."
+                                name="LastPulled"
+                                required="false"
+                                testWith="&#34;&#34;"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="http://pm.unitysandbox.com/UnityPM/unityservice.svc/json/MagicJson"
+                                        verb="POST">
+                        <httpHeaders>
+                           <header name="Content-Type">application/json</header>
+                        </httpHeaders>
+                        <body>{{"Action":"GetAppointmentsByChangeDTTM", "Appname":{$Appname}, "AppUserID":{$AppUserID}, "PatientID":"", "Token":{$Token}, "Parameter1":{$ApptStartDate}, "Parameter2":{$ApptEndDate}, "Parameter3":{$LastPulled}, "Parameter4":"", "Parameter5":"", "Parameter6":"", "Data":""}}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="GetAppointmentTypes"
+                       maxRedirects="100"
+                       name="GetAppointmentTypes"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Returns a list of available appointment type codes.
+			</description>
+                  <input>
+                     <parameter name="Appname"
+                                required="true"
+                                testWith="&#34;InformaticaCorporation.POC.TestApp&#34;"
+                                type="string"/>
+                     <parameter name="AppUserID"
+                                required="false"
+                                testWith="&#34;demo1&#34;"
+                                type="string"/>
+                     <parameter name="PatientID"
+                                required="false"
+                                testWith="&#34;33283&#34;"
+                                type="string"/>
+                     <parameter name="Token"
+                                required="true"
+                                testWith="&#34;D0716251-BD52-417E-88B2-B8DD2F86D041&#34;"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="http://pm.unitysandbox.com/UnityPM/unityservice.svc/json/MagicJson"
+                                        verb="POST">
+                        <httpHeaders>
+                           <header name="Content-Type">application/json</header>
+                        </httpHeaders>
+                        <body>{{"Action":"GetAppointmentTypes", "Appname":{$Appname}, "AppUserID":{$AppUserID}, "PatientID":{$PatientID}, "Token":{$Token}, "Parameter1":"", "Parameter2":"", "Parameter3":"", "Parameter4":"", "Parameter5":"", "Parameter6":"", "Data":""}}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="GetAvailableSchedule"
+                       maxRedirects="100"
+                       name="GetAvailableSchedule"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Gets schedule availability based on resource, date, location, and department.
+			</description>
+                  <input>
+                     <parameter name="Appname"
+                                required="true"
+                                testWith="&#34;InformaticaCorporation.POC.TestApp&#34;"
+                                type="string"/>
+                     <parameter name="AppUserID"
+                                required="true"
+                                testWith="&#34;demo1&#34;"
+                                type="string"/>
+                     <parameter name="Token"
+                                required="true"
+                                testWith="&#34;D0716251-BD52-417E-88B2-B8DD2F86D041&#34;"
+                                type="string"/>
+                     <parameter description="Appointment resource abbreviation. See GetResources."
+                                name="Resource"
+                                required="true"
+                                testWith="&#34;ANNANE&#34;"
+                                type="string"/>
+                     <parameter description="Starting date (inclusive YYYY-MM-DD)."
+                                name="StartDate"
+                                required="false"
+                                testWith="&#34;&#34;"
+                                type="string"/>
+                     <parameter description="Ending date (exclusive YYYY-MM-DD)."
+                                name="EndDate"
+                                required="false"
+                                testWith="&#34;&#34;"
+                                type="string"/>
+                     <parameter description="Scheduling location abbreviation. See GetSchedulingLocations."
+                                name="SchedulingLoc"
+                                required="false"
+                                testWith="&#34;&#34;"
+                                type="string"/>
+                     <parameter description="Scheduling department abbreviation. See GetSchedulingDepartments."
+                                name="SchedulingDept"
+                                required="false"
+                                testWith="&#34;&#34;"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="http://pm.unitysandbox.com/UnityPM/unityservice.svc/json/MagicJson"
+                                        verb="POST">
+                        <httpHeaders>
+                           <header name="Content-Type">application/json</header>
+                        </httpHeaders>
+                        <body>{{"Action":"GetAppointmentTypes", "Appname":{$Appname}, "AppUserID":{$AppUserID}, "PatientID":"", "Token":{$Token}, "Parameter1":{$Resource}, "Parameter2":{$StartDate}, "Parameter3":{$EndDate}, "Parameter4":{$SchedulingLoc}, "Parameter5":{$SchedulingDept}, "Parameter6":"", "Data":""}}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="GetAvailableTimeBlocks"
+                       maxRedirects="100"
+                       name="GetAvailableTimeBlocks"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Returns eligible appointment types for time blocks in the given period. To be used with GetAvailableSchedule to determine appointment availability.
+			</description>
+                  <input>
+                     <parameter name="Appname"
+                                required="true"
+                                testWith="&#34;InformaticaCorporation.POC.TestApp&#34;"
+                                type="string"/>
+                     <parameter name="AppUserID"
+                                required="true"
+                                testWith="&#34;demo1&#34;"
+                                type="string"/>
+                     <parameter name="Token"
+                                required="true"
+                                testWith="&#34;D0716251-BD52-417E-88B2-B8DD2F86D041&#34;"
+                                type="string"/>
+                     <parameter description="Appointment resource abbreviation. See GetResources."
+                                name="Resource"
+                                required="true"
+                                testWith="&#34;MARFEE&#34;"
+                                type="string"/>
+                     <parameter description="Starting date."
+                                name="StartDate"
+                                required="false"
+                                testWith="&#34;&#34;"
+                                type="string"/>
+                     <parameter description="Ending date (exclusive)."
+                                name="EndDate"
+                                required="false"
+                                testWith="&#34;&#34;"
+                                type="string"/>
+                     <parameter description="Scheduling location abbreviation. See GetSchedulingLocations."
+                                name="SchedulingLoc"
+                                required="false"
+                                testWith="&#34;OFFICE&#34;"
+                                type="string"/>
+                     <parameter description="Scheduling department abbreviation. See GetSchedulingDepartments."
+                                name="SchedulingDept"
+                                required="false"
+                                testWith="&#34;OFFICE&#34;"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="http://pm.unitysandbox.com/UnityPM/unityservice.svc/json/MagicJson"
+                                        verb="POST">
+                        <httpHeaders>
+                           <header name="Content-Type">application/json</header>
+                        </httpHeaders>
+                        <body>{{"Action":"GetAvailableTimeBlocks", "Appname":{$Appname}, "AppUserID":{$AppUserID}, "PatientID":"", "Token":{$Token}, "Parameter1":{$Resource}, "Parameter2":{$StartDate}, "Parameter3":{$EndDate}, "Parameter4":{$SchedulingLoc}, "Parameter5":{$SchedulingDept}, "Parameter6":"", "Data":""}}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="GetResources"
+                       maxRedirects="100"
+                       name="GetResources"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Provides a list of available resources.</description>
+                  <input>
+                     <parameter name="Appname"
+                                required="true"
+                                testWith="&#34;InformaticaCorporation.POC.TestApp&#34;"
+                                type="string"/>
+                     <parameter name="Token"
+                                required="true"
+                                testWith="&#34;D0716251-BD52-417E-88B2-B8DD2F86D041&#34;"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="http://pm.unitysandbox.com/UnityPM/unityservice.svc/json/MagicJson"
+                                        verb="POST">
+                        <httpHeaders>
+                           <header name="Content-Type">application/json</header>
+                        </httpHeaders>
+                        <body>{{"Action":"GetResources", "Appname":{$Appname}, "AppUserID":"", "PatientID":"", "Token":{$Token}, "Parameter1":"", "Parameter2":"", "Parameter3":"", "Parameter4":"", "Parameter5":"", "Parameter6":"", "Data":""}}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="GetSchedule"
+                       maxRedirects="100"
+                       name="GetSchedule"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>List appointments for the specified date or date range, for an individual user, a list of users or all users, appointment types, and appointment statuses.</description>
+                  <input>
+                     <parameter name="Appname"
+                                required="true"
+                                testWith="&#34;InformaticaCorporation.POC.TestApp&#34;"
+                                type="string"/>
+                     <parameter name="AppUserID"
+                                required="true"
+                                testWith="&#34;demo1&#34;"
+                                type="string"/>
+                     <parameter name="Token"
+                                required="true"
+                                testWith="&#34;D0716251-BD52-417E-88B2-B8DD2F86D041&#34;"
+                                type="string"/>
+                     <parameter description="Schedule Date. You can enter a single date (for example, 3/24/2015), or you can enter a date range separated by a pipe (3/24/2015|3/29/2015). &#xA;There is no predefined limit on the range of dates supplied to this parameter. However, to avoid performance issues, it is recommended that an application enforce a limit to the duration required (e.g., 30 days)."
+                                name="StartDate"
+                                required="true"
+                                testWith="&#34;3/24/2015|3/29/2015&#34;"
+                                type="string"/>
+                     <parameter description="Changed since (show any new changes for Schedule Date), that is changes for today's schedule since today at 10:17."
+                                name="ChangedSince"
+                                required="false"
+                                testWith="&#34;&#34;"
+                                type="string"/>
+                     <parameter description="Pipe-delimited list of scheduling location abbreviations."
+                                name="SchedulingFilter"
+                                required="false"
+                                testWith="&#34;&#34;"
+                                type="string"/>
+                     <parameter description="Sought user (other user whose schedule you want to pull). Use &#34;All&#34; to return schedules for all users. Or pipe delimited list for a list of practitioner's abbreviations."
+                                name="SoughtUser"
+                                required="true"
+                                testWith="&#34;All&#34;"
+                                type="string"/>
+                     <parameter description="Pipe-delimited list of desired appointment types."
+                                name="AppointmentType"
+                                required="false"
+                                testWith="&#34;&#34;"
+                                type="string"/>
+                     <parameter description="Active - returns appointments with statuses of Acknowledge, Confirmed, Scheduled, and Wait Listed.&#xA;ActiveNS - returns appointments with statuses included in Active list in addition to No-show.&#xA;Inactive - returns appointments with statuses of Canceled, No-show, and Bumped.&#xA;All (or no value) - returns appointments with any status."
+                                name="AppointmenStatus"
+                                required="false"
+                                testWith="&#34;&#34;"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="http://pm.unitysandbox.com/UnityPM/unityservice.svc/json/MagicJson"
+                                        verb="POST">
+                        <httpHeaders>
+                           <header name="Content-Type">application/json</header>
+                        </httpHeaders>
+                        <body>{{"Action":"GetSchedule", "Appname":{$Appname}, "AppUserID":{$AppUserID}, "PatientID":"", "Token":{$Token}, "Parameter1":{$StartDate}, "Parameter2":{$ChangedSince}, "Parameter3":{$SchedulingFilter}, "Parameter4":{$SoughtUser}, "Parameter5":{$AppointmentType}, "Parameter6":{$AppointmenStatus}, "Data":""}}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="GetScheduleByPatientID"
+                       maxRedirects="100"
+                       name="GetScheduleByPatientID"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Returns all appointments for a specified patient ID.</description>
+                  <input>
+                     <parameter name="Appname"
+                                required="true"
+                                testWith="&#34;InformaticaCorporation.POC.TestApp&#34;"
+                                type="string"/>
+                     <parameter name="AppUserID"
+                                required="true"
+                                testWith="&#34;demo1&#34;"
+                                type="string"/>
+                     <parameter name="PatientID"
+                                required="true"
+                                testWith="&#34;33283&#34;"
+                                type="string"/>
+                     <parameter name="Token"
+                                required="true"
+                                testWith="&#34;D0716251-BD52-417E-88B2-B8DD2F86D041&#34;"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="http://pm.unitysandbox.com/UnityPM/unityservice.svc/json/MagicJson"
+                                        verb="POST">
+                        <httpHeaders>
+                           <header name="Content-Type">application/json</header>
+                        </httpHeaders>
+                        <body>{{"Action":"GetScheduleByPatientID", "Appname":{$Appname}, "AppUserID":{$AppUserID}, "PatientID":{$PatientID}, "Token":{$Token}, "Parameter1":"", "Parameter2":"", "Parameter3":"", "Parameter4":"", "Parameter5":"", "Parameter6":"", "Data":""}}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="GetSchedulingDepartments"
+                       maxRedirects="100"
+                       name="GetSchedulingDepartments"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Generates a list of scheduling departments.
+			</description>
+                  <input>
+                     <parameter name="Appname"
+                                required="true"
+                                testWith="&#34;InformaticaCorporation.POC.TestApp&#34;"
+                                type="string"/>
+                     <parameter name="AppUserID"
+                                required="true"
+                                testWith="&#34;demo1&#34;"
+                                type="string"/>
+                     <parameter name="Token"
+                                required="true"
+                                testWith="&#34;D0716251-BD52-417E-88B2-B8DD2F86D041&#34;"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="http://pm.unitysandbox.com/UnityPM/unityservice.svc/json/MagicJson"
+                                        verb="POST">
+                        <httpHeaders>
+                           <header name="Content-Type">application/json</header>
+                        </httpHeaders>
+                        <body>{{"Action":"GetSchedulingDepartments", "Appname":{$Appname}, "AppUserID":{$AppUserID}, "PatientID":"", "Token":{$Token}, "Parameter1":"", "Parameter2":"", "Parameter3":"", "Parameter4":"", "Parameter5":"", "Parameter6":"", "Data":""}}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="GetSchedulingLocations"
+                       maxRedirects="100"
+                       name="GetSchedulingLocations"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Returns a list of scheduling locations.</description>
+                  <input>
+                     <parameter name="Appname"
+                                required="true"
+                                testWith="&#34;InformaticaCorporation.POC.TestApp&#34;"
+                                type="string"/>
+                     <parameter name="Token"
+                                required="true"
+                                testWith="&#34;D0716251-BD52-417E-88B2-B8DD2F86D041&#34;"
+                                type="string"/>
+                     <parameter description="Search on abbreviation or description"
+                                name="SearchTerm"
+                                required="false"
+                                testWith="&#34;&#34;"
+                                type="string"/>
+                     <parameter description="Abbreviation for scheduling department. Supplying this will filter results to only those scheduling locations that share a department with the supplied scheduling department."
+                                name="SchedulingDept"
+                                required="false"
+                                testWith="&#34;&#34;"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="http://pm.unitysandbox.com/UnityPM/unityservice.svc/json/MagicJson"
+                                        verb="POST">
+                        <httpHeaders>
+                           <header name="Content-Type">application/json</header>
+                        </httpHeaders>
+                        <body>{{"Action":"GetSchedulingLocations", "Appname":{$Appname}, "AppUserID":"", "PatientID":"", "Token":{$Token}, "Parameter1":{$SearchTerm}, "Parameter2":{$SchedulingDept}, "Parameter3":"", "Parameter4":"", "Parameter5":"", "Parameter6":"", "Data":""}}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="SaveAppointment"
+                       maxRedirects="100"
+                       name="SaveAppointment"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Creates an appointment for the specified patient.
+			</description>
+                  <input>
+                     <parameter name="Appname"
+                                required="true"
+                                testWith="&#34;InformaticaCorporation.POC.TestApp&#34;"
+                                type="string"/>
+                     <parameter name="AppUserID"
+                                required="true"
+                                testWith="&#34;demo1&#34;"
+                                type="string"/>
+                     <parameter name="PatientID"
+                                required="true"
+                                testWith="&#34;34360&#34;"
+                                type="string"/>
+                     <parameter name="Token"
+                                required="true"
+                                testWith="&#34;D0716251-BD52-417E-88B2-B8DD2F86D041&#34;"
+                                type="string"/>
+                     <parameter description="&lt;appt&gt;&#xA;&lt;appointmentDateTime&gt;06/15/2015 13:30&lt;/appointmentDateTime&gt;&#xA;&lt;appointmentDuration&gt;30&lt;/appointmentDuration&gt; &lt;!-- minutes --&gt;&#xA;&lt;appointmentType&gt;OV&lt;/appointmentType&gt; &lt;!-- GetAppointmentTypes.Abbreviation --&gt;&#xA;&lt;schedulingLocation&gt;OFFICE&lt;/schedulingLocation&gt; &lt;!-- GetSchedulingLocations.Abbreviation --&gt;&#xA;&lt;schedulingDepartment&gt;OFFICE&lt;/schedulingDepartment&gt; &lt;!-- GetSchedulingDepartments.Abbreviation --&gt;&#xA;&lt;resource&gt;ANNANE&lt;/resource&gt; &lt;!-- GetResources.Abbreviation --&gt;&#xA;&lt;comments&gt;Appointment saved from Unity&lt;/comments&gt;&#xA;&lt;referDr&gt;Bones&lt;/referDr&gt;&#xA;&lt;/appt&gt;"
+                                name="XMLPayload"
+                                required="true"
+                                testWith="&#34;&lt;appt&gt; &lt;appointmentDateTime&gt;07/26/2017 1:00PM&lt;/appointmentDateTime&gt; &lt;appointmentDuration&gt;5&lt;/appointmentDuration&gt; &lt;!-- minutes --&gt; &lt;appointmentType&gt;FOLLOWUP&lt;/appointmentType&gt; &lt;!-- GetAppointmentTypes.Abbreviation --&gt; &lt;schedulingLocation&gt;OFFICE&lt;/schedulingLocation&gt; &lt;!-- GetSchedulingLocations.Abbreviation --&gt; &lt;schedulingDepartment&gt;OFFICE&lt;/schedulingDepartment&gt; &lt;!-- GetSchedulingDepartments.Abbreviation --&gt; &lt;resource&gt;MARFEE&lt;/resource&gt; &lt;!-- GetResources.Abbreviation --&gt; &lt;comments&gt;Appointment saved from Unity by Yosi&lt;/comments&gt; &lt;referDr&gt;&lt;/referDr&gt; &lt;/appt&gt;&#34;"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="http://pm.unitysandbox.com/UnityPM/unityservice.svc/json/MagicJson"
+                                        verb="POST">
+                        <httpHeaders>
+                           <header name="Content-Type">application/json</header>
+                        </httpHeaders>
+                        <body>{{"Action":"SaveAppointment", "Appname":{$Appname}, "AppUserID":{$AppUserID}, "PatientID":{$PatientID}, "Token":{$Token}, "Parameter1":{$XMLPayload}, "Parameter2":"", "Parameter3":"", "Parameter4":"", "Parameter5":"", "Parameter6":"", "Data":""}}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="SetAppointmentStatus"
+                       maxRedirects="100"
+                       name="SetAppointmentStatus"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Updates the status of a given appointment.</description>
+                  <input>
+                     <parameter name="Appname"
+                                required="true"
+                                testWith="&#34;InformaticaCorporation.POC.TestApp&#34;"
+                                type="string"/>
+                     <parameter name="AppUserID"
+                                required="true"
+                                testWith="&#34;demo1&#34;"
+                                type="string"/>
+                     <parameter name="PatientID"
+                                required="true"
+                                testWith="&#34;33283&#34;"
+                                type="string"/>
+                     <parameter name="Token"
+                                required="true"
+                                testWith="&#34;D0716251-BD52-417E-88B2-B8DD2F86D041&#34;"
+                                type="string"/>
+                     <parameter description="See GetAppointmentsByChangeDTTM ."
+                                name="AppointmentID"
+                                required="true"
+                                testWith="&#34;11394&#34;"
+                                type="string"/>
+                     <parameter description="Options are as follows:&#xA;A = Acknowledge&#xA;B = Bumped&#xA;C = Confirmed&#xA;X = Canceled&#xA;N = No Show&#xA;W = Wait Listed&#xA;S = Scheduled"
+                                name="NewAppointmentStatus"
+                                required="true"
+                                testWith="&#34;S&#34;"
+                                type="string"/>
+                     <parameter description="Date and time the status change occurred. If no value is passed, the current server date time will be used."
+                                name="UpdateDate"
+                                required="false"
+                                testWith="&#34;&#34;"
+                                type="string"/>
+                     <parameter description="Time of update in integer format. For example, 11:30 a.m. would be 1130, and 2:00 p.m. would be 1400."
+                                name="UpdateTime"
+                                required="true"
+                                testWith="&#34;1300&#34;"
+                                type="string"/>
+                     <parameter description="When confirming an appointment, you may pass in a confirmation result ID. See GetAppointmentConfirmationResults for available values."
+                                name="ConfirmResultID"
+                                required="false"
+                                testWith="&#34;&#34;"
+                                type="string"/>
+                     <parameter description="When bumping or canceling an appointment, a bump or cancel reason can be specified here. See GetAppointmentCancellationReasons for available values."
+                                name="ReasonID"
+                                required="false"
+                                testWith="&#34;&#34;"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="http://pm.unitysandbox.com/UnityPM/unityservice.svc/json/MagicJson"
+                                        verb="POST">
+                        <httpHeaders>
+                           <header name="Content-Type">application/json</header>
+                        </httpHeaders>
+                        <body>{{"Action":"SetAppointmentStatus", "Appname":{$Appname}, "AppUserID":{$AppUserID}, "PatientID":{$PatientID}, "Token":{$Token}, "Parameter1":{$AppointmentID}, "Parameter2":{$NewAppointmentStatus}, "Parameter3":{$UpdateDate}, "Parameter4":{$UpdateTime}, "Parameter5":{$ConfirmResultID}, "Parameter6":{$ReasonID}, "Data":""}}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+            </actions>
+            <objects>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="SavePatientResponse">
+                  <description/>
+                  <detail>
+                     <field name="AccountID" type="string"/>
+                     <field name="PatientID" type="string"/>
+                     <field name="MRN" type="string"/>
+                     <field name="AccountDate" type="string"/>
+                     <field name="ContactID" type="string"/>
+                     <field name="AddressID" type="string"/>
+                     <field name="PatientNumber" type="string"/>
+                     <field name="AccountNumber" type="string"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="Patient">
+                  <description/>
+                  <detail>
+                     <field name="dateofbirth" type="string"/>
+                     <field name="firstname" type="string"/>
+                     <field name="WorkPhone" type="string"/>
+                     <field name="gender" type="string"/>
+                     <field name="ZipCode" type="string"/>
+                     <field name="MRN" type="string"/>
+                     <field name="middlename" type="string"/>
+                     <field name="City" type="string"/>
+                     <field name="orgid" type="string"/>
+                     <field name="lastname" type="string"/>
+                     <field name="ssn" type="string"/>
+                     <field name="AddressLine1" type="string"/>
+                     <field name="AddressLine2" type="string"/>
+                     <field name="HomePhone" type="string"/>
+                     <field name="State" type="string"/>
+                     <field name="PhoneNumber" type="string"/>
+                     <field name="age" type="string"/>
+                     <field name="OtherNumber" type="string"/>
+                     <field name="ID" type="string"/>
+                     <field name="CellPhone" type="string"/>
+                  </detail>
+               </processObject>
+            </objects>
+         </businessConnector>
+      </types1:Entry>
+      <types1:GUID>5ZFJNNRBabed32e15IFNSe</types1:GUID>
+      <types1:DisplayName>AllscriptsPracticeManagement1402</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2019-05-13T09:16:37.548Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

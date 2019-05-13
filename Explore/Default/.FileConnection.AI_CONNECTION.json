@@ -1,6 +1,6 @@
 [
    {
-      "objectGuid": "a8RP9XhNwc5dsJRYqax9ST",
+      "objectGuid": "7sviCSVbIuverTuLvnQruD",
       "objectName": "FileConnection",
       "objectType": "AI_CONNECTION",
       "path": "/Explore/Default",
@@ -17,7 +17,7 @@
          },
          "objectRefs": [],
          "repoInfo": {
-            "repoHandle": "zoSxCS7FdpOfTRg-gt-2161821-2019-01-18T10:52:02.941Z::conn.xml"
+            "repoHandle": "U2dy8NTYglxbdyp-gt-2476065-2019-05-08T04:05:07.474Z::conn.xml"
          }
       }
    }

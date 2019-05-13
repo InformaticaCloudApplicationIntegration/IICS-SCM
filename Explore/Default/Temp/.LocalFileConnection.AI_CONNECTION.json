@@ -1,6 +1,6 @@
 [
    {
-      "objectGuid": "eig6qboAOy4d4nVvhyE6Mu",
+      "objectGuid": "iW7LxrZJFcVgrgT1LzQ7wz",
       "objectName": "LocalFileConnection",
       "objectType": "AI_CONNECTION",
       "path": "/Explore/Default/Temp",
@@ -17,7 +17,7 @@
          },
          "objectRefs": [],
          "repoInfo": {
-            "repoHandle": "oEFsWTzIf6riX2F-gt-2401463-2019-03-28T16:27:15.234Z::conn.xml"
+            "repoHandle": "HWvJ4rswVYx8R8W-gt-5067360-2019-05-08T04:05:15.365Z::conn.xml"
          }
       }
    }

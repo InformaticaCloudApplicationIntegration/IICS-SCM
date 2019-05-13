@@ -1,9 +1,9 @@
 <aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
                    xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
    <types1:Item>
-      <types1:EntryId>AvZE4O9pH8sVYx8-gt-597973-2019-01-18T12:33:30.428Z::conn.xml</types1:EntryId>
-      <types1:Name>Customer-and-Invoice-details-actions-1</types1:Name>
-      <types1:ParentFlowIds>DclzHfSTu0kMVX3-gt-600882-2019-01-18T13:05:28.469Z::pd.xml,1fPHy1MuzBq695k-gt-416616-2019-01-21T16:31:00.984Z::pd.xml</types1:ParentFlowIds>
+      <types1:EntryId>NXHVOJ2oTVMTonQ-gt-5048370-2019-05-08T04:05:16.308Z::conn.xml</types1:EntryId>
+      <types1:Name>Customer-and-Invoice-details-actions</types1:Name>
+      <types1:ParentFlowIds>XCLDclzHfSTu0kM-gt-5031694-2019-05-08T04:05:18.029Z::pd.xml,W619jDySabbeJOS-gt-5067391-2019-05-08T04:05:17.869Z::pd.xml</types1:ParentFlowIds>
       <types1:MimeType>application/xml+connection</types1:MimeType>
       <types1:Description/>
       <types1:AppliesTo/>
@@ -11,19 +11,16 @@
       <types1:VersionLabel>1.0</types1:VersionLabel>
       <types1:State>CURRENT</types1:State>
       <types1:ProcessGroup/>
-      <types1:CreatedBy>ganesh@na1.dm-us.org</types1:CreatedBy>
-      <types1:CreationDate>2019-01-18T12:33:30Z</types1:CreationDate>
+      <types1:CreatedBy>sagarwal@svccon.com</types1:CreatedBy>
+      <types1:CreationDate>2019-05-08T04:05:16Z</types1:CreationDate>
       <types1:ModifiedBy/>
-      <types1:PublicationStatus>published</types1:PublicationStatus>
-      <types1:PublishedBy>ganesh@na1.dm-us.org</types1:PublishedBy>
-      <types1:PublicationDate>2019-01-18T12:33:46Z</types1:PublicationDate>
-      <types1:PublishedContributionId>project:/rt.connection/Customer-and-Invoice-details-actions-1/Customer-and-Invoice-details-actions-1.conn.xml</types1:PublishedContributionId>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
       <types1:AutosaveExists>false</types1:AutosaveExists>
       <types1:Entry>
          <connection xmlns="http://schemas.informatica.com/socrates/data-services/2014/04/avosConnections.xsd"
                      displayName="Customer-and-Invoice-details-actions"
                      label="Customer-and-Invoice-details-actions"
-                     name="Customer-and-Invoice-details-actions-1">
+                     name="Customer-and-Invoice-details-actions">
             <description/>
             <tags/>
             <agent/>
@@ -35,7 +32,7 @@
             <businessConnector xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"
                                agentOnly="false"
                                connectorPath="project:/rt.connector/Customer_and_Invoice_Details1/Customer_and_Invoice_Details1_svcDef.xml"
-                               guid="fUmUhrbv5erdSNnXSVJKEg"
+                               guid="59CqIASmMeZlOmaGyfMxwx"
                                name="Customer_and_Invoice_Details1"
                                supportsConnectionTest="false"
                                uuid="34c4010c-d50a-4f01-85de-5778eb2f4cb2">
@@ -43,8 +40,8 @@
             </businessConnector>
          </connection>
       </types1:Entry>
-      <types1:GUID>5KDzB3dxBAqfUNhWDtbbst</types1:GUID>
+      <types1:GUID>6FaMeNCMcP4fwPDiY9Nssv</types1:GUID>
       <types1:DisplayName>Customer-and-Invoice-details-actions</types1:DisplayName>
    </types1:Item>
-   <types1:CurrentServerDateTime>2019-05-13T08:58:43.504Z</types1:CurrentServerDateTime>
+   <types1:CurrentServerDateTime>2019-05-13T09:16:40.507Z</types1:CurrentServerDateTime>
 </aetgt:getResponse>

@@ -1,6 +1,6 @@
 [
    {
-      "objectGuid": "iSxmWjy6w8dcCwof8FGP4K",
+      "objectGuid": "1vzKG7LM7sycnaR36ymWuX",
       "objectName": "Edmunds",
       "objectType": "AI_SERVICE_CONNECTOR",
       "path": "/Explore/Default",
@@ -17,7 +17,7 @@
          },
          "objectRefs": [],
          "repoInfo": {
-            "repoHandle": "tiTW34Xutaaabbg-gt-2508423-2019-01-21T12:39:33.318Z::svc.xml"
+            "repoHandle": "S24FsWTzIf6riX2-gt-5057538-2019-05-08T04:05:07.132Z::svc.xml"
          }
       }
    }

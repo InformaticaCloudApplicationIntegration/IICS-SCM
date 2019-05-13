@@ -1,6 +1,6 @@
 [
    {
-      "objectGuid": "4gzvqAO1s2ShKo3jfTi4y4",
+      "objectGuid": "4dp8pwLIIVXhcNXQtHILQN",
       "objectName": "OrderProcessorDelete",
       "objectType": "PROCESS",
       "path": "/Explore/Default",
@@ -17,7 +17,7 @@
          },
          "objectRefs": [],
          "repoInfo": {
-            "repoHandle": "RTyxKf3eFhBJQWS-gt-36259-2018-06-13T05:06:07.052Z::pd.xml"
+            "repoHandle": "2wQuoJ49ARJi4tc-gt-5067306-2019-05-08T04:05:08.623Z::pd.xml"
          }
       }
    }

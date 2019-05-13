@@ -1,7 +1,7 @@
 <aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
                    xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
    <types1:Item>
-      <types1:EntryId>AKVlDjAqQHhwq9b-gt-903570-2019-01-21T05:43:41.419Z::conn.xml</types1:EntryId>
+      <types1:EntryId>lnCmp6oIuQaaabc-gt-5031674-2019-05-08T04:05:17.92Z::conn.xml</types1:EntryId>
       <types1:Name>Edmunds-actions-1</types1:Name>
       <types1:MimeType>application/xml+connection</types1:MimeType>
       <types1:Description/>
@@ -10,14 +10,10 @@
       <types1:VersionLabel>1.0</types1:VersionLabel>
       <types1:State>CURRENT</types1:State>
       <types1:ProcessGroup/>
-      <types1:CreatedBy>ganesh@na1.dm-us.org</types1:CreatedBy>
-      <types1:CreationDate>2019-01-21T05:43:41Z</types1:CreationDate>
-      <types1:ModifiedBy>ganesh@na1.dm-us.org</types1:ModifiedBy>
-      <types1:ModificationDate>2019-01-21T06:24:27Z</types1:ModificationDate>
-      <types1:PublicationStatus>published</types1:PublicationStatus>
-      <types1:PublishedBy>ganesh@na1.dm-us.org</types1:PublishedBy>
-      <types1:PublicationDate>2019-01-21T06:24:42Z</types1:PublicationDate>
-      <types1:PublishedContributionId>project:/rt.connection/Edmunds-actions-1/Edmunds-actions-1.conn.xml</types1:PublishedContributionId>
+      <types1:CreatedBy>sagarwal@svccon.com</types1:CreatedBy>
+      <types1:CreationDate>2019-05-08T04:05:18Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
       <types1:AutosaveExists>false</types1:AutosaveExists>
       <types1:Entry>
          <connection xmlns="http://schemas.informatica.com/socrates/data-services/2014/04/avosConnections.xsd"
@@ -33,7 +29,7 @@
             <businessConnector xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"
                                agentOnly="false"
                                connectorPath="project:/rt.connector/Edmunds/Edmunds_svcDef.xml"
-                               guid="iFMv5t4cbc6bTZY1JtKcQP"
+                               guid="9759x1bKR2JbToujRHcg0l"
                                name="Edmunds"
                                supportsConnectionTest="false"
                                uuid="a6612547-8176-402a-b8e4-e9adb87e9171">
@@ -41,8 +37,8 @@
             </businessConnector>
          </connection>
       </types1:Entry>
-      <types1:GUID>6PEvZYD0ZrIjmRBII0TjOM</types1:GUID>
+      <types1:GUID>45cmS6qgZkfdMfmoEotzWA</types1:GUID>
       <types1:DisplayName>Edmunds-actions</types1:DisplayName>
    </types1:Item>
-   <types1:CurrentServerDateTime>2019-05-13T08:58:44.007Z</types1:CurrentServerDateTime>
+   <types1:CurrentServerDateTime>2019-05-13T09:16:41.004Z</types1:CurrentServerDateTime>
 </aetgt:getResponse>

@@ -1,6 +1,6 @@
 [
    {
-      "objectGuid": "iFMv5t4cbc6bTZY1JtKcQP",
+      "objectGuid": "9759x1bKR2JbToujRHcg0l",
       "objectName": "Edmunds",
       "objectType": "AI_SERVICE_CONNECTOR",
       "path": "/Explore/Use Cases and Demos/Automotive Services",
@@ -17,7 +17,7 @@
          },
          "objectRefs": [],
          "repoInfo": {
-            "repoHandle": "qg7XFEpciZBpDUQ-gt-6447-2018-02-11T09:43:34.266Z::svc.xml"
+            "repoHandle": "HS45bfTQbdxWq9b-gt-5067378-2019-05-08T04:05:15.451Z::svc.xml"
          }
       }
    }

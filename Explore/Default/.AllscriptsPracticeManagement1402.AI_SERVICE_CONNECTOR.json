@@ -1,13 +1,13 @@
 [
    {
-      "objectGuid": "9IjW0FTu1j4dELdAEi14G8",
-      "objectName": "Datastore",
+      "objectGuid": "5ZFJNNRBabed32e15IFNSe",
+      "objectName": "AllscriptsPracticeManagement1402",
       "objectType": "AI_SERVICE_CONNECTOR",
       "path": "/Explore/Default",
       "metadata": {
          "additionalInfo": {
-            "contentType": "application/json; charset=utf-8",
-            "description": "Accesses the schemaless NoSQL database to provide fully managed, robust, scalable storage for your application.",
+            "contentType": "Binary",
+            "description": "Allscripts Practice Management APIs for PRO-PM GA Practice Management 14.0.2 (AZURE)",
             "documentState": "VALID"
          },
          "contextAttributes": null,
@@ -17,7 +17,7 @@
          },
          "objectRefs": [],
          "repoInfo": {
-            "repoHandle": "TzAnOjseGbciZBp-gt-2476057-2019-05-08T04:05:07.376Z::svc.xml"
+            "repoHandle": "uu3cjAXhNUdyOoM-gt-123374-2018-08-17T06:04:23.366Z::svc.xml"
          }
       }
    }

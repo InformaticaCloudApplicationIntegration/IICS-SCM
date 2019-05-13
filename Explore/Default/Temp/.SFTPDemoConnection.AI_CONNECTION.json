@@ -1,6 +1,6 @@
 [
    {
-      "objectGuid": "2Q9pG43Nsiclfc7nvbYNY1",
+      "objectGuid": "9gHNi0ml6QDcMZEB4PqiaM",
       "objectName": "SFTPDemoConnection",
       "objectType": "AI_CONNECTION",
       "path": "/Explore/Default/Temp",
@@ -17,7 +17,7 @@
          },
          "objectRefs": [],
          "repoInfo": {
-            "repoHandle": "OdwWcn6Hbf13Erh-gt-1856570-2019-03-28T16:27:14.656Z::conn.xml"
+            "repoHandle": "HIk3aaa-gt-5057561-2019-05-08T04:05:15.344Z::conn.xml"
          }
       }
    }

@@ -1,9 +1,8 @@
 <aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
                    xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
    <types1:Item>
-      <types1:EntryId>tiTW34Xutaaabbg-gt-2508423-2019-01-21T12:39:33.318Z::svc.xml</types1:EntryId>
+      <types1:EntryId>S24FsWTzIf6riX2-gt-5057538-2019-05-08T04:05:07.132Z::svc.xml</types1:EntryId>
       <types1:Name>Edmunds-1</types1:Name>
-      <types1:ParentFlowIds>xR6Eaaaaaaaaaaa-gt-937704-2019-01-21T12:49:52.383Z::conn.xml</types1:ParentFlowIds>
       <types1:MimeType>application/xml+businesssconnector</types1:MimeType>
       <types1:Description/>
       <types1:AppliesTo/>
@@ -11,13 +10,10 @@
       <types1:VersionLabel>1.0</types1:VersionLabel>
       <types1:State>CURRENT</types1:State>
       <types1:ProcessGroup/>
-      <types1:CreatedBy>ganesh@na1.dm-us.org</types1:CreatedBy>
-      <types1:CreationDate>2019-01-21T12:39:33Z</types1:CreationDate>
+      <types1:CreatedBy>sagarwal@svccon.com</types1:CreatedBy>
+      <types1:CreationDate>2019-05-08T04:05:07Z</types1:CreationDate>
       <types1:ModifiedBy/>
-      <types1:PublicationStatus>published</types1:PublicationStatus>
-      <types1:PublishedBy>ganesh@na1.dm-us.org</types1:PublishedBy>
-      <types1:PublicationDate>2019-01-21T12:40:35Z</types1:PublicationDate>
-      <types1:PublishedContributionId>project:/rt.connector/Edmunds_1/Edmunds_1_svcDef.xml</types1:PublishedContributionId>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
       <types1:AutosaveExists>false</types1:AutosaveExists>
       <types1:Entry>
          <businessConnector xmlns="http://schemas.informatica.com/socrates/data-services/2014/05/business-connector-model.xsd"
@@ -135,8 +131,8 @@
             </objects>
          </businessConnector>
       </types1:Entry>
-      <types1:GUID>iSxmWjy6w8dcCwof8FGP4K</types1:GUID>
+      <types1:GUID>1vzKG7LM7sycnaR36ymWuX</types1:GUID>
       <types1:DisplayName>Edmunds</types1:DisplayName>
    </types1:Item>
-   <types1:CurrentServerDateTime>2019-05-13T08:58:41.14Z</types1:CurrentServerDateTime>
+   <types1:CurrentServerDateTime>2019-05-13T09:16:37.599Z</types1:CurrentServerDateTime>
 </aetgt:getResponse>

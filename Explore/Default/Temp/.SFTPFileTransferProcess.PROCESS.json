@@ -1,6 +1,6 @@
 [
    {
-      "objectGuid": "1rAZErm1Fqkbxo5XeHnN0Y",
+      "objectGuid": "3N2Y3hnecQNlrAcJP3SCoI",
       "objectName": "SFTPFileTransferProcess",
       "objectType": "PROCESS",
       "path": "/Explore/Default/Temp",
@@ -17,7 +17,7 @@
          },
          "objectRefs": [],
          "repoInfo": {
-            "repoHandle": "wZaaaa-gt-5423657-2019-03-28T16:27:16.358Z::pd.xml"
+            "repoHandle": "MDOp7jvpppppppp-gt-5048362-2019-05-08T04:05:16.283Z::pd.xml"
          }
       }
    }

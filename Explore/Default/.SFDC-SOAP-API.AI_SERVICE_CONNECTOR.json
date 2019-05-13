@@ -1,6 +1,6 @@
 [
    {
-      "objectGuid": "bORTBs4EnAkeG79HeaD0E4",
+      "objectGuid": "gc9UPJvK0WhddP03iT65wM",
       "objectName": "SFDC-SOAP-API",
       "objectType": "AI_SERVICE_CONNECTOR",
       "path": "/Explore/Default",
@@ -17,7 +17,7 @@
          },
          "objectRefs": [],
          "repoInfo": {
-            "repoHandle": "ZXXUfTRgpDqotxG-gt-816654-2019-04-09T09:40:18.823Z::svc.xml"
+            "repoHandle": "6cmkbclopz4KhPV-gt-5067331-2019-05-08T04:05:09.222Z::svc.xml"
          }
       }
    }

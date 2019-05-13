@@ -1,13 +1,13 @@
 [
    {
-      "objectGuid": "dwSQco8ZEODjDNIWafLToV",
-      "objectName": "BaseRatePO",
-      "objectType": "PROCESS_OBJECT",
+      "objectGuid": "3ePRlx4wvAIj6euoFJgvQ4",
+      "objectName": "AWSProductAdvert API",
+      "objectType": "AI_SERVICE_CONNECTOR",
       "path": "/Explore/Default",
       "metadata": {
          "additionalInfo": {
             "contentType": "application/json; charset=utf-8",
-            "description": "",
+            "description": "From here - https://docs.aws.amazon.com/AWSECommerceService/latest/DG/WhatIsA2S.html",
             "documentState": "VALID"
          },
          "contextAttributes": null,
@@ -17,7 +17,7 @@
          },
          "objectRefs": [],
          "repoInfo": {
-            "repoHandle": "Q9QtzbdtqSLlBWl-gt-5057504-2019-05-08T04:05:06.927Z::po.xml"
+            "repoHandle": "x1H5lRuImXycotF-gt-646481-2018-09-13T22:12:17.372Z::svc.xml"
          }
       }
    }

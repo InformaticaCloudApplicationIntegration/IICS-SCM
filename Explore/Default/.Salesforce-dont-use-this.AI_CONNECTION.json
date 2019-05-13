@@ -1,6 +1,6 @@
 [
    {
-      "objectGuid": "kwY17ZWJFAJlP8bUjWWhMl",
+      "objectGuid": "9EbPtjgjHzMhG85l8t52KG",
       "objectName": "Salesforce-dont-use-this",
       "objectType": "AI_CONNECTION",
       "path": "/Explore/Default",
@@ -17,7 +17,7 @@
          },
          "objectRefs": [],
          "repoInfo": {
-            "repoHandle": "lKchKGXShOeCFk4-gt-120383-2018-11-30T10:31:43.189Z::conn.xml"
+            "repoHandle": "U7UcgiciT6sFsds-gt-2476081-2019-05-08T04:05:07.546Z::conn.xml"
          }
       }
    }

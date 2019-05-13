@@ -1,6 +1,6 @@
 [
    {
-      "objectGuid": "1u6nP3ryQAZjEOHFIxVVkp",
+      "objectGuid": "5vWbawws5SxeKogXQ1VUoL",
       "objectName": "KafkaConnection",
       "objectType": "AI_CONNECTION",
       "path": "/Explore/Default",
@@ -17,7 +17,7 @@
          },
          "objectRefs": [],
          "repoInfo": {
-            "repoHandle": "PrvyXYDdxKlFmVS-gt-2136723-2019-04-25T06:50:10.665Z::conn.xml"
+            "repoHandle": "1bbfRLdqcgm8lnC-gt-5067278-2019-05-08T04:05:08.545Z::conn.xml"
          }
       }
    }

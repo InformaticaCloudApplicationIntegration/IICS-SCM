@@ -1,7 +1,7 @@
 <aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
                    xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
    <types1:Item>
-      <types1:EntryId>lKchKGXShOeCFk4-gt-120383-2018-11-30T10:31:43.189Z::conn.xml</types1:EntryId>
+      <types1:EntryId>U7UcgiciT6sFsds-gt-2476081-2019-05-08T04:05:07.546Z::conn.xml</types1:EntryId>
       <types1:Name>Salesforce-dont-use-this</types1:Name>
       <types1:MimeType>application/xml+connection</types1:MimeType>
       <types1:Description/>
@@ -10,10 +10,9 @@
       <types1:VersionLabel>1.0</types1:VersionLabel>
       <types1:State>CURRENT</types1:State>
       <types1:ProcessGroup/>
-      <types1:CreatedBy>mandar@na1.dm-us.org</types1:CreatedBy>
-      <types1:CreationDate>2018-11-30T10:31:43Z</types1:CreationDate>
-      <types1:ModifiedBy>luc@na1.dm-us.org</types1:ModifiedBy>
-      <types1:ModificationDate>2019-02-25T21:00:10Z</types1:ModificationDate>
+      <types1:CreatedBy>sagarwal@svccon.com</types1:CreatedBy>
+      <types1:CreationDate>2019-05-08T04:05:08Z</types1:CreationDate>
+      <types1:ModifiedBy/>
       <types1:PublicationStatus>unpublished</types1:PublicationStatus>
       <types1:AutosaveExists>false</types1:AutosaveExists>
       <types1:Entry>
@@ -47,8 +46,8 @@
             </authentication>
          </connection>
       </types1:Entry>
-      <types1:GUID>kwY17ZWJFAJlP8bUjWWhMl</types1:GUID>
+      <types1:GUID>9EbPtjgjHzMhG85l8t52KG</types1:GUID>
       <types1:DisplayName>Salesforce-dont-use-this</types1:DisplayName>
    </types1:Item>
-   <types1:CurrentServerDateTime>2019-05-13T08:58:41.087Z</types1:CurrentServerDateTime>
+   <types1:CurrentServerDateTime>2019-05-13T09:16:37.459Z</types1:CurrentServerDateTime>
 </aetgt:getResponse>

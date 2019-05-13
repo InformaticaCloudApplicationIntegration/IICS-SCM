@@ -1,6 +1,6 @@
 [
    {
-      "objectGuid": "dJMKYjTTPArcgXgFzW872P",
+      "objectGuid": "5kbiO9ngAGzj13KUBKDdK9",
       "objectName": "orders",
       "objectType": "STRUCTURE_DISCOVERY",
       "path": "/Explore/Default",
@@ -22,7 +22,7 @@
          },
          "objectRefs": [],
          "repoInfo": {
-            "repoHandle": "01013R30000000000002"
+            "repoHandle": "0107AB30000000000002"
          }
       }
    }

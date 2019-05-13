@@ -1,7 +1,7 @@
 <aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
                    xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
    <types1:Item>
-      <types1:EntryId>PrvyXYDdxKlFmVS-gt-2136723-2019-04-25T06:50:10.665Z::conn.xml</types1:EntryId>
+      <types1:EntryId>1bbfRLdqcgm8lnC-gt-5067278-2019-05-08T04:05:08.545Z::conn.xml</types1:EntryId>
       <types1:Name>KafkaConnection</types1:Name>
       <types1:MimeType>application/xml+connection</types1:MimeType>
       <types1:Description/>
@@ -10,14 +10,10 @@
       <types1:VersionLabel>1.0</types1:VersionLabel>
       <types1:State>CURRENT</types1:State>
       <types1:ProcessGroup/>
-      <types1:CreatedBy>sorabh@na1.dm-us.org</types1:CreatedBy>
-      <types1:CreationDate>2019-04-25T06:50:11Z</types1:CreationDate>
-      <types1:ModifiedBy>sorabh@na1.dm-us.org</types1:ModifiedBy>
-      <types1:ModificationDate>2019-04-29T05:12:19Z</types1:ModificationDate>
-      <types1:PublicationStatus>published</types1:PublicationStatus>
-      <types1:PublishedBy>sorabh@na1.dm-us.org</types1:PublishedBy>
-      <types1:PublicationDate>2019-04-29T05:12:53Z</types1:PublicationDate>
-      <types1:PublishedContributionId>project:/rt.connection/KafkaConnection/KafkaConnection.conn.xml</types1:PublishedContributionId>
+      <types1:CreatedBy>sagarwal@svccon.com</types1:CreatedBy>
+      <types1:CreationDate>2019-05-08T04:05:09Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
       <types1:AutosaveExists>false</types1:AutosaveExists>
       <types1:Entry>
          <connection xmlns="http://schemas.informatica.com/socrates/data-services/2014/04/avosConnections.xsd"
@@ -72,8 +68,8 @@
             </javaConnector>
          </connection>
       </types1:Entry>
-      <types1:GUID>1u6nP3ryQAZjEOHFIxVVkp</types1:GUID>
+      <types1:GUID>5vWbawws5SxeKogXQ1VUoL</types1:GUID>
       <types1:DisplayName>KafkaConnection</types1:DisplayName>
    </types1:Item>
-   <types1:CurrentServerDateTime>2019-05-13T08:58:41.361Z</types1:CurrentServerDateTime>
+   <types1:CurrentServerDateTime>2019-05-13T09:16:37.451Z</types1:CurrentServerDateTime>
 </aetgt:getResponse>

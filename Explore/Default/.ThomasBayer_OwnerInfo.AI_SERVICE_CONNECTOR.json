@@ -1,6 +1,6 @@
 [
    {
-      "objectGuid": "2qnhxOhDi8KlWaISjOGRez",
+      "objectGuid": "5kI5HtbTIwMekYT4WdPeih",
       "objectName": "ThomasBayer_OwnerInfo",
       "objectType": "AI_SERVICE_CONNECTOR",
       "path": "/Explore/Default",
@@ -17,7 +17,7 @@
          },
          "objectRefs": [],
          "repoInfo": {
-            "repoHandle": "ydx2CGeFRqXpIW7-gt-1270186-2019-01-16T06:03:38.81Z::svc.xml"
+            "repoHandle": "23ybdsMkdypKwKB-gt-5067296-2019-05-08T04:05:08.595Z::svc.xml"
          }
       }
    }

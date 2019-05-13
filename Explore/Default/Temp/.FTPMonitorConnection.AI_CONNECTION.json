@@ -1,6 +1,6 @@
 [
    {
-      "objectGuid": "6u8hqL7ObybglAcrIyHsC0",
+      "objectGuid": "9REKi3oL1xpglBPgcbr006",
       "objectName": "FTPMonitorConnection",
       "objectType": "AI_CONNECTION",
       "path": "/Explore/Default/Temp",
@@ -17,7 +17,7 @@
          },
          "objectRefs": [],
          "repoInfo": {
-            "repoHandle": "dvrTdtqSLlBWlD2-gt-1856564-2019-03-28T16:27:14.059Z::conn.xml"
+            "repoHandle": "HwzZsMBw8jIw8jI-gt-5067352-2019-05-08T04:05:15.326Z::conn.xml"
          }
       }
    }

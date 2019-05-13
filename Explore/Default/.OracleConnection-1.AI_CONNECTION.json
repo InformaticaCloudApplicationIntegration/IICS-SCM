@@ -1,6 +1,6 @@
 [
    {
-      "objectGuid": "8elVzXSsJAEbN03DT8DjqO",
+      "objectGuid": "9xg1Q2pKShWdmN7L2Eh46z",
       "objectName": "OracleConnection-1",
       "objectType": "AI_CONNECTION",
       "path": "/Explore/Default",
@@ -17,7 +17,7 @@
          },
          "objectRefs": [],
          "repoInfo": {
-            "repoHandle": "ZMaabdvhxiQLnzY-gt-4053271-2019-01-20T07:44:09.828Z::conn.xml"
+            "repoHandle": "WZ8ZAZf5kck8jKB-gt-5048303-2019-05-08T04:05:07.799Z::conn.xml"
          }
       }
    }

@@ -1,6 +1,6 @@
 [
    {
-      "objectGuid": "a6VqZsQrg6clg0lb8K6b4r",
+      "objectGuid": "axHRhaWwsCgkRRbmBQsqO0",
       "objectName": "B2BGateway_EDI810_4010_v2",
       "objectType": "HSCHEMA",
       "path": "/Explore/Default",
@@ -22,7 +22,7 @@
          },
          "objectRefs": [],
          "repoInfo": {
-            "repoHandle": "01013R3600000000000A"
+            "repoHandle": "0107AB3600000000000D"
          }
       }
    }

@@ -1,9 +1,8 @@
 <aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
                    xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
    <types1:Item>
-      <types1:EntryId>fOC2XZPnE29Em2k-gt-332415-2019-01-18T12:23:27.081Z::svc.xml</types1:EntryId>
+      <types1:EntryId>2IuAaabbfZk9EW4-gt-5067322-2019-05-08T04:05:08.692Z::svc.xml</types1:EntryId>
       <types1:Name>Customer_and_Invoice_Details1</types1:Name>
-      <types1:ParentFlowIds>AvZE4O9pH8sVYx8-gt-597973-2019-01-18T12:33:30.428Z::conn.xml</types1:ParentFlowIds>
       <types1:MimeType>application/xml+businesssconnector</types1:MimeType>
       <types1:Description/>
       <types1:AppliesTo/>
@@ -11,14 +10,10 @@
       <types1:VersionLabel>1.0</types1:VersionLabel>
       <types1:State>CURRENT</types1:State>
       <types1:ProcessGroup/>
-      <types1:CreatedBy>ganesh@na1.dm-us.org</types1:CreatedBy>
-      <types1:CreationDate>2019-01-18T12:23:27Z</types1:CreationDate>
-      <types1:ModifiedBy>ganesh@na1.dm-us.org</types1:ModifiedBy>
-      <types1:ModificationDate>2019-01-18T12:31:24Z</types1:ModificationDate>
-      <types1:PublicationStatus>published</types1:PublicationStatus>
-      <types1:PublishedBy>ganesh@na1.dm-us.org</types1:PublishedBy>
-      <types1:PublicationDate>2019-01-18T12:31:31Z</types1:PublicationDate>
-      <types1:PublishedContributionId>project:/rt.connector/Customer_and_Invoice_Details1/Customer_and_Invoice_Details1_svcDef.xml</types1:PublishedContributionId>
+      <types1:CreatedBy>sagarwal@svccon.com</types1:CreatedBy>
+      <types1:CreationDate>2019-05-08T04:05:09Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
       <types1:AutosaveExists>false</types1:AutosaveExists>
       <types1:Entry>
          <businessConnector xmlns="http://schemas.informatica.com/socrates/data-services/2014/05/business-connector-model.xsd"
@@ -107,8 +102,8 @@
             <objects/>
          </businessConnector>
       </types1:Entry>
-      <types1:GUID>fUmUhrbv5erdSNnXSVJKEg</types1:GUID>
+      <types1:GUID>59CqIASmMeZlOmaGyfMxwx</types1:GUID>
       <types1:DisplayName>Customer and Invoice Details1</types1:DisplayName>
    </types1:Item>
-   <types1:CurrentServerDateTime>2019-05-13T08:58:41.02Z</types1:CurrentServerDateTime>
+   <types1:CurrentServerDateTime>2019-05-13T09:16:37.572Z</types1:CurrentServerDateTime>
 </aetgt:getResponse>

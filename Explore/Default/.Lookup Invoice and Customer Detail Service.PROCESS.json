@@ -1,6 +1,6 @@
 [
    {
-      "objectGuid": "jDY4sPBX0Ilbs1kP0JkRil",
+      "objectGuid": "9yJ4yzGdegEcad7ORBGRaJ",
       "objectName": "Lookup Invoice and Customer Detail Service",
       "objectType": "PROCESS",
       "path": "/Explore/Default",
@@ -16,15 +16,15 @@
             "minor": 0
          },
          "objectRefs": [
-            "5KDzB3dxBAqfUNhWDtbbst"
+            "6FaMeNCMcP4fwPDiY9Nssv"
          ],
          "repoInfo": {
-            "repoHandle": "1fPHy1MuzBq695k-gt-416616-2019-01-21T16:31:00.984Z::pd.xml"
+            "repoHandle": "W619jDySabbeJOS-gt-5067391-2019-05-08T04:05:17.869Z::pd.xml"
          }
       }
    },
    {
-      "objectGuid": "5KDzB3dxBAqfUNhWDtbbst",
+      "objectGuid": "6FaMeNCMcP4fwPDiY9Nssv",
       "objectName": "Customer-and-Invoice-details-actions",
       "objectType": "AI_CONNECTION",
       "path": "/Explore/Default",
@@ -41,7 +41,7 @@
          },
          "objectRefs": [],
          "repoInfo": {
-            "repoHandle": "AvZE4O9pH8sVYx8-gt-597973-2019-01-18T12:33:30.428Z::conn.xml"
+            "repoHandle": "NXHVOJ2oTVMTonQ-gt-5048370-2019-05-08T04:05:16.308Z::conn.xml"
          }
       }
    }

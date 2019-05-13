@@ -1,8 +1,9 @@
 <aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
                    xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
    <types1:Item>
-      <types1:EntryId>OdwWcn6Hbf13Erh-gt-1856570-2019-03-28T16:27:14.656Z::conn.xml</types1:EntryId>
-      <types1:Name>SFTPDemoConnection-1</types1:Name>
+      <types1:EntryId>HIk3aaa-gt-5057561-2019-05-08T04:05:15.344Z::conn.xml</types1:EntryId>
+      <types1:Name>SFTPDemoConnection</types1:Name>
+      <types1:ParentFlowIds>MDOp7jvpppppppp-gt-5048362-2019-05-08T04:05:16.283Z::pd.xml</types1:ParentFlowIds>
       <types1:MimeType>application/xml+connection</types1:MimeType>
       <types1:Description>asdsa</types1:Description>
       <types1:AppliesTo/>
@@ -10,8 +11,8 @@
       <types1:VersionLabel>1.0</types1:VersionLabel>
       <types1:State>CURRENT</types1:State>
       <types1:ProcessGroup/>
-      <types1:CreatedBy>luc@na1.dm-us.org</types1:CreatedBy>
-      <types1:CreationDate>2019-03-28T16:27:15Z</types1:CreationDate>
+      <types1:CreatedBy>sagarwal@svccon.com</types1:CreatedBy>
+      <types1:CreationDate>2019-05-08T04:05:15Z</types1:CreationDate>
       <types1:ModifiedBy/>
       <types1:PublicationStatus>unpublished</types1:PublicationStatus>
       <types1:AutosaveExists>false</types1:AutosaveExists>
@@ -19,7 +20,7 @@
          <connection xmlns="http://schemas.informatica.com/socrates/data-services/2014/04/avosConnections.xsd"
                      displayName="SFTPDemoConnection"
                      label="SFTPDemoConnection"
-                     name="SFTPDemoConnection-1">
+                     name="SFTPDemoConnection">
             <description>asdsa</description>
             <agent>00000J</agent>
             <attributes>
@@ -85,8 +86,8 @@
             </javaConnector>
          </connection>
       </types1:Entry>
-      <types1:GUID>2Q9pG43Nsiclfc7nvbYNY1</types1:GUID>
+      <types1:GUID>9gHNi0ml6QDcMZEB4PqiaM</types1:GUID>
       <types1:DisplayName>SFTPDemoConnection</types1:DisplayName>
    </types1:Item>
-   <types1:CurrentServerDateTime>2019-05-13T08:58:43.364Z</types1:CurrentServerDateTime>
+   <types1:CurrentServerDateTime>2019-05-13T09:16:40.603Z</types1:CurrentServerDateTime>
 </aetgt:getResponse>

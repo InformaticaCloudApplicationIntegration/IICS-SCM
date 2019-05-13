@@ -1,6 +1,6 @@
 [
    {
-      "objectGuid": "5KDzB3dxBAqfUNhWDtbbst",
+      "objectGuid": "6FaMeNCMcP4fwPDiY9Nssv",
       "objectName": "Customer-and-Invoice-details-actions",
       "objectType": "AI_CONNECTION",
       "path": "/Explore/Default",
@@ -16,15 +16,15 @@
             "minor": 0
          },
          "objectRefs": [
-            "fUmUhrbv5erdSNnXSVJKEg"
+            "59CqIASmMeZlOmaGyfMxwx"
          ],
          "repoInfo": {
-            "repoHandle": "AvZE4O9pH8sVYx8-gt-597973-2019-01-18T12:33:30.428Z::conn.xml"
+            "repoHandle": "NXHVOJ2oTVMTonQ-gt-5048370-2019-05-08T04:05:16.308Z::conn.xml"
          }
       }
    },
    {
-      "objectGuid": "fUmUhrbv5erdSNnXSVJKEg",
+      "objectGuid": "59CqIASmMeZlOmaGyfMxwx",
       "objectName": "Customer and Invoice Details1",
       "objectType": "AI_SERVICE_CONNECTOR",
       "path": "/Explore/Default",
@@ -41,7 +41,7 @@
          },
          "objectRefs": [],
          "repoInfo": {
-            "repoHandle": "fOC2XZPnE29Em2k-gt-332415-2019-01-18T12:23:27.081Z::svc.xml"
+            "repoHandle": "2IuAaabbfZk9EW4-gt-5067322-2019-05-08T04:05:08.692Z::svc.xml"
          }
       }
    }

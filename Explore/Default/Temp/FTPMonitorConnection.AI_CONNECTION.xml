@@ -1,8 +1,9 @@
 <aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
                    xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
    <types1:Item>
-      <types1:EntryId>dvrTdtqSLlBWlD2-gt-1856564-2019-03-28T16:27:14.059Z::conn.xml</types1:EntryId>
-      <types1:Name>FTPMonitorConnection-1</types1:Name>
+      <types1:EntryId>HwzZsMBw8jIw8jI-gt-5067352-2019-05-08T04:05:15.326Z::conn.xml</types1:EntryId>
+      <types1:Name>FTPMonitorConnection</types1:Name>
+      <types1:ParentFlowIds>HCC6LlRkPUEbfV3-gt-5057571-2019-05-08T04:05:15.427Z::pd.xml</types1:ParentFlowIds>
       <types1:MimeType>application/xml+connection</types1:MimeType>
       <types1:Description/>
       <types1:AppliesTo/>
@@ -10,8 +11,8 @@
       <types1:VersionLabel>1.0</types1:VersionLabel>
       <types1:State>CURRENT</types1:State>
       <types1:ProcessGroup/>
-      <types1:CreatedBy>luc@na1.dm-us.org</types1:CreatedBy>
-      <types1:CreationDate>2019-03-28T16:27:14Z</types1:CreationDate>
+      <types1:CreatedBy>sagarwal@svccon.com</types1:CreatedBy>
+      <types1:CreationDate>2019-05-08T04:05:15Z</types1:CreationDate>
       <types1:ModifiedBy/>
       <types1:PublicationStatus>unpublished</types1:PublicationStatus>
       <types1:AutosaveExists>false</types1:AutosaveExists>
@@ -19,7 +20,7 @@
          <connection xmlns="http://schemas.informatica.com/socrates/data-services/2014/04/avosConnections.xsd"
                      displayName="FTPMonitorConnection"
                      label="FTPMonitorConnection"
-                     name="FTPMonitorConnection-1">
+                     name="FTPMonitorConnection">
             <description/>
             <agent>00000J</agent>
             <attributes>
@@ -102,8 +103,8 @@
             </javaConnector>
          </connection>
       </types1:Entry>
-      <types1:GUID>6u8hqL7ObybglAcrIyHsC0</types1:GUID>
+      <types1:GUID>9REKi3oL1xpglBPgcbr006</types1:GUID>
       <types1:DisplayName>FTPMonitorConnection</types1:DisplayName>
    </types1:Item>
-   <types1:CurrentServerDateTime>2019-05-13T08:58:43.449Z</types1:CurrentServerDateTime>
+   <types1:CurrentServerDateTime>2019-05-13T09:16:40.66Z</types1:CurrentServerDateTime>
 </aetgt:getResponse>

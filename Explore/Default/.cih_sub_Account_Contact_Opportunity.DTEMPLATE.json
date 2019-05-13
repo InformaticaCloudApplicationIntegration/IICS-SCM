@@ -1,6 +1,6 @@
 [
    {
-      "objectGuid": "9MUlJFR8ZQslx64B2fSGeh",
+      "objectGuid": "7BUbFwyigT8cPiYYFxLdW4",
       "objectName": "cih_sub_Account_Contact_Opportunity",
       "objectType": "DTEMPLATE",
       "path": "/Explore/Default",
@@ -22,7 +22,7 @@
          },
          "objectRefs": [],
          "repoInfo": {
-            "repoHandle": "01013R1700000000001E"
+            "repoHandle": "0107AB17000000000005"
          }
       }
    }

@@ -1,8 +1,8 @@
 <aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
                    xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
    <types1:Item>
-      <types1:EntryId>wZaaaa-gt-5423657-2019-03-28T16:27:16.358Z::pd.xml</types1:EntryId>
-      <types1:Name>SFTPFileTransferProcess-1</types1:Name>
+      <types1:EntryId>MDOp7jvpppppppp-gt-5048362-2019-05-08T04:05:16.283Z::pd.xml</types1:EntryId>
+      <types1:Name>SFTPFileTransferProcess</types1:Name>
       <types1:MimeType>application/xml+process</types1:MimeType>
       <types1:Description/>
       <types1:AppliesTo/>
@@ -10,8 +10,8 @@
       <types1:VersionLabel>1.0</types1:VersionLabel>
       <types1:State>CURRENT</types1:State>
       <types1:ProcessGroup/>
-      <types1:CreatedBy>luc@na1.dm-us.org</types1:CreatedBy>
-      <types1:CreationDate>2019-03-28T16:27:16Z</types1:CreationDate>
+      <types1:CreatedBy>sagarwal@svccon.com</types1:CreatedBy>
+      <types1:CreationDate>2019-05-08T04:05:16Z</types1:CreationDate>
       <types1:ModifiedBy/>
       <types1:PublicationStatus>unpublished</types1:PublicationStatus>
       <types1:AutosaveExists>false</types1:AutosaveExists>
@@ -19,7 +19,7 @@
          <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
                   xmlns:list="urn:activevos:spi:list:functions"
                   displayName="SFTPFileTransferProcess"
-                  name="SFTPFileTransferProcess-1">
+                  name="SFTPFileTransferProcess">
             <appliesTo/>
             <description/>
             <generator>Informatica Process Designer 8</generator>
@@ -57,8 +57,8 @@
             </flow>
          </process>
       </types1:Entry>
-      <types1:GUID>1rAZErm1Fqkbxo5XeHnN0Y</types1:GUID>
+      <types1:GUID>3N2Y3hnecQNlrAcJP3SCoI</types1:GUID>
       <types1:DisplayName>SFTPFileTransferProcess</types1:DisplayName>
    </types1:Item>
-   <types1:CurrentServerDateTime>2019-05-13T08:58:43.401Z</types1:CurrentServerDateTime>
+   <types1:CurrentServerDateTime>2019-05-13T09:16:40.513Z</types1:CurrentServerDateTime>
 </aetgt:getResponse>

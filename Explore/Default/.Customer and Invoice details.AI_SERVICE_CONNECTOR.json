@@ -1,6 +1,6 @@
 [
    {
-      "objectGuid": "8IOxPlbHp2ydO9ZQifyxqd",
+      "objectGuid": "aef8CSM9vtEgLE7TgZaJmN",
       "objectName": "Customer and Invoice details",
       "objectType": "AI_SERVICE_CONNECTOR",
       "path": "/Explore/Default",
@@ -17,7 +17,7 @@
          },
          "objectRefs": [],
          "repoInfo": {
-            "repoHandle": "GOXyDQeH2PKDC0h-gt-2541904-2019-01-21T12:58:06.52Z::svc.xml"
+            "repoHandle": "Rk1iSrZMSPfXBiV-gt-5057530-2019-05-08T04:05:07.083Z::svc.xml"
          }
       }
    }

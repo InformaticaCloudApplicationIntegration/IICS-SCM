@@ -1,6 +1,6 @@
 [
    {
-      "objectGuid": "25TiQQc0T2QcfxVUmCbw4s",
+      "objectGuid": "2jGcdQ5ybCjeivpijnPbOq",
       "objectName": "Edmund-actions",
       "objectType": "AI_CONNECTION",
       "path": "/Explore/Default",
@@ -16,15 +16,15 @@
             "minor": 0
          },
          "objectRefs": [
-            "iSxmWjy6w8dcCwof8FGP4K"
+            "1vzKG7LM7sycnaR36ymWuX"
          ],
          "repoInfo": {
-            "repoHandle": "xR6Eaaaaaaaaaaa-gt-937704-2019-01-21T12:49:52.383Z::conn.xml"
+            "repoHandle": "HZCU7uMydx2CGeF-gt-5057579-2019-05-08T04:05:15.462Z::conn.xml"
          }
       }
    },
    {
-      "objectGuid": "iSxmWjy6w8dcCwof8FGP4K",
+      "objectGuid": "1vzKG7LM7sycnaR36ymWuX",
       "objectName": "Edmunds",
       "objectType": "AI_SERVICE_CONNECTOR",
       "path": "/Explore/Default",
@@ -41,7 +41,7 @@
          },
          "objectRefs": [],
          "repoInfo": {
-            "repoHandle": "tiTW34Xutaaabbg-gt-2508423-2019-01-21T12:39:33.318Z::svc.xml"
+            "repoHandle": "S24FsWTzIf6riX2-gt-5057538-2019-05-08T04:05:07.132Z::svc.xml"
          }
       }
    }
