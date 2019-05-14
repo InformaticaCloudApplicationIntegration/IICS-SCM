@@ -1,0 +1,109 @@
+[
+   {
+      "objectGuid": "hnA2Um4YBEFgW0NTML89m9",
+      "objectName": "Gather Insights",
+      "objectType": "TASKFLOW",
+      "path": "/Explore/JenkinsPipelinePROD",
+      "metadata": {
+         "additionalInfo": {
+            "contentType": null,
+            "description": "",
+            "documentState": "VALID"
+         },
+         "contextAttributes": null,
+         "modelVersion": {
+            "major": 1,
+            "minor": 0
+         },
+         "objectRefs": [
+            "79jBkrjeZhIe2DUISsJkwD",
+            "2h2oNtDY4whhIYXg7SGEie",
+            "4XKeUi7wTcdjiIpWUeH3Ks"
+         ],
+         "repoInfo": {
+            "repoHandle": "i2Fjuz3PI2HBxZm-gt-538173-2019-05-13T09:56:31.136Z::tf.xml"
+         }
+      }
+   },
+   {
+      "objectGuid": "79jBkrjeZhIe2DUISsJkwD",
+      "objectName": "MCT_TopCustomers",
+      "objectType": "MTT",
+      "path": "/Explore/JenkinsPipelinePROD",
+      "metadata": {
+         "additionalInfo": {
+            "contentType": null,
+            "description": "",
+            "documentState": "VALID"
+         },
+         "contextAttributes": [
+            {
+               "name": "id",
+               "value": "@1"
+            }
+         ],
+         "modelVersion": {
+            "major": 0,
+            "minor": 0
+         },
+         "objectRefs": [],
+         "repoInfo": {
+            "repoHandle": "01013R0Z00000000003S"
+         }
+      }
+   },
+   {
+      "objectGuid": "2h2oNtDY4whhIYXg7SGEie",
+      "objectName": "MCT_TopStockCode",
+      "objectType": "MTT",
+      "path": "/Explore/JenkinsPipelinePROD",
+      "metadata": {
+         "additionalInfo": {
+            "contentType": null,
+            "description": "",
+            "documentState": "VALID"
+         },
+         "contextAttributes": [
+            {
+               "name": "id",
+               "value": "@1"
+            }
+         ],
+         "modelVersion": {
+            "major": 0,
+            "minor": 0
+         },
+         "objectRefs": [],
+         "repoInfo": {
+            "repoHandle": "01013R0Z00000000003U"
+         }
+      }
+   },
+   {
+      "objectGuid": "4XKeUi7wTcdjiIpWUeH3Ks",
+      "objectName": "MCT_TopInvoice",
+      "objectType": "MTT",
+      "path": "/Explore/JenkinsPipelinePROD",
+      "metadata": {
+         "additionalInfo": {
+            "contentType": null,
+            "description": "",
+            "documentState": "VALID"
+         },
+         "contextAttributes": [
+            {
+               "name": "id",
+               "value": "@1"
+            }
+         ],
+         "modelVersion": {
+            "major": 0,
+            "minor": 0
+         },
+         "objectRefs": [],
+         "repoInfo": {
+            "repoHandle": "01013R0Z00000000003T"
+         }
+      }
+   }
+]
