@@ -4,7 +4,7 @@
       <types1:EntryId>Fi8RVf4VQT53nQc-gt-401652-2019-05-14T04:47:42.501Z::pd.xml</types1:EntryId>
       <types1:Name>Marketo_API_Business_Process_Jenkins_Demo</types1:Name>
       <types1:MimeType>application/xml+process</types1:MimeType>
-      <types1:Description/>
+      <types1:Description>This is a test process</types1:Description>
       <types1:AppliesTo/>
       <types1:Tags>.anonymous</types1:Tags>
       <types1:VersionLabel>1.0</types1:VersionLabel>
@@ -13,10 +13,10 @@
       <types1:CreatedBy>sorabh@na1.dm-us.org</types1:CreatedBy>
       <types1:CreationDate>2019-05-14T04:47:43Z</types1:CreationDate>
       <types1:ModifiedBy>sorabh@na1.dm-us.org</types1:ModifiedBy>
-      <types1:ModificationDate>2019-05-14T04:59:57Z</types1:ModificationDate>
+      <types1:ModificationDate>2019-05-16T06:20:53Z</types1:ModificationDate>
       <types1:PublicationStatus>published</types1:PublicationStatus>
       <types1:PublishedBy>sorabh@na1.dm-us.org</types1:PublishedBy>
-      <types1:PublicationDate>2019-05-14T05:00:03Z</types1:PublicationDate>
+      <types1:PublicationDate>2019-05-16T06:20:58Z</types1:PublicationDate>
       <types1:PublishedContributionId>project:/spi.Marketo_API_Business_Process_Jenkins_Demo/Marketo_API_Business_Process_Jenkins_Demo.pd.xml</types1:PublishedContributionId>
       <types1:AutosaveExists>false</types1:AutosaveExists>
       <types1:Entry>
@@ -25,7 +25,7 @@
                   displayName="Marketo API Business Process Jenkins Demo"
                   name="Marketo_API_Business_Process_Jenkins_Demo">
             <appliesTo/>
-            <description/>
+            <description>This is a test process</description>
             <tags>.anonymous</tags>
             <generator>Informatica Process Designer 11</generator>
             <input>
@@ -130,5 +130,5 @@
       <types1:GUID>fdSL9n9UWQdduACVJQNjoe</types1:GUID>
       <types1:DisplayName>Marketo API Business Process Jenkins Demo</types1:DisplayName>
    </types1:Item>
-   <types1:CurrentServerDateTime>2019-05-16T06:18:16.77Z</types1:CurrentServerDateTime>
+   <types1:CurrentServerDateTime>2019-05-16T06:24:23.427Z</types1:CurrentServerDateTime>
 </aetgt:getResponse>
