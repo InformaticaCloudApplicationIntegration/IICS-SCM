@@ -1,0 +1,76 @@
+[
+   {
+      "objectGuid": "4aCGWkgKM4nkFQ8vYFL56j",
+      "objectName": "Enterprise Data Warehousing through API",
+      "objectType": "TASKFLOW",
+      "path": "/Explore/JenkinsPipelinePROD",
+      "metadata": {
+         "additionalInfo": {
+            "contentType": null,
+            "description": "Retail sales data needs to be reconciled across geographies and needs to be written to one central DB for analytics. You would be receiving files from different geographies to write to central DB. The mapping logic is consistent for all geographies. The mapping is parameterized to take source value as a parameter. Taskflow can now be invoked with a list of source parameters and be looped over the mapping by passing one source value at a time.\n\nOnce this is done, user would call a subtaskflow that provide analytics based on customer input coming through the API request",
+            "documentState": "VALID"
+         },
+         "contextAttributes": null,
+         "modelVersion": {
+            "major": 1,
+            "minor": 0
+         },
+         "objectRefs": [
+            "kBthdHOiu2Gl6zCstHO9kU",
+            "hnA2Um4YBEFgW0NTML89m9"
+         ],
+         "repoInfo": {
+            "repoHandle": "0tBghuImXycotFg-gt-533112-2019-05-13T09:56:31.991Z::tf.xml"
+         }
+      }
+   },
+   {
+      "objectGuid": "kBthdHOiu2Gl6zCstHO9kU",
+      "objectName": "MCT Write to Warehouse",
+      "objectType": "MTT",
+      "path": "/Explore/JenkinsPipelinePROD",
+      "metadata": {
+         "additionalInfo": {
+            "contentType": null,
+            "description": "",
+            "documentState": "VALID"
+         },
+         "contextAttributes": [
+            {
+               "name": "id",
+               "value": "@1"
+            }
+         ],
+         "modelVersion": {
+            "major": 0,
+            "minor": 0
+         },
+         "objectRefs": [],
+         "repoInfo": {
+            "repoHandle": "01013R0Z00000000003V"
+         }
+      }
+   },
+   {
+      "objectGuid": "hnA2Um4YBEFgW0NTML89m9",
+      "objectName": "Gather Insights",
+      "objectType": "TASKFLOW",
+      "path": "/Explore/JenkinsPipelinePROD",
+      "metadata": {
+         "additionalInfo": {
+            "contentType": null,
+            "description": "",
+            "documentState": "VALID"
+         },
+         "contextAttributes": null,
+         "modelVersion": {
+            "major": 1,
+            "minor": 0
+         },
+         "objectRefs": [],
+         "repoInfo": {
+            "repoHandle": "i2Fjuz3PI2HBxZm-gt-538173-2019-05-13T09:56:31.136Z::tf.xml"
+         }
+      }
+   }
+]
