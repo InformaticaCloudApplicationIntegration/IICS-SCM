@@ -1,0 +1,71 @@
+[
+   {
+      "objectGuid": "fdSL9n9UWQdduACVJQNjoe",
+      "objectName": "Marketo API Business Process Jenkins Demo",
+      "objectType": "PROCESS",
+      "path": "/Explore/JenkinsPipelinePROD",
+      "metadata": {
+         "additionalInfo": {
+            "contentType": "application/json; charset=utf-8",
+            "description": "Version 6",
+            "documentState": "VALID"
+         },
+         "contextAttributes": null,
+         "modelVersion": {
+            "major": 1,
+            "minor": 0
+         },
+         "objectRefs": [
+            "99DMjRFG9qSjnz83ar8xqN",
+            "abZYxQxIKOzgbBa295kE4D"
+         ],
+         "repoInfo": {
+            "repoHandle": "Fi8RVf4VQT53nQc-gt-401652-2019-05-14T04:47:42.501Z::pd.xml"
+         }
+      }
+   },
+   {
+      "objectGuid": "99DMjRFG9qSjnz83ar8xqN",
+      "objectName": "Marketo-Lead-Database-API-actions-Jenkins-Demo",
+      "objectType": "AI_CONNECTION",
+      "path": "/Explore/JenkinsPipelinePROD",
+      "metadata": {
+         "additionalInfo": {
+            "contentType": "application/json; charset=utf-8",
+            "description": "",
+            "documentState": "VALID"
+         },
+         "contextAttributes": null,
+         "modelVersion": {
+            "major": 1,
+            "minor": 0
+         },
+         "objectRefs": [],
+         "repoInfo": {
+            "repoHandle": "JVxYi0Nmumf6S3w-gt-868693-2019-05-14T04:47:40.572Z::conn.xml"
+         }
+      }
+   },
+   {
+      "objectGuid": "abZYxQxIKOzgbBa295kE4D",
+      "objectName": "Marketo-Identity-API-actions-Jenkins-Demo",
+      "objectType": "AI_CONNECTION",
+      "path": "/Explore/JenkinsPipelinePROD",
+      "metadata": {
+         "additionalInfo": {
+            "contentType": "application/json; charset=utf-8",
+            "description": "",
+            "documentState": "VALID"
+         },
+         "contextAttributes": null,
+         "modelVersion": {
+            "major": 1,
+            "minor": 0
+         },
+         "objectRefs": [],
+         "repoInfo": {
+            "repoHandle": "taaabbgdoGsF4Xk-gt-525067-2019-05-14T04:47:42.316Z::conn.xml"
+         }
+      }
+   }
+]
