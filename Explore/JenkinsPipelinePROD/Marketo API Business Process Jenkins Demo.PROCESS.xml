@@ -1,0 +1,135 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>Fi8RVf4VQT53nQc-gt-401652-2019-05-14T04:47:42.501Z::pd.xml</types1:EntryId>
+      <types1:Name>Marketo_API_Business_Process_Jenkins_Demo</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description>Version 6</types1:Description>
+      <types1:AppliesTo/>
+      <types1:Tags>.anonymous</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>sorabh@na1.dm-us.org</types1:CreatedBy>
+      <types1:CreationDate>2019-05-14T04:47:43Z</types1:CreationDate>
+      <types1:ModifiedBy>sorabh@na1.dm-us.org</types1:ModifiedBy>
+      <types1:ModificationDate>2020-02-04T17:11:35Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>sorabh@na1.dm-us.org</types1:PublishedBy>
+      <types1:PublicationDate>2020-02-04T17:11:40Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/spi.Marketo_API_Business_Process_Jenkins_Demo/Marketo_API_Business_Process_Jenkins_Demo.pd.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="Marketo API Business Process Jenkins Demo"
+                  name="Marketo_API_Business_Process_Jenkins_Demo"
+                  overrideAPIName="false">
+            <appliesTo/>
+            <description>Version 6</description>
+            <tags>.anonymous</tags>
+            <generator>Informatica Process Designer 11</generator>
+            <input>
+               <parameter description=""
+                          name="client_id_in"
+                          required="true"
+                          type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description=""
+                          name="client_secret_in"
+                          required="true"
+                          type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description=""
+                          name="grant_type_in"
+                          required="true"
+                          type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="lead_id_in" required="true" type="int">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+            </input>
+            <output>
+               <field description="" name="email_out" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+            </output>
+            <notes/>
+            <deployment suspendOnFault="false" tracingLevel="verbose">
+               <rest>
+                  <allowAnonymousAccess/>
+               </rest>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="jchhpm8v" targetId="jchhpm8u"/>
+               </start>
+               <service id="jchhpm8u">
+                  <title>Get Marketo Access Token</title>
+                  <serviceName>Marketo-Identity-API-actions-Jenkins-Demo:identityUsingGET</serviceName>
+                  <serviceGUID>abZYxQxIKOzgbBa295kE4D</serviceGUID>
+                  <serviceInput>
+                     <parameter name="client_id" source="field" updatable="true">input.client_id_in</parameter>
+                     <parameter name="client_secret" source="field" updatable="true">input.client_secret_in</parameter>
+                     <parameter name="grant_type" source="field" updatable="true">input.grant_type_in</parameter>
+                  </serviceInput>
+                  <link id="jchhpm9n" targetId="jchhpm9m"/>
+               </service>
+               <service id="jchhpm9m">
+                  <title>Fetch Lead Details</title>
+                  <serviceName>Marketo-Lead-Database-API-actions-Jenkins-Demo:getLeadByIdUsingGET</serviceName>
+                  <serviceGUID>99DMjRFG9qSjnz83ar8xqN</serviceGUID>
+                  <serviceInput>
+                     <parameter name="leadId" source="field" updatable="true">input.lead_id_in</parameter>
+                     <parameter name="access_token" source="field" updatable="true">output.access_token</parameter>
+                  </serviceInput>
+                  <link id="jchhpmaw" targetId="jchhpmav"/>
+               </service>
+               <container id="jchhpmav" type="exclusive">
+                  <title>Valid lead ID</title>
+                  <flow id="jchhpmaz">
+                     <assignment id="jq7vv9i8">
+                        <title>Assign email output success</title>
+                        <operation source="field" to="output.email_out">output.email</operation>
+                     </assignment>
+                     <link id="jchhpmb0" targetId="jchhpmav" type="containerLink"/>
+                  </flow>
+                  <flow id="jchhpmb2">
+                     <assignment id="jq7vv9i1">
+                        <title>Assign email output failure</title>
+                        <operation source="constant" to="output.email_out">emailNotFound@informatica.com</operation>
+                     </assignment>
+                     <link id="jchhpmb3" targetId="jchhpmav" type="containerLink"/>
+                  </flow>
+                  <link id="jchhpmay" targetId="jchhpmaz" type="containerLink">
+                     <condition source="formula">
+                        <function name="set">
+                           <arg name="field">{$output.ResponseOfLead[1]/result[1]/id}</arg>
+                        </function>
+                     </condition>
+                  </link>
+                  <link id="jchhpmb1" targetId="jchhpmb2" type="containerLink"/>
+                  <link id="jchhpmax" targetId="c"/>
+               </container>
+               <end id="c"/>
+            </flow>
+         </process>
+      </types1:Entry>
+      <types1:GUID>fdSL9n9UWQdduACVJQNjoe</types1:GUID>
+      <types1:DisplayName>Marketo API Business Process Jenkins Demo</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2020-07-22T16:19:53.917Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

@@ -1,0 +1,156 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>zvGFaaaaaaaaaaa-gt-994367-2019-05-14T04:47:40.404Z::svc.xml</types1:EntryId>
+      <types1:Name>Marketo_Identity_API_Jenkins_Demo</types1:Name>
+      <types1:ParentFlowIds>taaabbgdoGsF4Xk-gt-525067-2019-05-14T04:47:42.316Z::conn.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+businesssconnector</types1:MimeType>
+      <types1:Description>Marketo Rest API</types1:Description>
+      <types1:AppliesTo/>
+      <types1:Tags>Identity</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>sorabh@na1.dm-us.org</types1:CreatedBy>
+      <types1:CreationDate>2019-05-14T04:47:40Z</types1:CreationDate>
+      <types1:ModifiedBy>sorabh@na1.dm-us.org</types1:ModifiedBy>
+      <types1:ModificationDate>2019-05-14T04:48:34Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>sorabh@na1.dm-us.org</types1:PublishedBy>
+      <types1:PublicationDate>2019-05-14T04:48:39Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/rt.connector/Marketo_Identity_API_Jenkins_Demo/Marketo_Identity_API_Jenkins_Demo_svcDef.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <businessConnector xmlns="http://schemas.informatica.com/socrates/data-services/2014/05/business-connector-model.xsd"
+                            agentOnly="false"
+                            debug="false"
+                            displayName="Marketo Identity API Jenkins Demo"
+                            label=""
+                            name="Marketo_Identity_API_Jenkins_Demo"
+                            uuid="d48cfb1a-6250-4552-bf43-b61253533a84">
+            <description>Marketo Rest API</description>
+            <tags>Identity</tags>
+            <connectionAttributes xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd">
+               <connectionAttribute description="Host Name"
+                                    masked="false"
+                                    name="hostName"
+                                    required="true"
+                                    testWith="462-VKM-148.mktorest.com"
+                                    type="string"/>
+            </connectionAttributes>
+            <actions>
+               <action category="Identity"
+                       failOnError="true"
+                       forSearch="false"
+                       label="identityUsingGET"
+                       maxRedirects="100"
+                       name="identityUsingGET"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Identity. Retrieve an access token from Marketo. Calls to this endpoint are not counted towards API call limit.</description>
+                  <input>
+                     <parameter description="Client ID from Admin &gt; Integration &gt; Launchpoint menu."
+                                label="client_id"
+                                name="client_id"
+                                required="true"
+                                testWith=""
+                                type="string"/>
+                     <parameter description="Client Secret from Admin &gt; Integration &gt; Launchpoint menu."
+                                label="client_secret"
+                                name="client_secret"
+                                required="true"
+                                testWith=""
+                                type="string"/>
+                     <parameter description="Grant type."
+                                label="grant_type"
+                                name="grant_type"
+                                required="true"
+                                testWith=""
+                                type="picklist">
+                        <options>
+                           <option name="values">[{"value":"client_credentials","label":"client_credentials"}]</option>
+                        </options>
+                     </parameter>
+                     <parameter description="LaunchPoint Technology Partner &lt;a href='http://developers.marketo.com/support/Marketo_LaunchPoint_Technology_Partner_API_Key.pdf'&gt;API Key&lt;/a&gt;."
+                                label="partner_id"
+                                name="partner_id"
+                                required="false"
+                                testWith=""
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="https://{$hostName}//identity/oauth/token"
+                                        verb="GET">
+                        <httpHeaders>
+                           <header name="Content-Type">application/json</header>
+                           <header name="Accept">application/json</header>
+                        </httpHeaders>
+                     </restSimpleBinding>
+                  </binding>
+                  <output>
+                     <field description=""
+                            name="status"
+                            responseStatusCode="true"
+                            type="string"/>
+                     <field description=""
+                            name="access_token"
+                            property="access_token"
+                            type="string"/>
+                     <field description="" name="scope" property="scope" type="string"/>
+                     <field description=""
+                            name="token_type"
+                            property="token_type"
+                            type="string"/>
+                     <field description=""
+                            name="expires_in"
+                            property="expires_in"
+                            type="string"/>
+                     <field description=""
+                            entireResponse="true"
+                            name="response"
+                            type="string"/>
+                  </output>
+               </action>
+            </actions>
+            <objects>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="string">
+                  <description/>
+                  <detail>
+                     <field name="string" type="string"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="boolean">
+                  <description/>
+                  <detail>
+                     <field name="boolean" type="boolean"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="double">
+                  <description/>
+                  <detail>
+                     <field name="double" type="double"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="integer">
+                  <description/>
+                  <detail>
+                     <field name="integer" type="int"/>
+                  </detail>
+               </processObject>
+            </objects>
+         </businessConnector>
+      </types1:Entry>
+      <types1:GUID>5J1efVEtGONeJnrOdQVpah</types1:GUID>
+      <types1:DisplayName>Marketo Identity API Jenkins Demo</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2020-07-22T16:19:53.706Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

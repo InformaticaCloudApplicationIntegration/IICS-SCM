@@ -1,0 +1,49 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>taaabbgdoGsF4Xk-gt-525067-2019-05-14T04:47:42.316Z::conn.xml</types1:EntryId>
+      <types1:Name>Marketo-Identity-API-actions-Jenkins-Demo</types1:Name>
+      <types1:ParentFlowIds>Fi8RVf4VQT53nQc-gt-401652-2019-05-14T04:47:42.501Z::pd.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+connection</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>sorabh@na1.dm-us.org</types1:CreatedBy>
+      <types1:CreationDate>2019-05-14T04:47:42Z</types1:CreationDate>
+      <types1:ModifiedBy>sorabh@na1.dm-us.org</types1:ModifiedBy>
+      <types1:ModificationDate>2019-05-14T04:51:30Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>sorabh@na1.dm-us.org</types1:PublishedBy>
+      <types1:PublicationDate>2019-05-14T04:52:21Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/rt.connection/Marketo-Identity-API-actions-Jenkins-Demo/Marketo-Identity-API-actions-Jenkins-Demo.conn.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <connection xmlns="http://schemas.informatica.com/socrates/data-services/2014/04/avosConnections.xsd"
+                     displayName="Marketo-Identity-API-actions-Jenkins-Demo"
+                     label="Marketo-Identity-API-actions-Jenkins-Demo"
+                     name="Marketo-Identity-API-actions-Jenkins-Demo">
+            <description/>
+            <tags/>
+            <agent/>
+            <attributes>
+               <attribute encrypted="false" name="hostName" value="462-VKM-148.mktorest.com"/>
+            </attributes>
+            <businessConnector xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"
+                               agentOnly="false"
+                               connectorPath="project:/rt.connector/Marketo_Identity_API_Jenkins_Demo/Marketo_Identity_API_Jenkins_Demo_svcDef.xml"
+                               guid="5J1efVEtGONeJnrOdQVpah"
+                               name="Marketo_Identity_API_Jenkins_Demo"
+                               supportsConnectionTest="false"
+                               uuid="d48cfb1a-6250-4552-bf43-b61253533a84">
+               <description>Marketo Rest API</description>
+            </businessConnector>
+         </connection>
+      </types1:Entry>
+      <types1:GUID>abZYxQxIKOzgbBa295kE4D</types1:GUID>
+      <types1:DisplayName>Marketo-Identity-API-actions-Jenkins-Demo</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2020-07-22T16:19:53.844Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>
